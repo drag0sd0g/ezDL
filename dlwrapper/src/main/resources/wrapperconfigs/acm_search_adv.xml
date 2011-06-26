@@ -1,0 +1,95 @@
+<wrapperconfiguration>
+
+	<!-- numeric-entities: yes -->
+
+	<fetch minPage="1" maxPage="1" method="GET" url="$url" encoding="ISO-8859-1">
+		<param name="nquery" value="$query" />
+		<param name="CFID" value="$cfid" />
+		<param name="CFTOKEN" value="$cftoken" />
+		<param name="adv" value="1" />
+	</fetch>
+
+
+	<fetch minPage="2" method="GET" url="$url" encoding="ISO-8859-1">
+	</fetch>
+
+
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+
+		<replace pattern="&lt;style&gt;[^&lt;]+&lt;\/style&gt;"
+			replacewith="" />
+		<substitute pattern="\t" replacewith="" />
+		<substitute pattern="\n" replacewith="" />
+		<substitute pattern="&lt;[^&gt;]+?&lt;" replacewith="&lt;"/>
+	</cleanOriginal>
+
+
+
+	<parse>
+
+		<verify>
+			<expect regex=".*Association for Computing Machinery.*">
+				<text xpath="//div[@class='footer-copy-text']/text()" />
+			</expect>
+			<expect regex=".*Results.*">
+				<text
+					xpath="/html/body/div/table[2]/tr[3]/td/table[1]/tr[3]/td[2]/table[1]/tr[1]/td/table[1]/tr[1]/td[1]/text()" />
+			</expect>
+		</verify>
+
+		<iterate
+			xpath="/html/body/div/table[2]/tr[3]/td/table/tr[3]/td[2]/table/tr[@valign='top']/td[2]/table[1]">
+
+.			<extract key="nextpage">
+				<url xpath="//tr/td[attribute::colspan='2']/a[position()=last()-1]/@href">
+				</url>
+			</extract>
+
+			<extract key="title">
+				<text xpath="./tr[1]/td[1]/a/text()" />
+			</extract>
+
+			<extract key="authors">
+				<text xpath="./tr[1]/td[1]/div[@class='authors']">
+					<substitute pattern="/.+" replacewith="">
+						<split delimiter=",">
+							<substitute pattern="^\s+|\s+$" replacewith="" />
+						</split>
+					</substitute>
+				</text>
+			</extract>
+
+			<extract key="month">
+				<text xpath="tr[2]/td[1]/text()">
+					<substitute pattern="\d\d\d\d" replacewith="">
+						<substitute pattern="\s+$" replacewith="">
+							<substitute pattern="^\s+" replacewith="" />
+						</substitute>
+					</substitute>
+				</text>
+			</extract>
+
+			<extract key="year">
+				<text xpath="tr[2]/td[1]/text()">
+					<substitute pattern="^\S*\s" replacewith="">
+						<findone pattern="\d\d\d\d" />
+					</substitute>
+				</text>
+			</extract>
+
+			<extract key="details">
+				<text xpath="./tr[1]/td[1]/a/@href" />
+			</extract>
+
+			<extract key="detaillink">
+				<url xpath="./tr[1]/td[1]/a/@href" />
+			</extract>
+
+		</iterate>
+	</parse>
+
+</wrapperconfiguration>

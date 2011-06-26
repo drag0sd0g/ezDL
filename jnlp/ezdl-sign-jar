@@ -1,0 +1,83 @@
+#!/bin/bash
+
+JAR_DEFAULT=gframedl.jar
+SIGNED_JAR_DEFAULT=gframedl-signed.jar
+
+KEYSTORE_DEFAULT=~/.ezdl/keystore
+KEYSTORE_ALIAS_DEFAULT=ezdl
+
+TARGET_HOST_DEFAULT=ezdl.de
+TARGET_DEFAULT=/var/www/webstart
+
+
+
+read -p "JAR file to sign (default is $JAR_DEFAULT): " -e t1
+read -p "Signed JAR file (default is $SIGNED_JAR_DEFAULT): " -e t2
+read -p "Keystore (default is $KEYSTORE_DEFAULT): " -e t3
+read -p "Keystore alias (default is $KEYSTORE_ALIAS_DEFAULT): " -e t4
+read -p "Host name to where the signed JAR will be copied (default is $TARGET_HOST_DEFAULT): " -e t5
+read -p "Final target of signed JAR file (default is $TARGET_DEFAULT): " -e t6
+
+
+if [ -n "$t1" ]
+then
+  jar="$t1"
+else
+  jar="$JAR_DEFAULT"
+fi
+
+if [ -n "$t2" ]
+then
+  signed_jar="$t2"
+else
+  signed_jar="$SIGNED_JAR_DEFAULT"
+fi
+
+if [ -n "$t3" ]
+then
+  keystore="$t3"
+else
+  keystore="$KEYSTORE_DEFAULT"
+fi
+
+if [ -n "$t4" ]
+then
+  keystore_alias="$t4"
+else
+  keystore_alias="$KEYSTORE_ALIAS_DEFAULT"
+fi
+
+if [ -n "$t5" ]
+then
+  target_host="$t5"
+else
+  target_host="$TARGET_HOST_DEFAULT"
+fi
+
+if [ -n "$t6" ]
+then
+  target="$t6"
+else
+  target="$TARGET_DEFAULT"
+fi
+
+
+echo $jar
+echo $signed_jar
+echo $keystore
+echo $target_host
+echo $target
+
+
+CMD="jarsigner -keystore $keystore -signed-jar $signed_jar $jar \"$keystore_alias\""
+echo $CMD
+$CMD
+
+CMD2="scp $signed_jar ezdl@$target_host:$target"
+echo $CMD2
+$CMD2
+
+
+
+
+ 

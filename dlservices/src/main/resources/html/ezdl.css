@@ -1,0 +1,173 @@
+/*
+ *
+ * Layout
+ */
+ 
+body {
+	position: absolute;
+	left:20px;
+} 
+ 
+ 
+div#main {
+	position: absolute;
+	top: 30px;
+	left: 170px;
+}
+
+div#menu  {
+	background: url("images/logo.png") no-repeat 0px 0px;
+	xbackground-color: red;
+	position: absolute;
+	top: 00px;
+	width: 150px;
+	height: 300px;
+}
+
+div#menu ul {
+	position: relative;
+	top: 80px;
+}
+
+
+/*
+ *
+ * Fonts 
+ */
+
+* {
+	font-family:Arial, Helvetica, sans-serif;
+	/*white-space: nowrap;*/
+}
+
+h1 { 
+	font-size: 20pt; 
+}
+
+
+a {
+  	text-decoration: none;
+  	font-weight:normal;
+}
+
+
+tr th {
+	text-align: center;
+	font-weight:bold;
+}
+
+tr td {
+	/*font-weight:bold;*/
+}
+
+
+
+/*
+ *
+ * Colors
+ */
+
+
+
+
+tr.even {
+	background-color: #DEDEDE;
+}
+
+tr.odd {
+	background-color: #CDCDCD;
+}
+
+tr th {
+	background-color: #BBBBBB;
+}
+
+tr.footer {
+	background-color: #C8D2DC;
+}
+
+tr {
+	background-color: #DEDEDE;
+}
+
+.recordend td{
+	border-bottom: 2px #777 solid;
+}
+
+
+/*
+ *
+ * Spacing
+ */
+
+table {
+	table-layout: fixed;
+	width: 800px;
+	/*max-width: 80%;*/ 
+}
+
+
+.type {
+	font-weight: bold;
+}
+
+
+
+
+
+/*
+ * Request log
+ *
+ */
+
+body#reqlog div#main table {
+	table-layout: fixed;
+	width: 800px;
+}
+
+body#reqlog div#main table th.name {
+	table-layout: fixed;
+	width: 350px;
+}
+
+body#reqlog div#main table th.info {
+	table-layout: fixed;
+	width: 750px;
+}
+
+
+
+/*
+ * Agent list
+ *
+ */
+
+body#agentlist div#main table {
+	table-layout: fixed;
+	width: 600px;
+}
+
+body#agentlist div#main table th.service {
+	width: 200px;
+}
+
+body#agentlist div#main table th.agent {
+	width: 100px;
+}
+
+body#agentlist div#main table th.req {
+	width: 70px;
+}
+
+body#agentlist div#main table th.status {
+	width: 70px;
+}
+
+body#agentlist div#main table th.log {
+	width: 70px;
+}
+
+body#agentlist div#main table th.buttons {
+	width: 20px;
+}
+

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>ezDL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="/ezdl.css">
+</head>
+
+<body id="agentlist">
+
+<div id="main">
+<h1>Agent List</h1>
+<table>
+  <tr class="a"> 
+    <th class="service">Service</th>
+    <th class="agent"> Agent </th>
+    <th class="req"> Requests </th>
+    <th class="status"> Status </th>
+    <th class="log"> Log </th>
+    <th class="buttons"/>
+  </tr>
+<% list %>
+  <tr class="<% cssclass %> recordend"> 
+    <td class="service"> <% service %> </td>
+    <td class="agent"> <% agent %> </td>
+    <td class="htmlreq"> <a href="<% prefix %>htmlrequest/<% agent %>">req</a> </td>
+    <td class="status"> <a href="<% prefix %>status/<% agent %>">status</a> </td>
+    <td class="htmllog"> <a href="<% prefix %>htmllog/<% agent %>">log</a> </td>
+    <td class="buttons"> <form method="post" action="<% prefix %>agentlist"><input type="hidden" name="kill" value="<% agent %>"></input><input type="image" src="<% prefix %>images/killandexit.gif" alt="runterfahren und beenden" border="0"/></form> </td>
+  </tr>
+<% /list %>
+  <tr class="b"> 
+    <td colspan="2"> <% directoryAgentName %> </td>
+    <td> <a href="<% prefix %>htmlrequest/<% directoryAgentName %>">req</a> </td>
+    <td> <a href="<% prefix %>status/<% directoryAgentName %>">status</a> </td>
+    <td> <a href="<% prefix %>htmldirlog">log</a> </td>
+    <td> <form method="post" action="<% prefix %>agentlist"><input type="hidden" name="killdir" value=""></input><input type="image" src="<% prefix %>images/killandexit.gif" alt="runterfahren und beenden" border="0"/></form> </td>
+  </tr>
+</table>
+</div>
+
+<div id="menu">
+<ul>
+<li><a href="/agentlist">Agent List</a></li>
+<li><a href="/dirprops">Properties</a></li>
+</ul>
+</div>
+
+</body>
+</html>

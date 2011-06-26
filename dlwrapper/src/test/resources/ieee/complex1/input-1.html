@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	 	<title>IEEE Xplore - SearchResult</title>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+<style type="text/css" media="screen, print">
+	@import url(/assets/css/master.css);
+	@import url(/assets/css/endeca.css);
+</style>
+<script type="text/javascript">
+	var NTPT_IMAGE_LOCATION = 'http://tagxplore.ieee.org/';
+	var ASSETS_RELATIVE_PATH = '/assets';
+	var SPECIAL_CHARACTER_MAPS = '&:.AND.,=:.EQ.,+:.PLS.,#:.HSH.,(:.LB.,):.RB.,":.QT.';
+	var SPECIAL_CHARACTERS = new Array();
+	var SPECIAL_CHARACTER_REPLACEMENTS = new Array();
+	var characterMaps = SPECIAL_CHARACTER_MAPS.split(",");
+	for (var i = 0; i < characterMaps.length; i++) {
+		parts = characterMaps[i].split(":");
+		SPECIAL_CHARACTERS[i] = parts[0];
+		SPECIAL_CHARACTER_REPLACEMENTS[i] = parts[1];
+	}
+	
+</script>
+<script type="text/javascript" src="/assets/js/lib.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.new.js"></script>
+<script type="text/javascript" src="/assets/js/search.new.js"></script>
+</head>
+
+<body>
+
+
+	<p class="JumpLink" id="PageTop"><a href="#Body">Skip to Main Content</a></p>
+
+
+	<!-- BEGIN: LayoutWrapper -->
+	<div id="LayoutWrapper">
+		
+		<!-- BEGIN: HeaderWrapper -->		
+		
+			
+		
+
+
+<div id="UtilityNav">
+	<p class="links">
+	 
+	<a href="http://www.ieee.org" id="u-home" target="_blank">IEEE.org</a> &#160;|&#160; 
+	<span>IEEE <em>Xplore</em> Digital Library</span> &#160;|&#160; 
+	<a href="http://standards.ieee.org" id="u-standards" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitstandardsorg');">IEEE Standards Association</a> &#160;|&#160;
+	<a href="http://spectrum.ieee.org" id="u-spectrum" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitspectrum');">Spectrum Online</a> &#160;|&#160; 
+	<a href="http://www.ieee.org/web/services/general/sitemap.html" id="u-more" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitmoreieeesites');">More IEEE Sites</a>
+	
+	</p>
+</div>
+
+<div id="HeaderWrapper">
+<!-- BEGIN: HeaderWrapper -->
+<div id="HeaderMetaNavigation">
+	
+</div>
+		<div id="Header">
+				<div id="logo-xplore">
+					<a href="/"><img src="/assets/img/logo.xplore.gif" width="230" height="45" alt="IEEE Xplore Digital Library" /></a>
+				</div>
+
+				<div id="logo-ieee">
+					<img src="/assets/img/logo.ieee.gif" alt="IEEE" />
+				</div>
+
+				<div id="search-field">
+						
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/js/Xplore.js"></script>
+
+
+<script>
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }
+  function loginRedirectForPageTagging(eventType) {
+	    ntptEventTag(eventType);
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+}
+  function showHideDiv(div,show) {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }  
+  function addFilter(filter,checked) { 
+	  if(checked)
+	  {
+		  document.getElementById("newsearch").value="partialPref"
+	  	  document.getElementById("filter").value=filter;
+		// put a large number so that it would not hit the server
+		  acompleter.options.minChars=3000;
+		  document.getElementById('search_suggestions').style.visibility = 'hidden';
+	  }
+	  else
+	  {
+		  document.getElementById("filter").value="";
+		  acompleter.options.minChars=3;
+		  document.getElementById('search_suggestions').style.visibility = 'visible';
+	  }
+  }
+	function submitForm() {
+		document.forms["search_form"].submit();
+	}  
+</script>
+
+
+<form id="search_form" name="search_form"  action='/search/searchresult.jsp' method="get"
+		onSubmit="return filterQuery('queryText');">
+
+<fieldset id="search-fieldset">
+<div class="field"><label for="search-query" class="superfluous">Search Term(s)</label> 
+<span class="input-wrap">
+
+<input type="hidden" name="newsearch" id="newsearch" value="true"/>
+
+	
+<input type="text" name="queryText" id="queryText"  value="" />
+</span>
+
+    <div id="search_suggestions" class="autocomplete">
+    <script>
+    	var acompleter=new Ajax.Autocompleter('queryText', 'search_suggestions', '/search/typeahead',
+    		{ paramName: 'searchRefinementTerm', frequency: '0.8', minChars: 3, method: 'get',
+					parameters: 'searchRefinementMaxResults=20', 
+					afterUpdateElement: "return filterQuery('queryText')"
+    		});
+    </script>
+    </div>
+
+<input type="image" name=""
+	src="/assets/img/btn.search.gif" alt="Search" class="form-action" /></div>
+<div class="tools">
+
+
+  
+<a href="/search/advsearch.jsp" onclick="ntptEventTag('ev=Search&evType=advancedsearch');">Advanced Search</a> &nbsp;|&nbsp;
+
+
+
+
+
+	
+	
+			 
+			<a href="#" onclick='loginRedirectForPageTagging("ev=Search&evType=preferences")'> Preferences</a>&nbsp;|&nbsp;
+			
+
+
+
+ 
+ 	<span id="search-tips-popup" onclick="ntptEventTag('ev=Search&evType=searchtips');">Search Tips</span>
+ 
+
+&nbsp;
+
+</fieldset>
+</form>
+
+				</div>
+	
+		</div>
+
+</div>
+<!-- END: HeaderWrapper -->
+		
+		
+		<!-- END: HeaderWrapper -->
+
+		<!-- BEGIN: ToolBarWrapper -->		
+		
+
+
+
+
+
+
+<div id="ToolBarWrapper">
+
+	<div id="ToolBar">
+	
+	<div id="Browse" class="DHTMLMenu">
+	<div id="browse-content">
+	<h3><a href="/xpl/browseHome.jsp">Browse</a></h3>
+	<div class="SubMenu">
+		
+
+	
+<ul class="button" id="browse-revealed-menu">
+  
+ <li><a href="/xpl/periodicals.jsp" onclick="ntptEventTag('ev=Browse&evtype=Journals_Mag');">Journals & Magazines</a></li>
+	<li><a href="/xpl/conferences.jsp" onclick="ntptEventTag('ev=Browse&evtype=ConfProceedings');">Conference Proceedings</a></li>
+	<li><a href="/xpl/standards.jsp" onclick="ntptEventTag('ev=Browse&evtype=Standards');">Standards</a></li>
+	<li><a href="/xpl/bkBrowse.jsp" onclick="ntptEventTag('ev=Browse&evtype=Books');">Books</a></li>
+	<li><a href="/xpl/modulebrowse.jsp" onclick="ntptEventTag('ev=Browse&evtype=EducationCourses');">Educational Courses</a></li>
+	<li><a href="/techsurvey/jsp/ts_browse.jsp" onclick="ntptEventTag('ev=Browse&evtype=TechnologySurveys');">Technology Surveys</a></li>
+ 
+</ul>
+
+	</div>
+	</div>
+	</div>
+	
+	
+	
+
+
+
+
+
+	
+
+<ul id="UserTools" class="DHTMLMenu">	
+	<li id="my-account">
+		<span>My Settings</span>
+		<div class="SubMenu">
+			<ul>
+					
+ 			    
+					<!-- BEGIN: Unica Page Tag -->
+					<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+					<li><a href="/xpl/tocalerts_list.jsp" onclick="ntptEventTag('ev=mysettings&evType=ALERTS');">Alerts</a></li>			
+					<li><a href="/articleSale/purchaseHistory.jsp" onclick="ntptEventTag('ev=mysettings&evType=PURCHASEHISTORY');">Purchase History</a></li>
+					<!-- END: Unica Page Tag -->
+					
+				
+					 		
+					<li><a href="/Xplore/login.jsp?url=search/savedsearches" onclick="ntptEventTag('ev=mysettings&evType=SAVEDSEARCHES');">Saved Searches</a></li>
+						
+				
+				
+					
+						
+						
+							 	
+								<li><a href="/Xplore/login.jsp?tp=&fromGateway=true&" onclick="ntptEventTag('ev=mysettings&evType=SIGNIN');">Sign In</a></li>
+								
+						
+									
+				 									
+				<li><a href="/Xplore/accessinfo.jsp" onclick="ntptEventTag('ev=mysettings&evType=WHATCANIACCESS');">What can I access?</a></li>
+					
+			</ul>
+		</div>
+	</li>
+
+	<li id="cart">
+		<a href="http://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=InvokeMethod&SWEService=IEEEAddToCartService&SWEMethod=GoToView&mem_type=Customer&Join=y&src=0&HideNew=N&SessionId=CvS6M3QVhjncqNpnYhk4cCdhp31Bh3ytwfn5Qczyp1PwDDJbQdhB!614219243!1291305078992" target="cartwindow">Cart</a>
+	</li>
+</ul>				
+
+	
+
+
+<div class="support">
+	<a href="/xpl/termsOfUse.jsp"><span>Terms of Use</span></a>&nbsp;|	
+	<a href="/xpl/feedback.jsp"><span>Feedback</span></a>&nbsp;&nbsp;	
+	<a>
+		<img src="/assets/img/icon.support.gif" width="24" height="20" alt="" class="icon" />
+		<a href="/Xplorehelp/Help_start.html" target="blank"><span>Help</span></a>
+	</a>           
+</div>
+
+
+			 <table style='float: right; position: relative;' border='0' cellspacing='0' cellpadding='0'>
+	
+<td>
+
+
+       <div id="SignOut" class="DHTMLMenu">
+         
+         	<a href="/servlet/Login?logout=/Xplore/guesthome.jsp" border="0" onclick="ntptEventTag('ev=exitsignout');"><h3><font color='white'>Sign Out</font></h3></a>
+       	
+       </div>
+       
+</td>			
+
+</table>
+	
+	</div>
+
+</div>
+
+
+		<!-- END: ToolBarWrapper -->
+
+	
+		
+		<!-- BEGIN: BodyWrapper -->
+		<div id="BodyWrapper" class="Layout-Column-3">
+
+			<div id="Body">
+				
+				<div class="column-main" id='search' >
+					
+					
+
+
+
+
+
+
+
+
+
+<!---->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+  function gotoPage(pagenum) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'pageNumber' + '='+pagenum;
+    location.href = url_string;
+  }
+
+  function doSearch(searchTerm) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value  + '&'
+    + 'queryText' + '='+searchTerm;
+   // alert(url_string);
+    return url_string;
+  }
+
+  function showAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+    var url_string = '/search/srchabstract.jsp?'+ document.getElementById("oqs").value
+    + '&' + 'arnumber' +'='+ articleNumber;
+    url_string = url_string + '&resultAction=ABSTRACT';
+   // alert(url_string);
+    location.href = url_string;
+    
+  }
+
+  function showFreeAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+	    var url_string = '/search/freesrchabstract.jsp?'+ document.getElementById("oqs").value
+	    + '&' + 'arnumber' +'='+ articleNumber;
+	    url_string = url_string + '&resultAction=ABSTRACT';
+	   // alert(url_string);
+	    location.href = url_string;
+	    
+	  }
+
+  function sortAction(sortTypeValue) {	
+    var sortType = sortTypeValue.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'sortType' + '='+ sortType
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=SORT';
+    location.href = url_string;
+  }
+
+  function removeSearchWithin(term) {
+	  var filteredTerm = getFilteredTerms(term);
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value + '&'
+    + 'removeSearchWithin' + '=' + filteredTerm;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = encodeURI(url_string);
+  }
+
+  function removeRefinement(refineID) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRefinement' + '=' + refineID;
+    url_string = url_string + 
+     '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function removeRange(key) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRange' + '=' + key;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function rowsPerPageAction(rowsPerPageSelect) {
+	var  rowsPerPage=rowsPerPageSelect.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'rowsPerPage' + '='+rowsPerPage 
+    + '&' + 'pageNumber' + '='+ '1'+ '&resultAction=ROWS_PER_PAGE';
+    location.href = url_string;
+  }
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+}
+
+
+  function printSelect() {
+	  window.print();
+	  return false;
+}
+ 
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="search_results_form" id="search_results_form" action="search">
+  <input type="hidden" name="oqs" id="oqs" value="queryText=(((&#034;Document Title&#034;:test) AND (&#034;Author&#034;:belkin)))&amp;openedRefinements=*&amp;ranges=2006_2006_Publication_Year&amp;matchBoolean=true&amp;rowsPerPage=100&amp;searchField=Search All">
+  <input type="hidden" name="pageNumber" id="pageNumber" >
+  <input type="hidden" name="prevArticle" id="prevArticle" />
+  <input type="hidden" name="nextArticle" id="nextArticle" />
+  <input type="hidden" name="savedSearchTitle" id="savedSearchTitle"
+      value="" />
+  
+   
+  
+  
+	
+	
+	
+	
+	
+	
+	
+  	
+  	
+		
+		
+	 
+	
+	
+  	
+  
+ 	 
+
+		
+  <div id="results-hdr">
+							<h2>Search Results</h2>
+							<div class="content" id="content">
+						  
+						  <div class="refinement">
+							<p>You searched for:
+							
+							  
+							  <strong class="search-term">((("Document Title":test) AND ("Author":belkin)))</strong>
+							
+								
+							
+							</p>
+							</div>
+							
+							
+							<div class="refinement">	
+							<p>You refined by:		</p>		
+							</div>
+							 
+							
+								
+							<div class="refinement"   style="margin-left: 12px;"> 
+							 
+							 Publication Year:
+							 <span class="snippet">  
+                 2006
+                  -
+              	    2006
+                 
+               </span>
+              <img width="13" height="13" alt="Remove" title="Remove" class="remove-refine"
+                  src="/assets/img/icon.close.gif"
+                  onclick="javascript:removeRange('Publication_Year')" />
+              
+							</div>	
+							
+							
+						</div>
+					
+						<div>
+								
+						</div>
+				</div>	
+			 <div id="hiddenBreadcrumbContent" style="display:none" >
+							((("Document Title":test) AND ("Author":belkin)))::Publication Year[ 2006-2006]
+			  </div>	
+				<div id="hiddenEndecaQuery" style="display:none" >
+							N=0&Ntk=&Ntt=&Ntx=&Nty=1&Nrk=Search+All&Nrt=belkin+test&Nrr=Search+All&Nrm=matchany&Nf=Publication_Year|BTWN 2006 2006&Nrs=collection%28%29%2frecord%5b+%28++%28++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22test%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Author%22%2c%22belkin%22%2c%22allpartial%22%29%29+%29++%29++%29+%5d
+				</div>	
+				
+				 
+						  
+						  
+						  
+						  
+				 
+
+
+	
+			
+						<div class="page-tools">
+							  
+							  
+							  
+										
+							  
+							 	 
+							 						 
+							  
+							 
+							  
+								
+								
+								
+								
+								
+								
+								
+
+
+
+
+
+
+	
+				<fieldset>
+					<ul>
+						<span id="fromPage" style="display:none;">searchresults</span>				
+						<span id="formName" style="display:none;">search_results_form</span>							
+					
+					
+						
+										
+							  
+							   
+									<!-- BEGIN: Unica Page Tag -->
+									<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+									<li><img src="/assets/img/btn.save-this-search.gif" width="80" height="25" class="button" alt="Save this Search" onClick='loginRedirectForPageTagging("ev=savethissearch")'/></li>
+									<!-- END: Unica Page Tag -->
+							  	
+							  					 
+						
+							
+					
+						
+												
+							<li><img src="/assets/img/btn.dl-citations.gif" width="80" height="25" alt="Download Citations" class="button" id="popup-download-searchresult-citations" /></li>
+						
+						
+						
+						<li><img src="/assets/img/popup-email-selected-results.gif" width="100" height="25" alt="Email" class="button" id="popup-email-selected-results" /></li>
+						<li><img src="/assets/img/btn.print.gif" width="60" height="25" alt="Print" class="button" onclick="window.print();return false;"/></li>
+						
+				  
+					
+						<li>
+								
+								 
+							</li>
+					</ul>
+				</fieldset>
+							  	
+						</div>
+
+						<div class="results-display">
+						  <fieldset class="display-options">
+							    <label for="search-results-p-page">
+							      Results per Page 
+							    </label>
+							  
+							    <select name="rowsPerPage" id="rowsPerPage" onchange="javascript:rowsPerPageAction(this)">
+											<option  value="10" >10</option>
+											<option   value="25" >25</option> 
+											<option  value="50" >50</option> 
+											<option  selected  value="100" >100</option> 
+								</select>	
+								 </fieldset>
+						 
+						  <span class="display-status">
+						    Showing
+						    1 -  1 of
+						    1 results
+						    
+						    
+						    
+						      
+						      
+						      
+						      
+						    
+
+
+
+
+
+
+<div class="ClearFix"><!-- do not remove --></div>
+						    
+						  </span>
+						</div>
+
+						<div class="results-actions">
+						  <fieldset class="sort">
+						    <label for="search-results-sort-by">
+						      Sort By: 
+						    </label>
+						    <select name="sortType"	id="sortType" onchange="javascript:sortAction(this)">
+						      <option value="" >Relevance
+						      </option>
+						      
+						      <option  value="desc_Publication Year"
+						          >Newest First
+						      </option>
+						      
+						      <option  value="asc_Publication Year"
+						          >Oldest First
+						      </option>
+						      <option value="asc_Publication Title"
+						          >Publication Title AZ
+						      </option>
+						      
+						      <option value="desc_Publication Title"
+						          >Publication Title ZA
+						      </option>
+						    </select>
+						
+						  </fieldset>
+						
+						  <p class="links" id="toggle-all-checkboxes">
+						    <span id="select-all" class="link SelectAll">
+						      Select All
+						    </span>
+						    |
+						    <span id="deselect-all" class="link DeSelectAll">
+						      Deselect All
+						    </span>
+						  </p>
+						</div>
+
+	
+		 
+
+<!-- END IF NO RECORDS WERE FOUND -->
+
+
+			<!-- BEGIN: HeaderWrapper -->		
+			
+
+
+
+
+
+
+           
+ 
+
+
+
+
+<ul class="Results">
+	 
+
+          
+          
+          
+            <li class="noAbstract">
+          
+        
+         
+               
+        
+        
+          
+        
+        
+        
+        
+                               
+        
+        
+                 
+        <div class="header">
+          <div class="select">
+              	  
+              
+            <input name="" type="checkbox" value="" 
+            	id="1649575"/>
+           
+          </div>
+          <div class="detail">
+            <h3>           
+              	
+              		
+             			
+             				
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1649575&queryText%3D%28%28%28%22Document+Title%22%3Atest%29+AND+%28%22Author%22%3Abelkin%29%29%29%26openedRefinements%3D*%26ranges%3D2006_2006_Publication_Year%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					ISA Based Functional <span class='snippet'>Test</span> Generation with Application to Self-<span class='snippet'>Test</span> of RISC Processors
+             					</a>
+             				
+             				
+             			
+            	
+              
+          </h3>
+          
+          <!-- If user preference is Title only -->
+          
+            <p>
+               
+              Belkin, V.V.; Sharshunov, S.G.;
+			  
+              
+               	<br />                
+                <a href='../xpl/mostRecentIssue.jsp?punumber=10974'>
+                  Design and Diagnostics of Electronic Circuits and systems, 2006 IEEE
+                </a>
+                
+              
+              
+               
+             
+                <br/>Digital Object Identifier:
+                
+             	<a href="http://dx.doi.org/10.1109/DDECS.2006.1649575" target="blank">10.1109/DDECS.2006.1649575</a>
+                
+             
+              
+                <br/>Publication Year:
+                 2006
+               
+                
+                
+                  , Page(s):
+                  
+                    73
+                    
+                      
+                        -
+                        74
+                        
+                       
+                        
+                		 </p>
+                      
+                      
+                        <p>
+                        
+                     	<span class="type">
+                      		IEEE Conferences
+                         </span>
+                      
+                 </p>
+                      
+                <p class="links">
+                 
+                 	                	
+                	<img alt="You have unlimited access to this document with your subscription." title="You have unlimited access to this document with your subscription."
+                      src="/assets/img/subid.gif" />
+               		
+                
+                 
+                
+                 
+                	
+                	
+                		
+                			
+                			
+                		  		<a  href='/search/srchabstract.jsp?tp=&arnumber=1649575&queryText%3D%28%28%28%22Document+Title%22%3Atest%29+AND+%28%22Author%22%3Abelkin%29%29%29%26openedRefinements%3D*%26ranges%3D2006_2006_Publication_Year%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+                		  		AbstractPlus
+                           	
+                		
+                      </a>
+                	
+                	
+                
+                
+                	
+                	
+                	
+                	
+                	
+                      &nbsp;|&nbsp;
+                    
+                    Full Text:  
+                      <a href="/stamp/stamp.jsp?tp=&arnumber=1649575">
+                       PDF</a>&nbsp;(117 KB)                     
+                	
+                
+                
+                
+                 
+            
+            	
+               
+               	
+ 			</p>
+              <!-- BEGIN OF OPEN URL -->
+               
+                <!-- END OF OPEN URL -->
+                  </div>
+               
+                  <div class="tools">
+                    <img width="80" height="25" alt="Quick Abstract" class="button quick-abstract RevealControl"
+                        src="/assets/img/btn.quick-abstract.collapsed.gif"                       
+                    />
+                  </div>
+                 
+                </div>
+               
+                <div class="abstract RevealContent" id="abstract-1">
+                  
+                    <p>
+                      This paper presents a method for functional test generation, which aims self-test of RISC processors and processor cores. The method allows developing compact and quite effective software based tests if only the instruction set architecture (ISA) or ISA together with some micro architecture features are known. We have successfully applied this methodology to test a RISC processor core
+                      
+                 
+                	
+                	
+                	
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1649575&queryText%3D%28%28%28%22Document+Title%22%3Atest%29+AND+%28%22Author%22%3Abelkin%29%29%29%26openedRefinements%3D*%26ranges%3D2006_2006_Publication_Year%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					<span class="more">Read More&#187;</span> </a>
+             				
+             				                	
+                	
+                
+                  </p>
+                  
+                  </div>
+                
+                </li>
+                
+
+   </ul>
+
+            
+			<!-- END: HeaderWrapper -->
+
+
+            
+            
+              
+              
+              
+              
+            
+
+
+
+
+
+
+<div class="ClearFix"><!-- do not remove --></div>
+            
+          </form>	
+					
+				</div>
+				
+			
+				<div class="column-side column-side-left">
+					<!-- BEGIN: Search Refinements -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  function searchWithin() {
+	 // 
+ 	var good_query = filterQuery("swr_query");
+ 	if (good_query) {
+ 		var swr_query = getFilteredTerms(document.getElementById("swr_query").value);
+ 	    var url_string =  '/search/searchresult.jsp?' + 
+    	document.getElementById("oqs").value +'&'
+    	+ 'searchWithin'+ '=' + swr_query;
+    	 url_string = url_string 
+    	 +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    window.location = encodeURI(url_string);
+    } else {
+        return;
+    }
+  }
+  </script>
+  
+  
+
+  
+  
+  
+  
+
+  <!-- BEGIN: Search Refinements -->
+  <div class="box navigation">
+    <div class="header"><h3>Refine/Expand Results</h3></div>
+
+    <fieldset class="search-within-results" >
+      <label for="swr_query">Search within results:</label>
+      <input type="text" id="swr_query" name="swr_query" />
+      <input type="image" alt="Search" onclick="searchWithin()"
+          src="/assets/img/btn.search.sm.gif"/>
+    	<div id="search_within_suggestions" class="autocomplete" style="display:none">
+        <script type='text/javascript'>//<![CDATA[
+new Ajax.Autocompleter(
+'swr_query', 'search_within_suggestions', '/search/typeahead',
+{ paramName: 'searchRefinementTerm', frequency: '1.0', minChars: 3, method: 'get', parameters: encodeURI('queryText=((("Document Title":test) AND ("Author":belkin)))&openedRefinements=*&ranges=2006_2006_Publication_Year&matchBoolean=true&rowsPerPage=100&searchField=Search All') + '&searchRefinementId=3344', afterUpdateElement: searchWithin  }
+);
+//]]></script>
+
+      </div>
+    </fieldset>
+
+    
+    
+  </div>	
+					<!-- BEGIN: Search Refinements -->	
+				</div>
+
+				<div class="column-side column-side-right">
+
+					
+
+
+
+
+
+		
+
+
+	<div class="box box-style-2">
+	
+	<div class="header">
+	<h3>Brought to you by</h3>
+	</div>
+		
+	<div class="section">
+	<h4>University Duisburg Essen</h4>
+												
+	<ul> 
+		<li>Your institute subscribes to:</li>
+		<li><B>IEEE/IET Electronic Library (IEL), IBM Journal of Research and Development</B></li>
+		
+		
+	    
+		<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+	    
+	    
+	    
+	</ul>
+	</div>
+	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a>
+	
+	</div>
+	
+
+
+
+
+
+
+	
+<br/>
+
+					
+					
+					<!-- BEGIN: Search History -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="box">
+<div class="header">
+<h3>SEARCHES FOR THIS SESSION</h3>
+
+</div>
+
+<div class="section">
+<ul>
+<input type="hidden" name="queryText"  /> 
+	
+	
+				<li><a href='/search/searchresult.jsp?queryText%3D%28%28%28%22Document+Title%22%3Atest%29+AND+%28%22Author%22%3Abelkin%29%29%29%26openedRefinements%3D*%26ranges%3D2006_2006_Publication_Year%26searchRefinementMaxResults%3D20%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>((("Document Title":test) AND ("Author":belkin))) (1)</a></li>
+	
+				
+			
+
+	
+	
+		<li><a href="/search/jsp/search/searchHistoryMore.jsp?pageAction=search">More Search History</a></li>
+	
+</ul>
+</div>
+</div>
+
+
+<div class="box">
+	<div class="header">
+		<h3>Additional Results</h3>
+	</div>
+	<div class="section">
+		<p><a href="/search/globalspecresults.jsp?queryText='(((&#034;Document Title&#034;:test) AND (&#034;Author&#034;:belkin)))'">Application Notes (beta)</a></p>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+function doSearch(pageaction, searchTerm)
+{
+	alert(searchTerm);
+	var url_string = '/search/searchresult.jsp?' + 'queryText'+'='+searchTerm+'matchBoolean=true';	
+alert(url_string);
+	location.href = url_string;
+}
+
+function gotoSearchHistory(actionURL)
+{
+	var url_string = actionURL +'pageAction=' + 'search' ;	
+	location.href = url_string;
+}
+		
+</script>	
+					<!-- BEGIN: Search History -->		
+					
+				
+			</div>
+
+			</div>
+
+		</div>
+		<!-- END: BodyWrapper -->
+		
+
+
+		<!-- BEGIN: FooterWrapper -->
+		
+			
+
+
+
+
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- BEGIN: FooterWrapper -->
+		<div id="FooterWrapper">
+
+			<div id="logo-inspec">
+				<img src="/assets/img/logo.inspec.gif" width="95" height="45" alt="Indexed by Inspec" />
+			</div>
+			
+			<p class="links">
+			<a href="/Xplorehelp/Help_Welcome_to_IEEE_Xplore.html" target="blank" onclick="ntptEventTag('ev=Help');">Help</a> | 
+			<a href="/xpl/techform.jsp" onclick="ntptEventTag('ev=ContactUs');">Contact Us</a> | 
+			<a href="http://www.ieee.org/portal/site/mainsite/menuitem.818c0c39e85ef176fb2275875bac26c8/index.jsp?&pName=corp_level1&path=about/documentation/copyright&file=privacy.xml&xsl=generic.xsl" target="blank" onclick="ntptEventTag('ev=Privacy');">Privacy &amp; Security</a> | 
+			<a href="/xpl/sitemap.jsp" onclick="ntptEventTag('ev=SiteMap');">Site Map</a> | 
+			<a target="blank" href="http://www.ieee.org" onclick="ntptEventTag('ev=external link&evLocation=exitmoreieeesites');">IEEE.org</a> | 
+			<a target="blank" href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html" onclick="ntptEventTag('ev=NondiscriminationPolicy');">Nondiscrimination Policy</a> | 
+			<a target="blank" href="/xpl/jsp/common/termsOfUse.jsp" onclick="ntptEventTag('ev=TermsofUse');">Terms of Use</a></p>
+			
+			<p>&#169; Copyright 2010 IEEE &#8211; All Rights Reserved</p>
+			
+			<!-- BEGIN: Unica Page Tag -->
+			<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+			<script language ="JavaScript">
+			var unValue =  '94870';
+			var NTPT_PGEXTRA="un="+unValue+"&ip="+'134.91.35.240';
+			</script>
+			<script language="JavaScript" src="/assets/js/ntpagetag.js"></script>
+			<!-- END: Unica Page Tag -->
+			
+		</div>
+		<!-- END: FooterWrapper -->
+			
+					
+			
+		<!-- END: FooterWrapper -->
+			
+	</div>
+	<!-- END: LayoutWrapper -->
+
+	<p class="JumpLink"><a href="#PageTop">Back to Top</a></p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<wrapperconfiguration>
+
+	<!-- numeric-entities: yes -->
+
+	<fetch method="POST" url="$url" encoding="UTF-8">
+		<form name="doi" value="$dois" />
+		<form name="fileFormat" value="PLAIN_TEXT" />
+		<form name="hasAbstract" value="CITATION_AND_ABSTRACT" />
+	</fetch>
+
+
+</wrapperconfiguration>

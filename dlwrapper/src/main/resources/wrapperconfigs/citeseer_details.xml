@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wrapperconfiguration>
+
+	<fetch method="GET" url="$url" encoding="utf8" />
+
+	<cleanOriginal>
+		<replace pattern="&amp;ldquo;" replacewith="" />
+		<replace pattern="&amp;rdquo;" replacewith="" />
+		<replace pattern="&amp;lquo;" replacewith="" />
+		<replace pattern="&amp;rquo;" replacewith="" />
+		<!-- &nbsp; -->
+		<replace pattern="&amp;nbsp;" replacewith=" " />
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+	</cleanOriginal>
+
+
+	<parse>
+
+		<extract key="abstract">
+			<collect separator=" ">
+				<iterate
+					xpath="//div[@id='center_content']/div[@id='primary_content']/div[@id='main_content']/p[@class='para4']/text()">
+					<text xpath="." />
+				</iterate>
+			</collect>
+		</extract>
+
+		<extract key="journal">
+			<collect separator=" ">
+				<iterate
+					xpath="//div[@id='center_content']/div[@id='primary_content']/div[@id='introduction']/div[@class='char_increased  char_indented char6 padded']/text()">
+						<text xpath="." />
+				</iterate>
+			</collect>
+		</extract>	
+		
+		<extract key="fulltext">
+			<iterate xpath="/html/body/div[@id='page_wrapper']/div[@id='center_content']/div[@id='primary_content']/div[@id='introduction']/div[@id='downloads']/a">
+				<url xpath="./@href" />
+			</iterate>
+		</extract>
+
+	</parse>
+
+</wrapperconfiguration>

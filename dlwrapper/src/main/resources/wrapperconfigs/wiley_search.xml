@@ -1,0 +1,53 @@
+<wrapperconfiguration>
+
+	<!-- numeric-entities: yes -->
+
+	<fetch method="POST" url="$url" encoding="UTF-8">
+		<form value="$query"/>
+		<param name="resultsPerPage" value="$maxResults" />
+		<param name="start" value="1" />
+		<form name="inTheLastList" value="6" />
+		<form value="$yearRange" />
+	</fetch>
+
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+
+		<replace pattern="&lt;style&gt;[^&lt;]+&lt;\/style&gt;"
+			replacewith="" />
+		<substitute pattern="\t" replacewith="" />
+		<substitute pattern="\n" replacewith="" />
+	</cleanOriginal>
+
+	<parse>
+	
+	<verify>
+			<expect regex=".*Search Results.*">
+				<text xpath="/html/body/div[@id='leftBorder']/div/div[@id='content']/div/div/h1"/>
+			</expect>
+	</verify>
+	
+
+		<!--iterate xpath="//div[@id='content']//div[@id='searchResultsList']/ol[@class='articles']/li/div[@class='citation article']"-->
+		<iterate xpath="//div[@id='content']//div[@id='searchResultsList']/ol[@class='articles']/li/div[2]">
+
+			<extract key="id">
+					<!--text xpath="./ul/li/a[text()='Abstract']/@href"-->
+					<text xpath="./a/@href">
+							<substitute pattern="(/doi/)|(/[a-z]+$)" replacewith=""/>
+					</text>
+			</extract>
+
+			<extract key="details">
+					<text xpath="./ul/li/a[text()='Abstract']/@href">
+							<substitute pattern="(/doi/)|(/abstract)" replacewith=""/>
+					</text>
+			</extract>
+
+		</iterate>
+	</parse>
+
+</wrapperconfiguration>

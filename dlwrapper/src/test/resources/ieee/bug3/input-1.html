@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+	
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<script>
+    function checkFormSubmit()
+	{   
+	   
+	   if( (document.forms.loginForm.username.value.length > 0) && (document.forms.loginForm.password.value.length > 0) )
+	   {
+	       return true;
+	   } 
+	   else
+	   {   
+	       alert("Please enter username and password.")
+	       return false;       
+	   }
+	   //return ( (document.forms.frm1.id.value.length > 0) && (document.forms.frm1.password.value.length > 0) );
+	    
+	}
+	
+ </script>
+
+
+<script language=javascript type='text/javascript'>
+  function toggleDivVisibility(divName) 
+  {
+    if (document.getElementById) { // DOM3 = IE5, NS6
+    
+       if(document.getElementById(divName).style.display == 'block')
+         document.getElementById(divName).style.display = 'none';
+       else
+         document.getElementById(divName).style.display = 'block';
+    }
+    else {
+       if (document.layers) { // Netscape 4
+          if(eval('document.'+divName+'.display') == 'block')
+            eval('document.'+divName+'.display') = 'none';
+          else
+            eval('document.'+divName+'.display') = 'block';
+       }
+       else { // IE 4
+          if(eval('document.all.'+divName+'.style.display') == 'block')
+            eval('document.all.'+divName+'.style.display') = 'none';
+          else
+            eval('document.all.'+divName+'.style.display') = 'block';
+       }
+    }
+  }
+  
+</script>
+	<meta name="Description" content="IEEE Xplore. Delivering full text access to the world's highest quality technical literature in engineering and technology.">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>IEEE Xplore - Home</title>
+	
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+<style type="text/css" media="screen, print">
+	@import url(/assets/css/master.css);
+	@import url(/assets/css/endeca.css);
+</style>
+<script type="text/javascript">
+	var ASSETS_RELATIVE_PATH = '/assets';
+	var SPECIAL_CHARACTER_MAPS = '&:.AND.,=:.EQ.,+:.PLS.,#:.HSH.,(:.LB.,):.RB.,":.QT.';
+	var SPECIAL_CHARACTERS = new Array();
+	var SPECIAL_CHARACTER_REPLACEMENTS = new Array();
+	var characterMaps = SPECIAL_CHARACTER_MAPS.split(",");
+	for (var i = 0; i < characterMaps.length; i++) {
+		parts = characterMaps[i].split(":");
+		SPECIAL_CHARACTERS[i] = parts[0];
+		SPECIAL_CHARACTER_REPLACEMENTS[i] = parts[1];
+	}
+	
+</script>
+<script type="text/javascript" src="/assets/js/lib.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.new.js"></script>
+
+<script type="text/javascript" src="/assets/js/search.new.js"></script>
+	
+</head>
+
+<body>
+
+	<p class="JumpLink" id="PageTop"><a href="#Body">Skip to Main Content</a></p>
+
+
+	<!-- BEGIN: LayoutWrapper -->
+	<div id="LayoutWrapper" class="Home">
+
+		<!-- BEGIN: HeaderWrapper -->
+		
+			
+		
+
+
+<div id="UtilityNav">
+	<p class="links">
+	<a href="http://www.ieee.org" id="u-home" target="_blank">IEEE.org</a> &#160;|&#160; 
+	<span>IEEE <em>Xplore</em> Digital Library</span> &#160;|&#160; 
+	<a href="http://standards.ieee.org" id="u-standards" target="_blank">IEEE Standards Association</a> &#160;|&#160;
+
+	<a href="http://spectrum.ieee.org" id="u-spectrum" target="_blank">Spectrum Online</a> &#160;|&#160; 
+	<a href="http://www.ieee.org/web/services/general/sitemap.html" id="u-more" target="_blank">More IEEE Sites</a>
+	</p>
+</div>
+
+<div id="HeaderWrapper">
+<!-- BEGIN: HeaderWrapper -->
+<div id="HeaderMetaNavigation">
+	
+</div>
+		<div id="Header">
+
+				<div id="logo-xplore">
+					<a href="/"><img src="/assets/img/logo.xplore.gif" width="230" height="45" alt="IEEE Xplore Digital Library" /></a>
+				</div>
+
+				<div id="logo-ieee">
+					<img src="/assets/img/logo.ieee.gif" alt="IEEE" />
+				</div>
+		
+				<p class="byline">Delivering full text access to the world's highest quality technical literature in engineering and technology</p>
+	
+		</div>
+
+</div>
+<!-- END: HeaderWrapper -->
+
+		<!-- END: HeaderWrapper -->
+		<!-- BEGIN: ToolBarWrapper -->
+		
+			
+		
+
+
+
+
+
+
+<div id="ToolBarWrapper">
+
+	<div id="ToolBar">
+	
+	
+	
+
+
+
+
+
+	
+
+<ul id="UserTools" class="DHTMLMenu">	
+	<li id="my-account">
+		<span>My Settings</span>
+
+		<div class="SubMenu">
+			<ul>
+							
+				<li><a href="/xpl/tocalerts_list.jsp">Alerts</a></li>			
+				<li><a href="/articleSale/purchaseHistory.jsp">Purchase History</a></li>
+				
+				<li><a href="/Xplore/login.jsp?url=search/savedsearches">Saved Searches</a></li>
+				
+				
+					
+						
+						
+							<li><a href="/Xplore/login.jsp?tp=&fromGateway=true&">Sign In</a></li>
+						
+									
+					
+				<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+
+				
+			</ul>
+		</div>
+	</li>
+
+	<li id="cart">
+		<a href="http://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=InvokeMethod&SWEService=IEEEAddToCartService&SWEMethod=GoToView&mem_type=Customer&Join=y&src=0&HideNew=N&SessionId=lvvmM7Nfyl1hzBZ3hq41CZVLvypc2j2RNfL7t2GhGhYJyswdHhGt!-1079424719!1283181855207" target="cartwindow">Cart</a>
+	</li>
+</ul>				
+
+	
+
+
+<div class="support">
+	<a href="/xpl/termsOfUse.jsp"><span>Terms of Use</span></a>&nbsp;|	
+	<a href="/xpl/feedback.jsp"><span>Feedback</span></a>&nbsp;&nbsp;	
+	<a>
+
+		<img src="/assets/img/icon.support.gif" width="24" height="20" alt="" class="icon" />
+		<a href="/Xplorehelp/Help_start.html" target="blank"><span>Help</span></a>
+	</a>           
+</div>
+
+			 <table style='float: right; position: relative;' border='0' cellspacing='0' cellpadding='0'>
+	
+<td>
+  <div id="SignIn" class="DHTMLMenu">
+
+    <a href="/servlet/Login?logout=/Xplore/guesthome.jsp" border="0"><h3><font color='white'>Sign Out</font></h3></a>
+
+       
+  </div>
+</td>			
+
+</table>
+	
+	</div>
+
+</div>
+
+		
+		<!-- END: ToolBarWrapper -->
+
+		<hr />
+
+		<!-- BEGIN: BodyWrapper -->
+
+		<div id="BodyWrapper">
+
+			<div id="Body">
+		
+
+				<div class="column-side column-side-left">
+
+					<div id="Browse">
+						<h3><a href="/xpl/browseHome.jsp">Browse</a></h3>
+						<div class="content">
+							
+							
+<ul class="button" id="browse-revealed-menu">
+
+	<li><a href="/xpl/periodicals.jsp">Journals & Magazines</a></li>
+	<li><a href="/xpl/conferences.jsp">Conference Proceedings</a></li>
+	<li><a href="/xpl/standards.jsp">Standards</a></li>
+	<li><a href="/xpl/bkBrowse.jsp">Books</a></li>
+	<li><a href="/xpl/modulebrowse.jsp">Educational Courses</a></li>
+	<li><a href="/techsurvey/jsp/ts_browse.jsp">Technology Surveys</a></li>
+
+</ul>
+							
+						</div>
+					</div>
+					
+					
+					
+					
+					 
+							
+
+
+
+
+		
+
+
+	<div class="box box-style-2">
+	
+	<div class="header">
+	<h3>Brought to you by</h3>
+	</div>
+		
+	<div class="section">
+	<h4>University Duisburg Essen</h4>
+
+												
+	<ul> 
+		<li>Your institute subscribes to:</li>
+		<li><B>IEEE/IET Electronic Library (IEL)</B></li>
+		
+	    
+		<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+	    
+	    
+	    
+	</ul>
+	</div>
+	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a>
+
+	
+	</div>
+	
+
+
+
+
+
+
+	
+<br/>
+					 
+					 
+				    																							
+					
+					<div class="box box-style-2">
+						<div class="header">
+							<h3>Quick Links</h3>
+						</div>
+						<div class="section">
+							<p><span class="more"><a href="/xpl/browsePopular.jsp">What's Popular? <span>&#187;</span></a></span></p>
+
+							<p><span class="more"><a href="/xpl/mostRecentWeeklyUpdatedPeriodicalsIssues.jsp">What's New? <span>&#187;</span></a></span></p>
+							<p><span class="more"><a href="/xpl/tocalerts_list.jsp">Manage Alerts <span>&#187;</span></a></span></p>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="column-main">
+
+					
+					<div id="search-field">
+						<fieldset class="search-field">
+							<p class="lead"><strong>Search  
+							
+							2,709,967 
+							documents</strong></p>
+							
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/js/Xplore.js"></script>
+
+
+<script>
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }
+  function showHideDiv(div,show) {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }  
+  function addFilter(filter,checked) { 
+	  if(checked)
+	  {
+		  document.getElementById("newsearch").value="partialPref"
+	  	  document.getElementById("filter").value=filter;
+		// put a large number so that it would not hit the server
+		  acompleter.options.minChars=3000;
+		  document.getElementById('search_suggestions').style.visibility = 'hidden';
+	  }
+	  else
+	  {
+		  document.getElementById("filter").value="";
+		  acompleter.options.minChars=3;
+		  document.getElementById('search_suggestions').style.visibility = 'visible';
+	  }
+  }
+	function submitForm() {
+		document.forms["search_form"].submit();
+	}  
+</script>
+		
+<form id="search_form" name="search_form"  action='/search/searchresult.jsp' method="get"
+		onSubmit="return filterQuery('queryText');">
+
+<fieldset id="search-fieldset">
+<div class="field"><label for="search-query" class="superfluous">Search Term(s)</label> 
+<span class="input-wrap">
+
+<input type="hidden" name="newsearch" id="newsearch" value="true"/>
+
+	
+<input type="text" name="queryText" id="queryText"  value="" />
+</span>
+
+    <div id="search_suggestions" class="autocomplete">
+    <script>
+    	var acompleter=new Ajax.Autocompleter('queryText', 'search_suggestions', '/search/typeahead',
+    		{ paramName: 'searchRefinementTerm', frequency: '0.8', minChars: 3, method: 'get',
+					parameters: 'searchRefinementMaxResults=20', 
+					afterUpdateElement: "return filterQuery('queryText')"
+    		});
+    </script>
+    </div>
+
+<input type="image" name=""
+	src="/assets/img/btn.search.gif" alt="Search" class="form-action" /></div>
+<div class="tools">
+
+
+
+<a href="/search/advsearch.jsp">Advanced Search</a> &nbsp;|&nbsp;
+
+
+
+
+
+	
+	
+		<a href="#" onClick='loginRedirect()'>Preferences</a>&nbsp;|&nbsp;
+
+
+
+
+ <span id="search-tips-popup">Search Tips</span>
+
+
+&nbsp;
+
+</fieldset>
+</form>
+
+						</fieldset>
+					</div>
+
+					
+					<div class="tabbed-content">
+						<ul class="tab-menu">
+							<li class="selected"><a href="#highlights"><span>Highlights</span></a></li>
+						</ul>
+						
+						<div class="home-page-feature" id="highlights">
+						  
+						  
+						
+							<div class="content selected" id="highlight1">
+								<img src='/images/highlight_image/highlight_301.jpg' width="200" height="135" alt="" class="pic" />
+								<div class="text">
+
+									<h3>IEEE Announces New Journals for 2011</h3>
+									<p><p>IEEE will be launching three new IEEE journals in 2011, covering a wide range of technologies:</p>
+<ul>
+<li>IEEE Journal on Emerging and Selected Topics in Circuits and Systems </li>
+<li>IEEE Journal of Photovoltaics </li>
+<li>IEEE Transactions on Terahertz Science and Technology </li>
+</ul>
+<p>&raquo;<a href="http://bit.ly/blFKGh" target="_blank">Learn more about these new journals</a></p></p>	
+								</div>
+
+							</div>
+						
+							<div class="content selected" id="highlight2">
+								<img src='/images/highlight_image/highlight_302.jpg' width="200" height="135" alt="" class="pic" />
+								<div class="text">
+									<h3>Enhanced Search Tools Help You Search Smarter</h3>
+									<p><p>Find relevant information easier with two key features from IEEE <em>Xplore</em>:</p>
+<ul>
+
+<li>Smart &ldquo;Refine/Expand Results&rdquo; Module: Modify your search by multiple facets to find exactly what you&rsquo;re looking for </li>
+<li>Functional Search Breadcrumb Trail: Easily remove search elements to expand your search for more results </li>
+</ul>
+<p>&raquo;<a href="http://bit.ly/9CgxcC" target="_blank">Learn more tips with the Searching with IEEE <em>Xplore</em> tutorial</a>&nbsp;(3:41 min.)<br />&raquo;<a href="http://bit.ly/cUFutI" target="_blank">View other self-paced IEEE <em>Xplore</em> tutorials</a></p></p>	
+								</div>
+
+							</div>
+						
+							<div class="content selected" id="highlight3">
+								<img src='/images/highlight_image/highlight_303.jpg' width="200" height="135" alt="" class="pic" />
+								<div class="text">
+									<h3>IEEE Leads the Way in Smart Grid Research</h3>
+									<p><p>Read about smart grid&rsquo;s impact on the world, opportunities for smart grid innovation, and how IEEE can help you stay ahead of the industry.<br />&raquo;<a href="http://bit.ly/ab9r86" target="_blank">Download the new IEEE Smart Grid white paper</a><br /><br />Stay on top of smart grid technology with the only IEEE Standards subscription for organizations that provides users with key foundational research for smart grid technology.<br />&raquo;<a href="http://bit.ly/9ahWbz" target="_blank">Learn more about the new IEEE Foundations on Smart Grid standards online subscription for organizations</a><br /><br />&raquo;<a href="http://bit.ly/ceTdYv">Search for smart grid research in IEEE <em>Xplore</em></a></p></p>	
+								</div>
+
+							</div>
+						
+							<div class="content selected" id="highlight4">
+								<img src='/images/highlight_image/highlight_304.jpg' width="200" height="135" alt="" class="pic" />
+								<div class="text">
+									<h3>IEEE <i>Xplore</i> Article Focus: Oil Spill Prevention Technology</h3>
+									<p><p>A leader in petroleum and natural gas research, IEEE has quality research on the prevention, clean up and containment of oil spills:</p>
+
+<ul>
+<li><a href="http://bit.ly/cBE81s">Oil Spill Contingency Planning using Laser Fluorosensors and Web-Based GIS</a>, IEEE OCEANS Conference, September 2008</li>
+<li><a href="http://bit.ly/d85xIf">Application of Marine Oil Spill Surveillance by Satellite Remote Sensing</a>, Conference on Environmental Science and Information Application Technology, July 2009</li>
+</ul>
+<p>&raquo;<a href="http://bit.ly/ayONa6">Search for more oil spill prevention research in IEEE <em>Xplore</em></a></p></p>	
+								</div>
+							</div>
+						
+							<div class="content selected" id="highlight5">
+								<img src='/images/highlight_image/highlight_305.jpg' width="200" height="135" alt="" class="pic" />
+
+								<div class="text">
+									<h3>Get the Most from IEEE Membership with myIEEE</h3>
+									<p><p>Your gateway to IEEE membership, my IEEE lets you connect with your local Section or Chapter, view the latest news and events, link to IEEE Societies, and much more.<br /><br />The new myDesktop lets you personalize your myIEEE experience with:</p>
+<ul>
+<li>Gadgets&mdash;Customize myIEEE modules and tools for your own membership needs</li>
+<li>Layout&mdash;Select multiple layout options with drag-and-drop gadget placement</li>
+<li>Themes&mdash;Define your own myIEEE experience with several technology-based themes</li>
+
+<li>RSS Feeds&mdash;Import feeds from IEEE and other external content sources</li>
+</ul>
+<p><strong>Stay connected to IEEE.<br /></strong>Use your Web Account to log in at <a title="www.myieee.org" href="http://bit.ly/a196qJ" target="_blank">www.myieee.org</a></p></p>	
+								</div>
+							</div>
+						
+							<div class="footer">
+								<h4>More Highlights</h4>
+								<ul class="pagination">
+
+									
+											<li><a href="#highlight1">1</a></li>				
+									
+											<li><a href="#highlight2">2</a></li>				
+									
+											<li><a href="#highlight3">3</a></li>				
+									
+											<li><a href="#highlight4">4</a></li>				
+									
+											<li><a href="#highlight5">5</a></li>				
+									
+								</ul>
+							</div>
+						</div>
+					</div>			
+				</div>
+
+
+			</div>
+
+		</div>
+		<!-- END: BodyWrapper -->
+
+		<hr />
+		
+
+
+
+		<!-- BEGIN: FooterWrapper -->
+		<div id="FooterWrapper">
+
+			<div id="logo-inspec">
+				<img src="/assets/img/logo.inspec.gif" width="95" height="45" alt="Indexed by Inspec" />
+			</div>
+			<p class="links"><a href="/Xplorehelp/Help_Welcome_to_IEEE_Xplore.html" target="blank">Help</a> | <a href="/xpl/techform.jsp">Contact Us</a> | <a href="http://www.ieee.org/portal/site/mainsite/menuitem.818c0c39e85ef176fb2275875bac26c8/index.jsp?&pName=corp_level1&path=about/documentation/copyright&file=privacy.xml&xsl=generic.xsl" target="blank">Privacy &amp; Security</a> | <a href="/xpl/sitemap.jsp">Site Map</a> | <a target="blank" href="http://www.ieee.org">IEEE.org</a> | <a target="blank" href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html">Nondiscrimination Policy</a> | <a target="blank" href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a></p>
+
+			<p>&#169; Copyright 2010 IEEE &#8211; All Rights Reserved</p>
+
+		</div>
+		<!-- END: FooterWrapper -->
+			
+			
+</body>
+</html>
+

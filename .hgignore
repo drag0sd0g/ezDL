@@ -1,0 +1,34 @@
+syntax: glob
+.classpath
+.project
+.settings
+target
+.metadata
+orb.db
+.DS_Store
+.orig
+*.log
+*~
+
+syntax: regexp
+^bin$
+\.orig\..*$
+\.orig$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+
+syntax: regexp
+^logging\.properties$
+syntax: regexp
+^activemq-data$
+syntax: regexp
+\.aux$
+syntax: regexp
+\.toc$
+syntax: regexp
+^src/main/latex/developer-guide/developer-guide\.pdf$
+syntax: regexp
+^src/main/latex/operator-guide/operator-guide\.pdf$
+syntax: regexp
+^src/main/latex/user-guide/user-guide\.pdf$

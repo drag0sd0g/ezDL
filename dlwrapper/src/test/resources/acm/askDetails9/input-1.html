@@ -1,0 +1,4559 @@
+
+<!doctype html>
+
+
+<head><script type="text/javascript">_cf_loadingtexthtml="<img alt=' ' src='/CFIDE/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/CFIDE/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='51E5F6BD1B2A64458259105A5149CE66';</script><script type="text/javascript" src="/CFIDE/scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/masks.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/cfformhistory.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/package/cfrichtexteditor.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/FCKeditor/fckeditor.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/yui/animation/animation-min.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/adapter/yui/ext-yui-adapter.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/ext-core.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/package/resizable.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/package/dragdrop/dragdrop.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/package/util.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/build/state/State-min.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/package/widget-core.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/ext/package/dialog/dialogs.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/ajax/package/cfwindow.js"></script>
+<link rel="stylesheet" type="text/css" href="/CFIDE/scripts/ajax/resources/ext/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/CFIDE/scripts/ajax/resources/cf/cf.css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/dl.css" />
+
+
+
+<title>Advances in XML retrieval</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #1d4d0f;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smallerer-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .65em;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.small-textb {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; font-weight: bold;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	.instr-text {font-family: Arial, Helvetica, sans-serif;
+		color:#666666; font-size: .83em;}
+		
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	.text16 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 16px;}
+		
+	.text14 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 14px;}
+	
+	.text12 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 12px;}
+		
+	.text10 {font-family: Arial, Helvetica, sans-serif;
+	    color:#000000; font-size: 12px;}
+		
+	.text9 {font-family: Arial, Helvetica, sans-serif;
+	   color:#000000; font-size: 12px;}
+	
+	.error-text {color:red;}
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+		#side {
+			width: 10px;
+			float: left;
+			margin-left: -1px;
+			padding: 2px;
+			}
+							
+		#content {
+			padding: 2px;
+			margin-left: 25px;
+			
+		        
+		        }
+	 .fulltext_lnk {border:0px;
+	 				 margin-right: 2px;
+					 vertical-align:baseline;
+	 				}
+	 
+	  .leftcoltab { 
+		  position:relative;
+		  top:5px;
+		  left:5px;
+		  float:left;
+		  width:530px;  /* for IE5/WIN */
+		  width:520px; /* actual value */
+		  margin:0 0 0px 0;
+		  padding:5px;
+		  z-index:100;
+		  }
+	  .rightcoltab {
+		  position:relative;
+		  top:5px;
+		  right:0px;
+		  float:right;
+		  margin:0 0px 0 0;
+		  padding:5px;
+		  width:350px;
+		  z-index:99;
+		  }
+	  .centercoltab {
+		  position:absolute;
+		  padding:0 0px;
+		  }
+
+  --></style>
+ 
+
+ 
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<script type="text/javascript">
+ function expandcollapse(anchor,whichone) {
+	 var inner = document.getElementById(anchor);
+	 var theshow = "toShow" + whichone;
+ 	 var thehide = "toHide" + whichone;
+	 var span = document.getElementById(theshow);
+     span.style.display = (span.style.display=='inline')?'none':'inline';
+     var span = document.getElementById(thehide);
+     span.style.display = (span.style.display=='none')?'inline':'none';
+     inner.innerHTML = (inner.innerHTML=='collapse')?'expand':'collapse';
+    }
+
+  function setDiv() {
+	var m = document.getElementById('divmain');
+	var mh = m.offsetHeight;
+	var t = document.getElementById('divtools');
+	var th = t.offsetHeight;
+	var tg = document.getElementById('divtags');
+	var tgh = tg.offsetHeight;
+	var calcheight = mh - th;
+	if (tgh > calcheight  ){
+	  var x = (th + tgh) - mh;
+	  if ( (th + tgh) - mh < 65) {
+	  }
+	  else {
+		 document.getElementById('divtags').innerHTML = "<p align='left' style='margin-top:0px'><span class='medium-text' style='padding-right:10px;'><strong>Tags:</strong></span><a href=results.cfm?query=%22experimentation%22&querydisp=%22experimentation%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> experimentation </span></a><a href=results.cfm?query=%22measurement%22&querydisp=%22measurement%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> measurement </span></a><a href=results.cfm?query=%22performance%22&querydisp=%22performance%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> performance </span></a><a href=\"javascript:ColdFusion.Window.show('thetags')\" class='small-link-text'>more tags</a></p>"; 
+		 var tg = document.getElementById('divtags');
+		 var tgh = tg.offsetHeight;
+		 tg.style.height = tgh  + 'px';
+	  }
+	}
+	else {
+		tg.style.height = calcheight + 'px';
+		document.getElementById('divtags').innerHTML = "<p align='left' style='margin-top:0px'><span class='medium-text' style='padding-right:10px;'><strong>Tags:</strong></span><a href=results.cfm?query=%22experimentation%22&querydisp=%22experimentation%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> experimentation </span></a><a href=results.cfm?query=%22measurement%22&querydisp=%22measurement%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> measurement </span></a><a href=results.cfm?query=%22performance%22&querydisp=%22performance%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> performance </span></a><a href=results.cfm?query=%22retrieval%22&querydisp=%22retrieval%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> retrieval </span></a><a href=results.cfm?query=%22semantic%20web%22&querydisp=%22semantic%20web%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> semantic web </span></a><a href=results.cfm?query=%22system%20evaluation%22&querydisp=%22system%20evaluation%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> system evaluation </span></a><a href=results.cfm?query=%22systems%20and%20software%22&querydisp=%22systems%20and%20software%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> systems and software </span></a><a href=results.cfm?query=%22test%20collections%22&querydisp=%22test%20collections%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> test collections </span></a><a href=results.cfm?query=%22xml%20retrieval%22&querydisp=%22xml%20retrieval%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> xml retrieval </span></a></p>";
+	}
+
+//  do I need to check after I resize to be sure I didn't go too big?
+//	var tg2 = document.getElementById('divtags');
+//	var tgh2 = tg.offsetHeight;	
+//	if (tgh2 > mh + 65) {
+//	  var y = mh + 65;
+//	  alert('expanded too much ' + tgh2 + ' should be at most ' + y);
+//	  tg.style.height = y + 'px';
+//	  document.getElementById('divtags').innerHTML = "<p align='left' style='margin-top:0px'><span class='medium-text' style='padding-right:10px;'><strong>Tags:</strong></span><a href=results.cfm?query=%22experimentation%22&querydisp=%22experimentation%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> experimentation </span></a><a href=results.cfm?query=%22measurement%22&querydisp=%22measurement%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> measurement </span></a><a href=results.cfm?query=%22performance%22&querydisp=%22performance%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> performance </span></a><a href=results.cfm?query=%22retrieval%22&querydisp=%22retrieval%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> retrieval </span></a><a href=results.cfm?query=%22semantic%20web%22&querydisp=%22semantic%20web%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> semantic web </span></a><a href=results.cfm?query=%22system%20evaluation%22&querydisp=%22system%20evaluation%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> system evaluation </span></a><a href=results.cfm?query=%22systems%20and%20software%22&querydisp=%22systems%20and%20software%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> systems and software </span></a><a href=results.cfm?query=%22test%20collections%22&querydisp=%22test%20collections%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#000000'> test collections </span></a><a href=results.cfm?query=%22xml%20retrieval%22&querydisp=%22xml%20retrieval%22&termshow=matchall&CFID=116491892&CFTOKEN=77104786 target=_self><span class='small-text' style='line-height: 140%; padding-right: 5px; color:#356b20'> xml retrieval </span></a></p>";
+//	}
+
+  }
+</script>
+
+<script type="text/javascript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+
+
+
+
+
+
+
+
+	
+	
+  
+
+
+
+	
+
+
+
+
+<meta name="citation_conference" content="Proceedings of the 2006 international workshop on Research issues in digital libraries">
+<meta name="citation_publisher" content="ACM">
+<meta name="citation_authors" content="Fuhr, Norbert; Lalmas, Mounia">
+<meta name="citation_title" content="Advances in XML retrieval: the INEX initiative">
+<meta name="citation_date" content="12/12/2006">
+<meta name="citation_isbn" content="1-59593-608-4">
+<meta name="citation_firstpage" content="16">
+<meta name="citation_doi" content="10.1145/1364742.1364763">
+<meta name="citation_abstract_html_url" content="http://portal.acm.org/citation.cfm?id=1364742.1364763">
+<meta name="citation_pdf_url" content="http://portal.acm.org/ft_gateway.cfm?id=1364763&type=pdf">
+<meta name="citation_keywords" content="XML retrieval; retrieval; semantic web; system evaluation; test collections">
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFFORM');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFDIV');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFTEXTAREA');
+</script>
+<script type='text/javascript' src='/cfformprotect/js/mouseMovement.js'></script><script type='text/javascript' src='/cfformprotect/js/usedKeyboard.js'></script>
+<script type="text/javascript">
+	if (window.ColdFusion) ColdFusion.required['username']=true;
+</script>
+
+<script type="text/javascript">
+	if (window.ColdFusion) ColdFusion.required['email']=true;
+</script>
+
+<script type="text/javascript">
+	if (window.ColdFusion) ColdFusion.required['body_text']=true;
+</script>
+<script type="text/javascript">
+<!--
+    _CF_submit_status["edit_form"]=null;
+    _CF_checkedit_form = function(_CF_this)
+    {
+        //return false if form submit button has already been pressed once
+        if( _CF_submit_status[_CF_this.name] == "submitting" ) return false;
+        //reset on submit
+        _CF_submit_status[_CF_this.name] = "submitting";
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element Creator required check
+        if( !_CF_hasValue(_CF_this['Creator'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "Creator", _CF_this['Creator'].value, "Name is required.");
+            _CF_error_exists = true;
+        }
+
+        //form element email required check
+        if( _CF_hasValue(_CF_this['email'], "TEXT", false ) )
+        {
+            //form element email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['email'].value, true))
+            {
+                _CF_onError(_CF_this, "email", _CF_this['email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "email", _CF_this['email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+        //form element body_text required check
+        if( !_CF_hasValue(_CF_this['body_text'], "TEXTAREA", false ) )
+        {
+            _CF_onError(_CF_this, "body_text", _CF_this['body_text'].value, "Please enter your Comment, (HTML is not allowed)");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+                _CF_submit_status[_CF_this.name] = null;
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFWINDOW');
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104462=function()
+	{
+		_cf_bind_init_1291072104463=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'theguide_body','bindExpr':['whatisguide.cfm']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1291072104463);var _cf_window=ColdFusion.Window.create('theguide','The ACM Guide to Computing Literature','whatisguide.cfm',{ modal:false, closable:true, divid:'cf_window1291072104461', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104462);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104465=function()
+	{
+		_cf_bind_init_1291072104466=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'thetags_body','bindExpr':['showthetags.cfm?id=1364763']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1291072104466);var _cf_window=ColdFusion.Window.create('thetags','All Tags','showthetags.cfm?id=1364763',{ modal:false, closable:true, divid:'cf_window1291072104464', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104465);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104468=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theformats','Export Formats','',{ modal:false, closable:true, divid:'cf_window1291072104467', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:250, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104468);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104470=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theexplaination','','',{ modal:false, closable:true, divid:'cf_window1291072104469', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104470);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104472=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theservices','','',{ modal:false, closable:true, divid:'cf_window1291072104471', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104472);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1291072104474=function()
+	{
+		_cf_bind_init_1291072104475=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'savetobinder_body','bindExpr':['savetobinder.cfm?id=1364763']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1291072104475);var _cf_window=ColdFusion.Window.create('savetobinder','Save to Binder','savetobinder.cfm?id=1364763',{ modal:false, closable:true, divid:'cf_window1291072104473', draggable:true, resizable:true, fixedcenter:true, width:600, height:600, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false, _cf_refreshOnShow:true});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1291072104474);
+</script>
+</head>
+
+<body style="text-align:center" onLoad="window.focus();">
+
+<script type="text/javascript">
+						addthis_pub             = 'acm'; 
+						//addthis_logo            = 'http://www.addthis.com/images/yourlogo.png';
+						addthis_logo            = 'http://portal.acm.org/images/ACM_transparent.png';
+						addthis_logo_background = 'c2d5fc';
+						addthis_logo_color      = '000000';
+						addthis_brand           = 'Citation Page';
+						addthis_options         = 'favorites, email, slashdot, citeulike, digg, delicious, twitter, myspace, facebook, google, more';
+						</script>
+                        
+<script src='AC_RunActiveContent.js' type="text/javascript"></script>
+
+
+
+
+
+	 
+	
+
+
+
+
+    
+        
+        
+        
+            
+            
+                
+                
+             
+          
+    
+        
+        
+        
+            
+        
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+        
+    
+        
+        
+        
+            
+            
+          
+    
+        
+        
+        
+            
+            
+          
+    
+
+
+
+<div style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+<a id="CIT"></a>
+
+
+	
+		
+				
+				
+					
+				  
+		
+	 
+
+
+
+
+
+
+	
+
+
+	
+
+
+<table style="table-layout:fixed; padding-top:5px; border:0px; width:100%; border-collapse:collapse;">
+	<tr style="vertical-align:top">
+		
+		<td style="padding-left: 5px; padding-right:10px; padding-bottom:0px; width:300px" class="small-link-text"  ><img src="http://portal.acm.org/images/ACMDL_Logo.jpg" alt="ACM DL" style="border:0px" usemap="#port" />
+		</td>
+        <td style="padding-left: 5px; padding-right:10px; padding-bottom:0px; width:263px" class="small-link-text">
+        	<table style="width:100%; border-collapse:collapse; padding:0px">
+			<tr><td style="text-align:center">
+				
+                  
+                  
+                            <div style="margin:0px auto;color:#356b20;font-size:10pt;line-height:10%;"> </div>
+                    
+					</td>		
+			</tr>
+			</table> 
+        </td>
+		<td style="padding-top: 0px; padding-left: 0px; padding-bottom:0px; text-align:right;" class="small-link-text">
+			 <p style="margin-top:0px; margin-bottom:10px;">
+					
+							
+                            <a href="https://portal.acm.org/signin.cfm?cfid=116491892&amp;cftoken=77104786" class="small-link-text">SIGN IN</a>
+                            &nbsp;&nbsp;<a href="https://portal.acm.org/signin.cfm?cfid=116491892&amp;cftoken=77104786"  class="small-link-text">SIGN UP</a>
+						
+			 </p>
+            
+			<table style="padding: 5px; border-collapse:collapse; float:right">
+				
+				
+							
+								  
+                            
+                            
+                                 
+                            
+                            
+                            <tr>
+                            <td class="small-link-text" style="text-align:right">
+                            <form name="qiksearch" action="results.cfm?h=1&amp;cfid=116491892&amp;cftoken=77104786" method="post">
+                           
+                           
+                            
+                                     
+                                        
+                                    
+                                    
+                                    
+                                    <span style="margin-left:0px"><label><input type="text" name="query" size="34" value=" " /></label>&nbsp;
+                                    <input style="vertical-align:top;" type="image" alt="Search" name="Go" src="http://portal.acm.org/images/search_small.jpg" />
+                                    
+                                    </span>
+							  </form>
+                                </td>
+                            </tr>
+                          
+				  
+			</table>
+
+			
+			
+		</td>
+
+	</tr>
+    
+    
+    <tr><td colspan="3" class="small-link-text" style="padding-bottom:5px; padding-top:0px; text-align:center">
+		<div style="margin:0px auto;color:#356b20;line-height:10%;"> </div>
+         
+         </td>
+    </tr>
+    </table>
+	
+<map name="port" id="port" > 
+  <area shape="rect" coords="1,1,60,50" href="http://www.acm.org/" alt="ACM Home Page" />
+  <area shape="rect" coords="65,1,275,68" href="http://portal.acm.org/dl.cfm?CFID=116491892&CFTOKEN=77104786" alt="ACM Digital Library Home Page" />
+</map>
+
+
+
+
+
+
+
+
+	
+    
+    
+  	
+	  	
+    	
+      
+
+
+                                            
+
+
+<table style="table-layout:fixed; padding-bottom:10px; width:100%; padding:0px;">
+	<tr style="vertical-align:top">
+		<td style="padding-right:10px; text-align:left" class="small-link-text">
+        	<div id="divmain" style="border:1px solid #356b20;">
+				 
+				<div class="large-text" style="text-align:left; margin-left:2px;margin-bottom:5px;">
+					
+                    	<h1 class="mediumb-text" style="margin-top:0px; margin-bottom:0px;"><strong>Advances in XML retrieval: the INEX initiative</strong></h1>
+                        
+					
+                </div>
+                  
+
+
+
+	
+            
+    
+
+
+
+
+<table class="medium-text" style="border-collapse:collapse; padding:0px;">
+
+<col style="width:540px" />
+
+<tr style="vertical-align:top">
+  <td>
+    <table style="border-collapse:collapse; padding:2px;" class="medium-text">
+      <col style="width:80px;" />
+      <col style="width:auto" />
+      <tr style="vertical-align:top">
+        
+          <td style="white-space:nowrap">Full Text:</td>
+          <td>
+               <img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+               <a href="purchase.cfm?id=1364763&CFID=116491892&CFTOKEN=77104786" title="Buy this Article"><img src="img/shopping-cart16.gif" border="0" alt="Buy this Article" hspace="3" />Buy this Article</a>
+               
+			
+                
+          </td>
+        
+      </tr>
+    </table>
+
+	
+        <table style="margin-top: 10px; border-collapse:collapse; padding:2px;" class="medium-text">
+            <col style="width:80px" />
+            
+            
+            <tr>
+            <td  valign="top" nowrap="nowrap">
+             
+               
+               							
+                      Authors:
+                
+              
+            </td>
+            <td valign="top" nowrap="nowrap">
+                
+                    <a href="author_page.cfm?id=81100362356&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=116491892&amp;cftoken=77104786" title="Author Profile Page" target="_self">Norbert Fuhr</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                    
+                        <small>University of Duisburg-Essen, Germany</small>
+                      
+                	
+            </td>
+            </tr>
+            
+            <tr>
+            <td  valign="top" nowrap="nowrap">
+             
+            </td>
+            <td valign="top" nowrap="nowrap">
+                
+                    <a href="author_page.cfm?id=81100072366&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=116491892&amp;cftoken=77104786" title="Author Profile Page" target="_self">Mounia Lalmas</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                    
+                        <small>Queen Mary University of London, UK</small>
+                      
+                	
+            </td>
+            </tr>
+            
+        </table>
+    
+    
+        <table style="margin-top: 10px" border="0" class="medium-text" cellpadding="2" cellspacing="0">
+            <tr><td><table border="0" class="medium-text" cellpadding="1" cellspacing="0">
+
+	
+			
+     
+  
+
+<tr valign="top">
+    <td nowrap="nowrap" style="padding-top:10px;">Published in:</td>
+</tr>
+
+
+
+
+
+	<tr valign="top">
+    	<td nowrap="nowrap" style="padding-bottom:0px">&middot;&nbsp;Proceeding</td>
+	</tr>
+    <tr valign="top">
+	    <td style="padding-left:10px;">
+		   <a href="http://www.isical.ac.in/~iwridl" title="Conference Website"  target="_self" class="link-text">IWRIDL '06</a> Proceedings of the 2006 international workshop on Research issues in digital libraries
+		   
+             
+                
+            
+			
+        </td>
+	</tr>
+    
+    <tr valign="top">
+	    <td style="padding-left:10px; padding-bottom:10px"> &copy;2007 
+           
+				 
+                 	
+                      	
+                    
+                    
+	                    <a href="citation.cfm?id=1364742&amp;picked=prox&amp;cfid=116491892&amp;cftoken=77104786"  target="_self" class="small-link-text">table&nbsp;of&nbsp;contents</a>
+    				
+                 
+                 
+                   	  ISBN:1-59593-608-4 
+                 
+                 
+                     <span style="margin-left:10px;">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364763" target="_self" class="small-link-text">10.1145/1364742.1364763</a></span>
+                 
+           
+      </td>
+	</tr>
+	 
+
+
+</table></td></tr>
+        </table>
+    
+
+  </td>
+
+  <td rowspan="20" nowrap="nowrap">
+	<table border="0" class="medium-text" cellpadding="0" cellspacing="0">
+		<tr>
+        	<td align="center" style="padding-bottom: 5px;">
+			  
+               
+					
+						
+	                        <img src="images/apdf.jpg" title="Advances in XML retrieval: the INEX initiative" width="60" height="90" alt="Advances in XML retrieval: the INEX initiative"  border="0" />
+						
+                      
+                 	
+              </td>
+              <td valign="top" align="left" nowrap="nowrap">
+	             
+                 
+				   <img src="images/acm_mini.jpg" title="Published by ACM" alt="Published by ACM" />
+                   2006 Article<br />
+                 
+                 	
+					
+                  
+        	 </td>
+        </tr>
+        
+        <tr>
+        	<td colspan="2" valign="baseline" style="padding-bottom:5px;">
+            <img src="img/stats.jpg" alt="Bibliometrics Data" />&nbsp;
+            <a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a>
+            </td>
+         </tr>
+         <tr>
+            <td  class="small-text" colspan="2" valign="top" style="padding-left:30px;">
+				
+                		
+	                    	&middot;&nbsp;Downloads (6 Weeks): 3<br />
+    	                    &middot;&nbsp;Downloads (12 Months): 20<br />
+                          
+                        &middot;&nbsp;Citation Count: 1
+                  
+			</td>
+         </tr>
+
+	</table>
+  </td>
+</tr>
+</table>
+
+<br clear="all" />
+
+
+
+
+                 <br clear="all" />
+			</div>
+			
+		</td>
+		<td style="padding-left: 5px; vertical-align:top; text-align:left; width:170px" class="small-link-text">
+	
+            <div id="divtools" style="background-color:#ece9d8; text-align:left; padding-top:5px; padding-bottom:5px; ">
+
+             <div class="medium-text" style="margin-left:3px; margin-top:10px;"><h1 class="mediumb-text" style="margin-top:-15px;"><strong>Tools and Resources</strong></h1></div>
+
+
+<ul title="Tools and Resources" style="list-style: none; list-style-position:inside;
+margin-left: 0px;
+padding-left: 0em;
+text-indent: 5px;
+margin-bottom: 0px;">
+
+
+
+
+	
+
+
+
+	
+        	
+    
+    
+
+
+
+
+
+
+	
+	
+	
+
+		
+             <li style="list-style-image:url(img/shopping-cart16.gif);margin-top:10px;">
+                  <span style="margin-left:6px;">
+                     <a href="https://portal.acm.org/purchase.cfm?id=1364763&CFID=116491892&CFTOKEN=77104786" class="small-link-text">Buy this Article</a>
+                  
+                  
+                  </span>
+              </li>
+        
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li style="list-style-image:url(img/toc_small.gif);margin-top:10px;"><span style="margin-left:6px;">
+   <span class="small-link-text">TOC Service:</span>
+   	  
+	  <img src="http://portal.acm.org/images/blanks.gif" border="0" alt="Spacer Image reserves space for checkmark when TOC Service is updated" name="saved" />
+      <ul style="margin-left: 0; padding-left: 0; display:inline;">
+      	
+        <li style="list-style:none; display:inline"><br /><img src="img/email_small.gif" alt="Toc Alert via Email" border="0" hspace="3" /><a href="#" onclick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">Email</a></li>
+        <li style="list-style:none; display:inline"><img src="img/rss_small.gif" alt="Toc Alert via Email" border="0" hspace="3" /><a href="#" onclick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');"  class="small-link-text">RSS</a></li>
+		        
+      </ul>
+    </span>
+</li>
+
+
+
+
+	
+        <li style="list-style-image:url(img/binder.gif);margin-top:10px;"><span style="margin-left:6px;">
+        <a href="citation.cfm?id=1364742.1364763&coll=DL&dl=GUIDE&preflayout=flat#" onclick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">Save to Binder</a>
+         </span></li>
+    
+  
+
+
+
+
+<li style="list-style-image:url(img/binder_green.gif);margin-top:10px;"><span style="margin-left:6px; margin-bottom:0px">
+   <span class="small-link-text">Export Formats:</span>
+      <ul style="margin-left: 0; padding-left: 0; margin-bottom:0px;">
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=1364763&expformat=bibtex','theformats');" class="small-link-text">BibTeX</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=1364763&expformat=endnotes','theformats');" class="small-link-text">EndNote</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=1364763&expformat=acmref','theformats');" class="small-link-text">ACM&nbsp;Ref</a></li>
+      </ul>
+    </span>
+</li>
+
+</ul>           
+     
+
+
+
+
+  
+        
+            
+        
+       
+
+
+
+
+
+  <!-- ADDTHIS BUTTON BEGIN -->
+  
+  <!-- ADDTHIS BUTTON END -->
+
+<p class="small-link-text" style="padding-top: 5px; margin-left:6px; margin-bottom:0px">Share:</p>
+  <!-- AddThis Button BEGIN -->
+
+
+
+
+<!-- AddThis Button BEGIN -->
+<div style="margin-left:5px;" class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_google"></a>
+<a class="addthis_button_citeulike"></a>
+<a class="addthis_button_slashdot"></a>
+<a class="addthis_button_delicious"></a>
+<a class="addthis_button_facebook"></a>
+<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=acm" class="addthis_button_expanded" title="more"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=acm"></script>
+<!-- AddThis Button END -->
+
+  
+ 
+
+  
+  
+
+            </div>
+            
+<div id="divtags" style="text-align:left; padding-top:10px">
+<span class="medium-text" style="padding-right:10px;">
+<a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=2','theexplaination');" title="Tags: explained">
+<strong>Tags:</strong>
+</a>
+</span>
+
+
+
+
+
+<a href="results.cfm?query=%22experimentation%22&amp;querydisp=%22experimentation%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#356b20">experimentation</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22measurement%22&amp;querydisp=%22measurement%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#000000">measurement</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22performance%22&amp;querydisp=%22performance%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#356b20">performance</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22retrieval%22&amp;querydisp=%22retrieval%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#000000">retrieval</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22semantic%20web%22&amp;querydisp=%22semantic%20web%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#356b20">semantic web</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22system%20evaluation%22&amp;querydisp=%22system%20evaluation%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#000000">system evaluation</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22systems%20and%20software%22&amp;querydisp=%22systems%20and%20software%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#356b20">systems and software</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22test%20collections%22&amp;querydisp=%22test%20collections%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#000000">test collections</span></a>
+
+
+
+
+
+
+<a href="results.cfm?query=%22xml%20retrieval%22&amp;querydisp=%22xml%20retrieval%22&amp;termshow=matchall&amp;cfid=116491892&amp;cftoken=77104786" target="_self"><span class="small-text" style="padding-right: 0px; color:#356b20">xml retrieval</span></a>
+
+
+
+
+
+
+
+
+
+</div>
+
+		</td>
+	</tr>
+    
+</table>
+
+	
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+</div>
+
+
+<div class="layout" style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+
+
+
+
+
+    
+ 
+
+
+
+
+
+		
+        
+        
+        
+        
+        
+
+
+<div id="fback" style="text-align:left; padding-top:10px; padding-bottom:20px">
+<span class="small-text" style="padding-right:10px; margin-bottom:0px;">
+<a title="feedback" href="mailto:portal-feedback@hq.acm.org?subject=Comments_on_new_design" style=" vertical-align:middle"><img src="img/feedbackg.gif" width="20" height="19" alt="feedback" border="0" /></a>
+<a title="feedback" href="mailto:portal-feedback@hq.acm.org?subject=Comments_on_new_design"><strong>Feedback</strong></a>
+
+<span style="padding:10px;">|</span>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+	  	
+		
+			
+		
+	
+	
+	
+    
+	  	
+		  	
+			    
+			
+		
+	
+
+	
+	
+	
+	    
+	 
+	
+	
+    
+	   
+	  
+
+
+
+
+
+
+
+
+
+
+
+<span>Switch to <a href="citation.cfm?id=1364742.1364763&coll=DL&dl=GUIDE&amp;preflayout=tabs">tabbed view</a> <noscript> (javascript required)</noscript></span>
+
+
+</span>
+
+ 
+<div class="small-text" style="margin-top:10px; margin-bottom:5px;"> 
+<br />
+
+    <a href="#abstract"  title="Abstract" style="padding:5px"><span>Abstract</span></a> |
+    
+    <a href="#authors"  title="Authors" style="padding:5px"><span>Authors</span></a> |
+    <a href="#references"  title="References" style="padding:5px"><span>References</span></a> |
+    <a href="#citedby"  title="Cited By" style="padding:5px"><span>Cited By</span></a> |
+    <a href="#indexterms"  title="Index Terms" style="padding:5px"><span>Index Terms</span></a> |
+    <a href="#source"  title="Publication" style="padding:5px"><span>Publication</span></a> |
+    <a href="#revs"  title="Reviews" style="padding:5px"><span style='color:#999999'>Reviews</span></a> |               
+	<a href="#comments"  title="Comments" style="padding:5px"><span>Comments</span></a>
+	
+     |               
+	<a href="#prox"  title="Table of Contents" style="padding:5px"><span>Table of Contents</span></a>
+    
+
+</div>
+    
+<div style="right: 0pt; border-top:1px solid #356b20; font-size:1px; margin-bottom:20px;"/>
+
+
+
+</div>
+
+
+
+
+
+
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="abstract" class="small-text">ABSTRACT</A></h1>
+       	
+
+
+
+
+
+ 
+			
+			<div style="margin-left:10px; margin-top:10px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+			
+
+		
+			
+           
+			
+			
+				<p>
+					<div style="display:inline"><p>We give a survey over the INEX initiative, which focuses on the evaluation of content -based access to XML documents. First, we describe the test setting and the various tracks of INEX. Then we present a new framework for the different views on XML retrieval, where we distinguish between the structural and the content dimension; in this space, current activities are located as well as new areas of research are pointed out. Finally, we discuss the combination of semantic web technologies and XML retrieval, pointing out potential benefits as well as the need for further research in this area.</p></div>
+				</p>
+			
+			
+           	</div>
+			
+		  
+        
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="authors" class="small-text"><SPAN class="heading">AUTHORS</SPAN></A></h1>
+		
+
+
+
+
+
+
+
+
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+<dl title="Authors" style="margin-top:0px">
+
+
+
+
+<dt style="float: left; clear: left; width: 100%; margin-top: 0px; margin-bottom: 0px;">
+ <strong>
+ 
+  </strong>
+ </dt> 
+          
+          <dd style="margin: 0 0 0 60px; padding: 0 0 0.5em 0;">
+			
+
+
+    
+    
+    
+    
+    
+        
+    
+    
+    
+
+								<span>
+									
+                                    <br><br />
+                                    
+                                        <table border="0" cellspacing="10">
+                                        <tr><td><table border="0" width="300"  cellpadding="0" cellspacing="0">
+<col width="120">
+<col width="180">
+<tr valign="top">
+
+	<td bgcolor="#cccccc" style="padding-bottom: 5px; padding-top: 5px">
+		
+		
+		
+			<img src="gifs/ProfileSilhouette.gif" alt="Author image not provided" align="middle" hspace="5">
+		
+		
+		
+	</td>
+
+<td  bgcolor="#cccccc" style="padding-bottom: 5px; padding-top: 5px" colspan="2">
+	
+	&nbsp;<span class="small-text"><strong><a title="author page of Norbert Fuhr" href="author_page.cfm?id=81100362356&CFID=116491892&CFTOKEN=77104786">Norbert Fuhr</a></strong><br /></span>
+	
+	
+	
+	
+	<span class="small-text"><br><p style="margin-bottom:-10px;" align="center">No contact information provided yet.</p>
+	
+	
+			
+	
+	</span>
+	
+	
+	
+</td>
+</tr>
+
+
+
+</table></td>
+                                            <td><table border="0" width="300" cellpadding="0" cellspacing="0">
+
+<tr>
+
+	<td><strong><a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a></strong>:&nbsp;publication history<br />
+		
+        <table width="90%" style="margin-top: 1px; margin-bottom: 10px" border="0" align="left">
+			<tr>
+				<td class="smaller-text">Publication years</td><td class="small-text" align="right">1984-2008</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text" style="border-bottom: 2">Publication count</td><td class="small-text" align="right">80</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text">Citation Count</td><td class="small-text" align="right">845</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text" style="border-bottom: 2">Available for download</td><td class="small-text" align="right">38</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+ 			
+			<tr>
+				<td class="smaller-text">Downloads (6 Weeks)</td><td class="small-text" align="right">124</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text">Downloads (12 Months)</td><td class="small-text" align="right">1,194</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+ 			
+		</table>
+	</td>
+	
+</tr>
+
+</table></td>
+                                        </tr>
+                                        <tr><td style="padding:0px">
+                                                    <a title="colleagues of Norbert Fuhr" href="author_page.cfm?id=81100362356&amp;dsp=coll&amp;trk=1&amp;CFID=116491892&CFTOKEN=77104786" target="_self">View colleagues</a> of Norbert Fuhr
+                                            </td>
+                                         </tr>
+                                        </table>
+                                     
+								</span>
+					
+
+
+    
+    
+    
+    
+    
+        
+    
+    
+    
+
+								<span>
+									
+                                    <br><br />
+                                    
+                                        <table border="0" cellspacing="10">
+                                        <tr><td><table border="0" width="300"  cellpadding="0" cellspacing="0">
+<col width="120">
+<col width="180">
+<tr valign="top">
+
+	<td bgcolor="#cccccc" style="padding-bottom: 5px; padding-top: 5px">
+		
+		
+		
+			<img src="gifs/ProfileSilhouette.gif" alt="Author image not provided" align="middle" hspace="5">
+		
+		
+		
+	</td>
+
+<td  bgcolor="#cccccc" style="padding-bottom: 5px; padding-top: 5px" colspan="2">
+	
+	&nbsp;<span class="small-text"><strong><a title="author page of Mounia Lalmas" href="author_page.cfm?id=81100072366&CFID=116491892&CFTOKEN=77104786">Mounia Lalmas</a></strong><br /></span>
+	
+	
+	
+	
+	<span class="small-text"><br><p style="margin-bottom:-10px;" align="center">No contact information provided yet.</p>
+	
+	
+			
+	
+	</span>
+	
+	
+	
+</td>
+</tr>
+
+
+
+</table></td>
+                                            <td><table border="0" width="300" cellpadding="0" cellspacing="0">
+
+<tr>
+
+	<td><strong><a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a></strong>:&nbsp;publication history<br />
+		
+        <table width="90%" style="margin-top: 1px; margin-bottom: 10px" border="0" align="left">
+			<tr>
+				<td class="smaller-text">Publication years</td><td class="small-text" align="right">1993-2010</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text" style="border-bottom: 2">Publication count</td><td class="small-text" align="right">100</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text">Citation Count</td><td class="small-text" align="right">408</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text" style="border-bottom: 2">Available for download</td><td class="small-text" align="right">45</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+ 			
+			<tr>
+				<td class="smaller-text">Downloads (6 Weeks)</td><td class="small-text" align="right">249</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+			<tr>
+				<td class="smaller-text">Downloads (12 Months)</td><td class="small-text" align="right">1,848</td>
+			</tr>
+			<tr><td height="1" bgcolor="#808080" colspan="2"></td></tr>
+ 			
+		</table>
+	</td>
+	
+</tr>
+
+</table></td>
+                                        </tr>
+                                        <tr><td style="padding:0px">
+                                                    <a title="colleagues of Mounia Lalmas" href="author_page.cfm?id=81100072366&amp;dsp=coll&amp;trk=1&amp;CFID=116491892&CFTOKEN=77104786" target="_self">View colleagues</a> of Mounia Lalmas
+                                            </td>
+                                         </tr>
+                                        </table>
+                                     
+								</span>
+					
+			</dd>
+                              
+
+</dl>
+</div>
+
+		  
+        
+        
+        
+		
+        
+        
+        
+        
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="references" class="small-text"><SPAN class="heading">REFERENCES</SPAN></A></h1>
+        
+        
+
+	
+  
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+			
+			
+			
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article.  ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+			
+			
+			
+			
+				
+				<table border="0" cellpadding="5">
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									1
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									S. Boag, D. Chamberlin, M. F. Fernandez, D. Florescu, J. Robie, and J. Sim&#233;on. XQuery 1.0: An XML query language. Technical report, 2002. http://www.w3.org/TR/xquery/.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									2
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									Charles Clarke. Range results in xml retrieval. In <i>INEX 2005 Workshop on Element Retrieval Methodology</i>, 2005.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> <img src="http://portal.acm.org/images/ACM_mini.jpg" width="25" height="24" alt="" vspace="0" border="0" align="top"></td>
+							<td>
+								<div class="abstract">
+									3
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+										
+										<a href="citation.cfm?id=1147210&CFID=116491892&CFTOKEN=77104786">
+									
+									Ludovic Denoyer , Patrick Gallinari, The Wikipedia XML corpus, ACM SIGIR Forum, v.40 n.1, June 2006
+									</a>
+
+									&nbsp;[doi><a href="http://doi.acm.org/10.1145/1147197.1147210">10.1145/1147197.1147210</a>]									
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									4
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									David C. Fallside. XML schema part 0: Primer. W3C recommendation, May 2001. http://www.w3.org/TR/xmlschema-0/.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									5
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									Norbert Fuhr, Mounia Lalmas, and Saadia Malik, editors. <i>INitiative for the Evaluation of XML Retrieval (INEX)</i>. Proceedings of the Second INEX Workshop. Dagstuhl, Germany, December 15--17, 2003, March 2004. http://inex.is.informatik.uni-duisburg.de:2003/proceedings.pdf.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									6
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+										
+										<a href="citation.cfm?id=1212119&CFID=116491892&CFTOKEN=77104786">
+									
+									Norbert Fuhr , Mounia Lalmas , Saadia Malik , Gabriella Kazai, Advances in XML Information Retrieval and Evaluation: 4th International Workshop of the Initiative for the Evaluation of XML Retrieval, INEX 2005, Dagstuhl ... Papers (Lecture Notes in Computer Science), Springer-Verlag New York, Inc., Secaucus, NJ, 2006
+									</a>
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									7
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+										
+										<a href="citation.cfm?id=1199349&CFID=116491892&CFTOKEN=77104786">
+									
+									Norbert Fuhr , Mounia Lalmas , Saadia Malik , Zolt&#225;n Szl&#225;vik, Advances in XML Information Retrieval: Third International Workshop of the Initiative for the Evaluation of XML Retrieval, INEX 2004, Dagstuhl Castle, ... 2004 (Lecture Notes in Computer Science), Springer-Verlag New York, Inc., Secaucus, NJ, 2005
+									</a>
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> <img src="http://portal.acm.org/images/ACM_mini.jpg" width="25" height="24" alt="" vspace="0" border="0" align="top"></td>
+							<td>
+								<div class="abstract">
+									8
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+										
+										<a href="citation.cfm?id=1185879&CFID=116491892&CFTOKEN=77104786">
+									
+									Jaap Kamps , Maarten Marx , Maarten de Rijke , B&#246;rkur Sigurbj&#246;rnsson, Articulating information needs in XML query languages, ACM Transactions on Information Systems (TOIS), v.24 n.4, p.407-436, October 2006
+									</a>
+
+									&nbsp;[doi><a href="http://doi.acm.org/10.1145/1185877.1185879">10.1145/1185877.1185879</a>]									
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									9
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									Deborah L. McGuinness and Frank van Harmelen. OWL web ontology language: Overview. Technical report, 2004. http://www.w3.org/TR/owl-features/.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									10
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									H. Nottelmann and N. Fuhr. Adding probabilities and rules to owl lite subsets based on probabilistic datalog. <i>International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems</i>, 14(1):17--41, 2006.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> <img src="http://portal.acm.org/images/ACM_mini.jpg" width="25" height="24" alt="" vspace="0" border="0" align="top"></td>
+							<td>
+								<div class="abstract">
+									11
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+										
+										<a href="citation.cfm?id=1183631&CFID=116491892&CFTOKEN=77104786">
+									
+									Paul Ogilvie , Mounia Lalmas, Investigating the exhaustivity dimension in content-oriented XML element retrieval evaluation, Proceedings of the 15th ACM international conference on Information and knowledge management, November 06-11, 2006, Arlington, Virginia, USA
+									</a>
+
+									&nbsp;[doi><a href="http://doi.acm.org/10.1145/1183614.1183631">10.1145/1183614.1183631</a>]									
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									12
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									Andrew Trotman and Borkur Sigurbjornsson. Narrowed extended xpath i (nexi). In Fuhr et al. {7}. http://www.springeronline.com/3-540-26166-4.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+						<tr valign="top">
+							<td valign="top"> &nbsp;</td>
+							<td>
+								<div class="abstract">
+									13
+								</div>
+							</td>
+							<td>
+								<div>
+									 
+									E. M. Voorhees and D. K. Harman, editors. <i>The Tenth Text REtrieval Conference (TREC 2001)</i>, Gaithersburg, MD, USA, 2002. NIST.
+									
+
+																		
+								</div>
+							</td>
+						</tr>
+					
+				</table>
+				
+			  
+			
+  
+</div>
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="citedby" class="small-text"><SPAN class="heading">CITED BY</SPAN></A></h1>
+		
+
+
+
+ 
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+		
+                       
+			
+			
+			
+			
+			
+			<table cellpadding="5">
+			
+				<tr valign="top">
+				<td valign="top">
+					
+					<img src="http://portal.acm.org/images/ACM_mini.jpg" width="25" height="24" alt="" vspace="0" border="0" align="top">
+				</td>
+				<td>
+					<div>
+						
+						<a href="citation.cfm?id=1321585&CFID=116491892&CFTOKEN=77104786">
+						Luis Sarmento , Valentin Jijkuon , Maarten de Rijke , Eugenio Oliveira, "More like these": growing entity classes from seeds, Proceedings of the sixteenth ACM conference on Conference on information and knowledge management, November 06-10, 2007, Lisbon, Portugal
+						</a>
+					</div>  
+					
+				</td>
+				</tr>
+			
+			</table>
+			
+
+           
+ </div>
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="indexterms" class="small-text"><SPAN class="heading">INDEX TERMS</SPAN></A></h1>
+        
+
+
+
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+
+
+<p class="Categories">
+<A NAME="indexterms"></A>
+
+
+
+
+	
+        
+        <span class=heading>Primary Classification:</span>
+        <br />
+        
+    	
+    
+    
+	   
+			
+            
+            
+            <strong>H.</strong> <a href="results.cfm?query=PrimaryCCS%3AH&querydisp=PrimaryCCS%3AH&termshow=matchboolean&CFID=116491892&CFTOKEN=77104786" target="_self">Information Systems</a><br />
+        
+
+
+	
+		
+		
+    
+    
+	   
+			
+            
+            
+            	<span style="padding-left:0px;"><img src="http://portal.acm.org/images/tree.gif" alt="" border="0" height="20" width="20"></span>
+            
+            <strong>H.3</strong> <a href="results.cfm?query=PrimaryCCS%3AH3&querydisp=PrimaryCCS%3AH3&termshow=matchboolean&CFID=116491892&CFTOKEN=77104786" target="_self">INFORMATION STORAGE AND RETRIEVAL</a><br />
+        
+
+
+	
+		
+		
+    
+    
+	   
+			
+            
+            
+            	<span style="padding-left:20px;"><img src="http://portal.acm.org/images/tree.gif" alt="" border="0" height="20" width="20"></span>
+            
+            <strong>H.3.4</strong> <a href="results.cfm?query=PrimaryCCS%3AH34&querydisp=PrimaryCCS%3AH34&termshow=matchboolean&CFID=116491892&CFTOKEN=77104786" target="_self">Systems and Software</a><br />
+        
+
+
+</p>
+
+
+
+</div>
+
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="source" class="small-text"><SPAN class="heading">PUBLICATION</SPAN></A></h1>
+        
+
+
+
+  	
+	  	
+    	
+      
+
+
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+
+<table border="0" class="medium-text" cellpadding="0" cellspacing="5">
+
+
+
+
+
+
+
+	
+    <tr valign="top">
+    	<td>Title</td> 
+	    <td>
+		   <a href="http://www.isical.ac.in/~iwridl" title="Conference Website"  target="_self" class="link-text">IWRIDL '06</a> Proceedings of the 2006 international workshop on Research issues in digital libraries
+		   
+           
+           
+            
+            	           
+		           <a href="citation.cfm?id=1364742&picked=prox&CFID=116491892&CFTOKEN=77104786"  target="_self" class="small-link-text">table&nbsp;of&nbsp;contents</a>
+			      
+             
+           
+        </td>
+	</tr>
+    
+    
+    
+     
+            		
+            
+            
+                   
+                    
+                     
+           
+                     
+                   
+                    
+                            
+                            
+                            <tr>
+                            <td  valign="top" nowrap="nowrap">
+                             
+                             
+                               
+                               							
+                                      Editors
+                                
+                              
+                              
+                            </td>
+                             <td valign="top">
+                                      
+                                          <a href="author_page.cfm?id=81350598757&CFID=116491892&CFTOKEN=77104786" title="Author Profile Page" target="_self">Prasenjit Majumder</a>
+                                      
+                              
+                                      	
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                            <td  valign="top" nowrap="nowrap">
+                             
+                             
+                              
+                            </td>
+                             <td valign="top">
+                                      
+                                          <a href="author_page.cfm?id=81341494124&CFID=116491892&CFTOKEN=77104786" title="Author Profile Page" target="_self">Mandar Mitra</a>
+                                      
+                              
+                                      	
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                            <td  valign="top" nowrap="nowrap">
+                             
+                             
+                              
+                            </td>
+                             <td valign="top">
+                                      
+                                          <a href="author_page.cfm?id=81100042670&CFID=116491892&CFTOKEN=77104786" title="Author Profile Page" target="_self">Swapan Kumar Parui</a>
+                                      
+                              
+                                      	
+                                </td>
+                            </tr>
+                            
+                     
+                     
+                     
+                     	
+	                        <tr><td>Article No.</td><td> 16</td></tr>
+    	                  
+                             
+                    
+                     
+					 
+                     
+                     	<tr>
+	                     
+                         	 
+    		                 <td>Sponsor</td>
+                            
+                          <td>
+                          <a href="sig.cfm?id=SP935&CFID=116491892&CFTOKEN=77104786">
+                          SIGIR</a> ACM Special Interest Group on Information Retrieval
+                          </td>
+                         </tr>
+                         
+                     
+                     
+                          <tr><td>Publisher</td><td><a href="http://www.acm.org/publications">ACM</a>
+                          New York, NY, USA
+                            &copy;2007</td></tr>
+                     
+                     
+					 <tr>
+                     <td></td>
+                     <td>
+					   
+                     ISBN: 1-59593-608-4 
+					 	   
+                     doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364763" target="_self" class="small-link-text">10.1145/1364742.1364763</a>
+                     </td>
+                     </tr>
+
+
+						
+
+
+
+
+
+					 
+         	         
+            
+
+</table>
+
+
+</table>
+
+
+
+</div>
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="revs" class="small-text"><SPAN class="heading">REVIEWS</SPAN></A></h1>
+        
+
+
+
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+
+    	<br />Reviews are not available for this item
+        
+        <div align="left" style="margin-top:30px">
+					<a title="Computing Reviews" href="ocr_review_main.cfm?CFID=116491892&CFTOKEN=77104786">
+                 <img src="http://portal.acm.org/images/ocrs-s.jpg" alt="Computing Reviews logo" border="0" style="vertical-align:middle"></a>
+        
+        
+       		<ul style="list-style:disc; display:inline-block">
+	            <li>Access <a href="ocr_review_main.cfm?CFID=116491892&CFTOKEN=77104786" target="_blank">critical reviews</a> of computing literature.</li>
+            	<li><a href="http://www.reviews.com/Reviewer/"  target="_blank">Become a reviewer</a> for Computing Reviews</li>
+            </ul>
+        </div>
+        
+
+</div>
+
+<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="comments" class="small-text"><SPAN class="heading">COMMENTS</SPAN></A></h1>
+              
+  		<style type="text/css">
+.leftcolc { 
+	position:relative;
+	top:5px;
+	left:5px;
+	float:left;
+	width:420px;  /* for IE5/WIN */
+	width:400px; /* actual value */
+	margin:0 0 0px 0;
+	padding:5px;
+	z-index:100;
+	}
+.rightcolc {
+	position:relative;
+	top:0px;
+	right:0px;
+	float:right;
+	margin:0 0px;
+	padding:0px;
+	width:500px;
+	z-index:99;
+	}
+.centercolc {
+	position:absolute;
+	padding:0 0px;
+	}
+.alt {
+background: #ece9d8;
+margin: 0;
+padding: 1px;
+}
+</style>
+
+ 
+
+
+     
+     
+
+
+
+    	
+
+
+<div style="margin-left:10px; margin-top:0px; margin-right:10px; margin-bottom: 10px;" class="flatbody">
+
+
+<div>
+<div>
+	
+
+	<p style="margin-left:5px;"><strong>Be the first to comment</strong>
+	 </p>
+	   	
+ 
+</div>
+	
+    <a name="discussion"></a>						
+    <form name="edit_form" id="edit_form" action="postcomment.cfm?id=1364763&loggedbyip=0&logged=0&curClient_no=NO&usebody=flatbody&full_name=&email=&CFID=116491892&CFTOKEN=77104786" method="post" onsubmit="return _CF_checkedit_form(this)">
+		<fieldset>
+				
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+	
+	<input type="hidden" name="formfield1234567891" id="formfield1234567891" value="">
+	
+
+
+
+	
+	<input type="hidden" name="formfield1234567892" id="formfield1234567892" value="">
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	<input type="hidden" name="formfield1234567893" value="39841335,19921031">
+
+
+
+	
+	<span style="display:none">Leave this field empty <input type="text" name="formfield1234567894" value=""></span>
+
+                
+                <p>Post a Comment:
+                </p>
+                <div>
+                     <div class="field">
+                        <label for="username">Name</label>
+                        <span class="fieldRequired" title="Required">(Required)</span>
+                        <div class="formHelp"></div>
+                        <div></div>
+                        <div style="margin-bottom:10px">
+                            <input name="Creator" type="text" title="Name"  alt="Submitter"  size="60"  id="username"  />
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label for="email">E-Mail</label>
+                        <span class="fieldRequired" title="Required">(Required)
+                        </span>
+                        <div class="formHelp"></div>
+                        <div style="margin-bottom:10px">
+                        <input name="email" id="email"  type="text" size="60"  />
+						</div>
+                    </div>
+                </div>
+
+	            
+
+	            <div class="field">
+		            <label for="body_text">Comment</label>
+		            <span class="fieldRequired" title="Required">(Required -  HTML syntax is <strong>not</strong> allowed and will be removed)</span>
+	                <div></div>
+                    <textarea name="body_text" rows="15" id="body_text" cols="110" html="No" ></textarea>
+                </div>
+
+                <div class="formControls">
+					<input type="Hidden" name="id" value="1364763">
+                    <input name="discussion_reply:method" id="discussion_reply:method"  type="submit" value="Post" class="context"  />
+                </div>
+        </fieldset>
+     </form>
+
+	 </div>
+
+</div>
+	
+
+
+		<h1 class="mediumb-text"><A HREF="#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" alt="top of page" hspace="10" border="0"></A><A NAME="prox" class="small-text">Table of Contents</A></h1>
+            
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<div style="margin-left:10px; margin-top:10px; margin-right:10px; margin-bottom: 10px;" >
+
+<h5 style="margin-bottom:0px; margin-top:0px" class="medium-text">Proceedings of the 2006 international workshop on Research issues in digital libraries</h5>
+
+
+
+<h5 class="medium-text" style="margin-bottom:10px; margin-top:10px;">Table of Contents</h5>
+
+<div style="clear:both">
+    
+</div>
+
+
+ 
+<table class="text12" border="0">
+
+  
+    	
+  
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:0"><a href="citation.cfm?id=1364743&CFID=116491892&CFTOKEN=77104786">Information retrieval and digital libraries: lessons of research</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:0">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100555334&CFID=116491892&CFTOKEN=77104786">Karen Sp&#228;rck Jones</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:0">Article No.: 1</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:0">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364743" title="DOI">10.1145/1364742.1364743</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:0">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364743&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:0">
+          <span id="toShow1" style="display:inline;"><br /><div style="display:inline">This paper reviews lessons from the history of information retrieval research, with particular emphasis on recent developments. These have demonstrated the value of statistical techniques for retrieval, and have also shown that they have an important, ...</div></span>
+          <span id="toHide1" style="display:none;"><br /><div style="display:inline"><p>This paper reviews lessons from the history of information retrieval research, with particular emphasis on recent developments. These have demonstrated the value of statistical techniques for retrieval, and have also shown that they have an important, though not exclusive, part to play in other information processing tasks, like question asnwering and summarising. The heterogeneous materials that digital libraries are expected to cover, their scale, and their changing composition, imply that statistical methods, which are general-purpose and very flexible, have significant potential value for the digital libraries of the future.</p></div></span> <a id="expcoll1" href="JavaScript: expandcollapse('expcoll1',1)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+  	  
+      
+	
+  
+  <tr>
+  <td></td>
+  <td colspan="2">SESSION: <strong>Search</strong></td>
+  </tr>
+  
+  
+  
+ 
+	        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          <tr>
+          <td></td>
+          <td style="padding-bottom:5px;">
+          
+          </td>
+          </tr>
+
+             
+		
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364745&CFID=116491892&CFTOKEN=77104786">On the science of search: statistical approaches, evaluation, optimisation</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81350601190&CFID=116491892&CFTOKEN=77104786">Stephen Robertson</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 2</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364745" title="DOI">10.1145/1364742.1364745</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364745&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow3" style="display:inline;"><br /><div style="display:inline">This paper, based on a talk, presents an overview of evaluation experiments in information retrieval, and also of statistical approaches to search. A strong connection exists between them: the notion that the objective of search can be expressed in terms ...</div></span>
+          <span id="toHide3" style="display:none;"><br /><div style="display:inline"><p>This paper, based on a talk, presents an overview of evaluation experiments in information retrieval, and also of statistical approaches to search. A strong connection exists between them: the notion that the objective of search can be expressed in terms of the measures used for evaluation informs the statistical theory in several ways. The latest manifestation of this connection is the work on optimization of ranking algorithms, using machine learning techniques.</p></div></span> <a id="expcoll3" href="JavaScript: expandcollapse('expcoll3',3)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364746&CFID=116491892&CFTOKEN=77104786">Vagueness and uncertainty in information retrieval: how can fuzzy sets help?</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100154599&CFID=116491892&CFTOKEN=77104786">Donald H. Kraft</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100055649&CFID=116491892&CFTOKEN=77104786">Gabriella Pasi</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100063417&CFID=116491892&CFTOKEN=77104786">Gloria Bordogna</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 3</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364746" title="DOI">10.1145/1364742.1364746</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364746&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow4" style="display:inline;"><br /><div style="display:inline">The field of fuzzy information systems has grown and is maturing. In this paper, some applications of fuzzy set theory to information retrieval are described, as well as the more recent outcomes of research in this field. Fuzzy set theory is applied ...</div></span>
+          <span id="toHide4" style="display:none;"><br /><div style="display:inline"><p>The field of fuzzy information systems has grown and is maturing. In this paper, some applications of fuzzy set theory to information retrieval are described, as well as the more recent outcomes of research in this field. Fuzzy set theory is applied to information retrieval with the main aim being to define flexible systems, i.e., systems that can represent and manage the vagueness and subjectivity which characterizes the process of information representation and retrieval, one of the main objectives of artificial intelligence.</p></div></span> <a id="expcoll4" href="JavaScript: expandcollapse('expcoll4',4)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364747&CFID=116491892&CFTOKEN=77104786">How the dragons work: searching in a web</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100252005&CFID=116491892&CFTOKEN=77104786">Ian H. Witten</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 4</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364747" title="DOI">10.1145/1364742.1364747</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364747&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow5" style="display:inline;"><br /><div style="display:inline">Search engines -- "web dragons" -- are the portals through which we access society's treasure trove of information. They do not publish the algorithms they use to sort and filter information, yet how they work is one of the most important questions of ...</div></span>
+          <span id="toHide5" style="display:none;"><br /><div style="display:inline"><p>Search engines -- "web dragons" -- are the portals through which we access society's treasure trove of information. They do not publish the algorithms they use to sort and filter information, yet how they work is one of the most important questions of our time. Google's PageRank is a way of measuring the prestige of each web page in terms of who links to it: it reflects the experience of a surfer condemned to click randomly around the web forever. The HITS technique distinguishes "hubs" that point to reputable sources from "authorities," the sources themselves. This helps differentiate communities on the web, which in turn can tease out alternative interpretations of ambiguous query terms. RankNet uses machine learning techniques to rank documents by predicting relevance judgments based on training data. This article explains in non-technical terms how the dragons work.</p></div></span> <a id="expcoll5" href="JavaScript: expandcollapse('expcoll5',5)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364748&CFID=116491892&CFTOKEN=77104786">Open source search and research</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100473134&CFID=116491892&CFTOKEN=77104786">Michel Beigbeder</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100245904&CFID=116491892&CFTOKEN=77104786">Wray Buntine</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100560049&CFID=116491892&CFTOKEN=77104786">Wai Gen Yee</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 5</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364748" title="DOI">10.1145/1364742.1364748</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364748&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow6" style="display:inline;"><br /><div style="display:inline">In this paper, we present a review of criteria for the evaluation of open source information retrieval tools and provide an overview of some of those that are more popular. The question of interaction between research and availability of open source ...</div></span>
+          <span id="toHide6" style="display:none;"><br /><div style="display:inline"><p>In this paper, we present a review of criteria for the evaluation of open source information retrieval tools and provide an overview of some of those that are more popular. The question of interaction between research and availability of open source search tools is addressed.</p></div></span> <a id="expcoll6" href="JavaScript: expandcollapse('expcoll6',6)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+  	  
+      
+	
+  
+  <tr>
+  <td></td>
+  <td colspan="2">SESSION: <strong>NLP</strong></td>
+  </tr>
+  
+  
+  
+ 
+	        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          <tr>
+          <td></td>
+          <td style="padding-bottom:5px;">
+          
+          </td>
+          </tr>
+
+             
+		
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364750&CFID=116491892&CFTOKEN=77104786">Shallow syntax analysis in Sanskrit guided by semantic nets constraints</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81408602136&CFID=116491892&CFTOKEN=77104786">G&#233;rard Huet</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 6</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364750" title="DOI">10.1145/1364742.1364750</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364750&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow8" style="display:inline;"><br /><div style="display:inline">We present the state of the art of a computational platform for the analysis of classical Sanskrit. The platform comprises modules for phonology, morphology, segmentation and shallow syntax analysis, organized around a structured lexical database. It ...</div></span>
+          <span id="toHide8" style="display:none;"><br /><div style="display:inline"><p>We present the state of the art of a computational platform for the analysis of classical Sanskrit. The platform comprises modules for phonology, morphology, segmentation and shallow syntax analysis, organized around a structured lexical database. It relies on the Zen toolkit for finite state automata and transducers, which provides data structures and algorithms for the modular construction and execution of finite state machines, in a functional framework.</p> <p>Some of the layers proceed in bottom-up synthesis mode - for instance, noun and verb morphological modules generate all inflected forms from stems and roots listed in the lexicon. Morphemes are assembled through internal sandhi, and the inflected forms are stored with morphological tags in dictionaries usable for lemmatizing. These dictionaries are then compiled into transducers, implementing the analysis of external sandhi, the phonological process which merges words together by euphony. This provides a tagging segmenter, which analyses a sentence presented as a stream of phonemes and produces a stream of tagged lexical entries, hyperlinked to the lexicon.</p> <p>The next layer is a syntax analyser, guided by semantic nets constraints expressing dependencies between the word forms. Finite verb forms demand semantic roles, according to valency patterns depending on the voice (active, passive) of the form and the governance (transitive, etc) of the root. Conversely, noun/adjective forms provide actors which may fill those roles, provided agreement constraints are satisfied. Tool words are mapped to transducers operating on tagged streams, allowing the modeling of linguistic phenomena such as coordination by abstract interpretation of actor streams. The parser ranks the various interpretations (matching actors with roles) with penalties, and returns to the user the minimum penalty analyses, for final validation of ambiguities. The whole platform is organized as a Web service, allowing the piecewise tagging of a Sanskrit text.</p></div></span> <a id="expcoll8" href="JavaScript: expandcollapse('expcoll8',8)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364751&CFID=116491892&CFTOKEN=77104786">Finding an answer to a question</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100474061&CFID=116491892&CFTOKEN=77104786">Brigitte Grau</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 7</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364751" title="DOI">10.1145/1364742.1364751</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364751&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow9" style="display:inline;"><br /><div style="display:inline">The huge quantity of available electronic information leads to a growing need for users to have tools able to be precise and selective. These kinds of tools have to provide answers to requests quite rapidly without requiring the user to explore each ...</div></span>
+          <span id="toHide9" style="display:none;"><br /><div style="display:inline"><p>The huge quantity of available electronic information leads to a growing need for users to have tools able to be precise and selective. These kinds of tools have to provide answers to requests quite rapidly without requiring the user to explore each document, to reformulate her request or to seek for the answer inside documents. From that viewpoint, finding an answer consists not only in finding relevant documents but also in extracting relevant parts. This leads us to express the question-answering problem in terms of an information retrieval problem that can be solved using natural language processing (NLP) approaches. In my talk, I will focus on defining what a "good" answer is, and how a system can find it.</p> <p>A good answer has to give the required piece of information. However, it is not sufficient; it also has both to be presented within its context of interpretation and to be justified in order to give a user means to evaluate if the answer fits her needs and is appropriate.</p> <p>One can view searching an answer to a question as a reformulation problem: according to what is asked, find one of the different linguistic expressions of the answer in all candidate sentences. Within this framework, interlingual question-answering can also be seen as another kind of linguistic variation. The answer phrasing can be considered as an affirmative reformulation of the question, partly or totally, which entails the definition of models that match with sentences containing the answer. According to the different approaches, the kinds of model and the matching criteria greatly differ. It can consist in building a structured representation that makes explicit the semantic relations between the concepts of the question and that is compared to a similar representation of sentences. As this approach requires a syntactic parser and a semantic knowledge base, which are not always available in all the languages, systems often apply a less formal approach based on a similarity measure between a passage and the question and answers are extracted from highest scored passages. Similarity involves different criteria: question terms and their linguistic variations in passages, syntactic proximity, answer type. We will see that, in such an approach, justifications can be envisioned by using text themselves, considered as depositories of semantic knowledge. I will focus on the approach the LIR group of LIMSI has taken for its monolingual and bilingual systems.</p></div></span> <a id="expcoll9" href="JavaScript: expandcollapse('expcoll9',9)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+  	  
+      
+	
+  
+  <tr>
+  <td></td>
+  <td colspan="2">SESSION: <strong>Multimedia</strong></td>
+  </tr>
+  
+  
+  
+ 
+	        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          <tr>
+          <td></td>
+          <td style="padding-bottom:5px;">
+          
+          </td>
+          </tr>
+
+             
+		
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364753&CFID=116491892&CFTOKEN=77104786">Digital audiovisual repositories: an introduction</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81350596179&CFID=116491892&CFTOKEN=77104786">Richard Wright</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 8</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364753" title="DOI">10.1145/1364742.1364753</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364753&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow11" style="display:inline;"><br /><div style="display:inline">This paper briefly describes the essential aspects of the digital world that audiovisual archives are entering - or being swallowed-up in. The crucial issue is whether archives will sink or swim in this all-digital environment. The core issue is defining ...</div></span>
+          <span id="toHide11" style="display:none;"><br /><div style="display:inline"><p>This paper briefly describes the essential aspects of the digital world that audiovisual archives are entering - or being swallowed-up in. The crucial issue is whether archives will sink or swim in this all-digital environment. The core issue is defining - and meeting - the requirements for a secure, sustainable <i>digital repository</i>.</p></div></span> <a id="expcoll11" href="JavaScript: expandcollapse('expcoll11',11)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364754&CFID=116491892&CFTOKEN=77104786">Diffusion maps-based image clustering</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81321488745&CFID=116491892&CFTOKEN=77104786">R. Agrawal</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81350591453&CFID=116491892&CFTOKEN=77104786">C.-H. Wu</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100462423&CFID=116491892&CFTOKEN=77104786">W. I. Grosky</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100250083&CFID=116491892&CFTOKEN=77104786">F. Fotouhi</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 9</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364754" title="DOI">10.1145/1364742.1364754</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364754&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow12" style="display:inline;"><br /><div style="display:inline">In the clustering of large number of images using low-level features, one of the problems encountered is the high dimensional feature space. The high dimensionality of feature spaces leads to unnecessary cost in feature selection and also in the distance ...</div></span>
+          <span id="toHide12" style="display:none;"><br /><div style="display:inline"><p>In the clustering of large number of images using low-level features, one of the problems encountered is the high dimensional feature space. The high dimensionality of feature spaces leads to unnecessary cost in feature selection and also in the distance measurement during the clustering process. In this paper, we propose an approach to reduce the dimensionality of the feature space based on diffusion maps. In the proposed approach, each image is represented by a set of tiles. A visual keyword-image matrix is derived from classifying these tiles into a set of clusters and counting the occurrence of each cluster in each image of our database. The visual keyword-image matrix is similar to the term-document matrix in information retrieval. We use diffusion maps to reduce the dimensionality of visual keyword matrix. By reducing the dimensionality of the image representation, we can save computation cost significantly. We compare the performance between the proposed approach and the approach that uses the global MPEG-7 color descriptors. The results demonstrate the improvements.</p></div></span> <a id="expcoll12" href="JavaScript: expandcollapse('expcoll12',12)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364755&CFID=116491892&CFTOKEN=77104786">Toward a common semantics between media and languages</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81350595869&CFID=116491892&CFTOKEN=77104786">Chistian Fluhr</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81342496111&CFID=116491892&CFTOKEN=77104786">Gregory Grefenstette</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100375272&CFID=116491892&CFTOKEN=77104786">Adrian Popescu</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 10</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364755" title="DOI">10.1145/1364742.1364755</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364755&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow13" style="display:inline;"><br /><div style="display:inline">For a computer to recognize objects, persons, situations or actions in multimedia, it needs to have learned models of each thing beforehand. For the moment, no large, general collection of training examples exists for the wide variety of things that ...</div></span>
+          <span id="toHide13" style="display:none;"><br /><div style="display:inline"><p>For a computer to recognize objects, persons, situations or actions in multimedia, it needs to have learned models of each thing beforehand. For the moment, no large, general collection of training examples exists for the wide variety of things that we would want to automatically recognize in multimedia, video and still images. We believe that the WWW and current technology can allow us to automatically build such a resource. This paper describes a methodology for the construction of a grounded, general purpose, multimedia ontology that is instantiated through web processing. In this hierarchically organized ontology, concepts corresponding to concrete objects, persons, situations and actions are linked with still images, videos and sounds that represent exemplars of each concept. These examples are necessary resources for computing discriminating signatures for the recognition of the concepts in still images or videos. Since images retrieved using existing image search engines contain much noise hand are not always representative, we also present here our methodology for finding good representative for each concept.</p></div></span> <a id="expcoll13" href="JavaScript: expandcollapse('expcoll13',13)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+  	  
+      
+	
+  
+  <tr>
+  <td></td>
+  <td colspan="2">SESSION: <strong>Document processing</strong></td>
+  </tr>
+  
+  
+  
+ 
+	        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          <tr>
+          <td></td>
+          <td style="padding-bottom:5px;">
+          
+          </td>
+          </tr>
+
+             
+		
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364757&CFID=116491892&CFTOKEN=77104786">Digitizing, coding, annotating, disseminating, and preserving documents</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100382260&CFID=116491892&CFTOKEN=77104786">George Nagy</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 11</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364757" title="DOI">10.1145/1364742.1364757</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364757&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow15" style="display:inline;"><br /><div style="display:inline">We examine some research issues in pattern recognition and image processing that have been spurred by the needs of digital libraries. Broader -- and not only linguistic -- context must be introduced in character recognition on low-contrast, tightly-set ...</div></span>
+          <span id="toHide15" style="display:none;"><br /><div style="display:inline"><p>We examine some research issues in pattern recognition and image processing that have been spurred by the needs of digital libraries. Broader -- and not only linguistic -- context must be introduced in character recognition on low-contrast, tightly-set documents because the conversion of documents to coded (searchable) form is lagging far behind conversion to image formats. At the same time, the prevalence of imaged documents over coded documents gives rise to interesting research problems in interactive annotation of document images. At the level of circulation, reformatting document images to accommodate diverse user needs remains a challenge.</p></div></span> <a id="expcoll15" href="JavaScript: expandcollapse('expcoll15',15)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364758&CFID=116491892&CFTOKEN=77104786">Document image analysis for digital libraries</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100596899&CFID=116491892&CFTOKEN=77104786">Prateek Sarkar</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 12</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364758" title="DOI">10.1145/1364742.1364758</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364758&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow16" style="display:inline;"><br /><div style="display:inline">Digital Libraries have many forms -- institutional libraries for information dissemination, document repositories for record-keeping, and personal digital libraries for organizing personal thoughts, knowledge, and course of action. Digital image content ...</div></span>
+          <span id="toHide16" style="display:none;"><br /><div style="display:inline"><p>Digital Libraries have many forms -- institutional libraries for information dissemination, document repositories for record-keeping, and personal digital libraries for organizing personal thoughts, knowledge, and course of action. Digital image content (scanned or otherwise) is a substantial component of all of these libraries. Processing and analyzing these images include tasks such as document layout understanding, character recognition, functional role labeling, image enhancement, indexing, organizing, restructuring, summarizing, cross linking, redaction, privacy management, and distribution.</p> <p>At the Palo Alto Research Center, we conduct research on several aspects of document analysis for Digital Libraries ranging from raw image transformations to linguistic analysis to interactive sensemaking tools. I shall describe a few recent research activities in the realm of document image analysis or their use in digital libraries.</p></div></span> <a id="expcoll16" href="JavaScript: expandcollapse('expcoll16',16)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364759&CFID=116491892&CFTOKEN=77104786">How to compose a complex document recognition system</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100267896&CFID=116491892&CFTOKEN=77104786">Hiromichi Fujisawa</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 13</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364759" title="DOI">10.1145/1364742.1364759</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364759&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow17" style="display:inline;"><br /><div style="display:inline">The technical challenges in document analysis and recognition have been to solve the problems of uncertainty and variability. From our experiences in developing OCRs, business form readers, and postal address recognition engines, we would like to present ...</div></span>
+          <span id="toHide17" style="display:none;"><br /><div style="display:inline"><p>The technical challenges in document analysis and recognition have been to solve the problems of uncertainty and variability. From our experiences in developing OCRs, business form readers, and postal address recognition engines, we would like to present design principles to cope with these problems of uncertainty and variability. When the targets of document recognition are complex and diversified, the recognition engine needs to solve many different kinds of pattern recognition problems, which are a reflection of uncertainty and variability. Inevitably, the engine becomes complex, raising a question of how to combine its subcomponents, which are not perfect in their accuracies. The design principles will be explained with examples in postal address recognition.</p></div></span> <a id="expcoll17" href="JavaScript: expandcollapse('expcoll17',17)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+  	  
+      
+	
+  
+  <tr>
+  <td></td>
+  <td colspan="2">SESSION: <strong>Evaluation</strong></td>
+  </tr>
+  
+  
+  
+ 
+	        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          <tr>
+          <td></td>
+          <td style="padding-bottom:5px;">
+          
+          </td>
+          </tr>
+
+             
+		
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364761&CFID=116491892&CFTOKEN=77104786">Multilingual information access: the contribution of evaluation</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100523414&CFID=116491892&CFTOKEN=77104786">Carol Peters</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 14</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364761" title="DOI">10.1145/1364742.1364761</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364761&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow19" style="display:inline;"><br /><div style="display:inline">Since evaluation of cross-language information retrieval systems began at TREC in 1997 and NTCIR in 1998 and, in particular, with the launch of the Cross-Language Evaluation Forum (CLEF) in 2000, considerable progress has been made in this particular ...</div></span>
+          <span id="toHide19" style="display:none;"><br /><div style="display:inline"><p>Since evaluation of cross-language information retrieval systems began at TREC in 1997 and NTCIR in 1998 and, in particular, with the launch of the Cross-Language Evaluation Forum (CLEF) in 2000, considerable progress has been made in this particular sector of IR. Advances can be considered in two stages. The first stage regarded in particular the development of text retrieval systems from simple so-called "bilingual" systems in which a query in one language is used to search a document collection in another to truly "multilingual" retrieval systems where a query in one language can find relevant results from a collection of documents in multiple languages. In the second stage, the focus was no longer just on multilingual document retrieval but was diversified to include different kinds of text retrieval across languages (e.g multilingual question answering) and retrieval on different kinds of media (e.g. collections containing images or speech). However, although the results from the research perspective have been interesting, there has been little real take-up by the applications communities. In the paper we describe the results achieved by CLEF over the years and propose a third stage for multilingual system evaluation which gives far more attention to questions regarding usability and user satisfaction but also provides ways for the results achieved to be transferred to the operational context.</p></div></span> <a id="expcoll19" href="JavaScript: expandcollapse('expcoll19',19)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364762&CFID=116491892&CFTOKEN=77104786">From CLIR to CLIE: some lessons in NTCIR evaluation</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81350589211&CFID=116491892&CFTOKEN=77104786">Hsin-Hsi Chen</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 15</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364762" title="DOI">10.1145/1364742.1364762</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364762&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow20" style="display:inline;"><br /><div style="display:inline">Cross-language information retrieval (CLIR) facilitates the use of one language to access documents in other languages. Cross-language information extraction (CLIE) extracts relevant information in finer granularity from multilingual documents for some ...</div></span>
+          <span id="toHide20" style="display:none;"><br /><div style="display:inline"><p>Cross-language information retrieval (CLIR) facilitates the use of one language to access documents in other languages. Cross-language information extraction (CLIE) extracts relevant information in finer granularity from multilingual documents for some specific applications like summarization, question answering, opinion extraction, <i>etc</i>. This paper reviews CLIR, CLQA, and opinion analysis tasks in NTCIR evaluation. The design methodologies and some key technologies are reported.</p></div></span> <a id="expcoll20" href="JavaScript: expandcollapse('expcoll20',20)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+  
+    	
+    
+  
+  <tr>
+  <td></td>
+  <td colspan="1"><span style="padding-left:20"><a href="citation.cfm?id=1364763&CFID=116491892&CFTOKEN=77104786">Advances in XML retrieval: the INEX initiative</a></span></td>
+  </tr>
+  
+  
+  
+ 
+	    
+     	  
+          <tr>
+          <td></td>
+          <td>
+          <span style="padding-left:20">
+          
+              
+              
+          
+              
+          
+          
+          
+          
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100362356&CFID=116491892&CFTOKEN=77104786">Norbert Fuhr</a>, 
+                        
+                        
+                    
+                
+                
+            
+                
+                
+                
+                
+                    
+                        
+                        
+                      
+                
+                    
+                        
+                        <a href="author_page.cfm?id=81100072366&CFID=116491892&CFTOKEN=77104786">Mounia Lalmas</a>
+                        
+                        
+                    
+                
+                
+            
+          </span>    
+          </td>
+          </tr>
+          
+             
+       
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">Article No.: 16</span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td> <span style="padding-left:20">doi&gt;<a href="http://dx.doi.org/10.1145/1364742.1364763" title="DOI">10.1145/1364742.1364763</a></span></td>
+          </tr>
+          
+        
+        
+        
+		  
+          <tr>
+          <td></td>
+          <td>
+           <span style="padding-left:20">
+          Full text: <a name="FullTextPdf" title="FullText Pdf" href="ft_gateway.cfm?id=1364763&type=pdf&CFID=116491892&CFTOKEN=77104786" target="_blank"><img src="imagetypes/pdf_logo.gif" alt="Pdf" class="fulltext_lnk" border="0" />Pdf</a>
+           </span>
+          </td>
+          </tr>
+          
+        
+        
+        
+        
+        
+        
+         
+		  
+          <tr>
+          <td></td>
+          <td style="padding-bottom:15px;">
+          <div style="padding-left:20">
+          <span id="toShow21" style="display:inline;"><br /><div style="display:inline">We give a survey over the INEX initiative, which focuses on the evaluation of content -based access to XML documents. First, we describe the test setting and the various tracks of INEX. Then we present a new framework for the different views on XML retrieval, ...</div></span>
+          <span id="toHide21" style="display:none;"><br /><div style="display:inline"><p>We give a survey over the INEX initiative, which focuses on the evaluation of content -based access to XML documents. First, we describe the test setting and the various tracks of INEX. Then we present a new framework for the different views on XML retrieval, where we distinguish between the structural and the content dimension; in this space, current activities are located as well as new areas of research are pointed out. Finally, we discuss the combination of semantic web technologies and XML retrieval, pointing out potential benefits as well as the need for further research in this area.</p></div></span> <a id="expcoll21" href="JavaScript: expandcollapse('expcoll21',21)">expand</a>
+          </div>
+		  </td>
+          </tr>          
+          
+  		  
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+	
+
+
+</div>
+
+
+ <p class="small-text" align="center">Powered by <a id="theguide" name="theguide" href="javascript:ColdFusion.Window.show('theguide')"><img src="img/poweredbyacm.jpg" width="336" height="11" alt="The ACM Guide to Computing Literature" border="0" /></a></p>
+
+
+
+ <br />
+<div class="footerbody" align="center" >
+	
+
+
+
+	The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2010 ACM, Inc.<br />
+	<a href="http://www.acm.org/publications/policies/usage">Terms of Usage</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/code-of-ethics">Code of Ethics</a>&nbsp;&nbsp;	  
+	<a href="http://www.acm.org/about/contact-us">Contact Us</a>
+
+<br /><br />
+Useful downloads: 
+<a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="" border="0" /> Adobe Acrobat</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="http://portal.acm.org/images/qtlogo.gif" width="16" height="16" alt="" border="0" /> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://www.microsoft.com/windows/windowsmedia/download/default.asp" target="_blank"><img src="http://portal.acm.org/images/wmv.gif" width="16" height="15" alt="" border="0" /> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="http://portal.acm.org/images/realplayer.gif" width="20" height="18" alt="" border="0" /> Real Player</a>
+
+
+</div> 
+
+
+
+<div  id="cf_window1291072104461" class="yuiextdlg">
+	
+	<div  id="theguide_title" class="x-dlg-hd">
+		The ACM Guide to Computing Literature
+	 </div>
+	<div  id="theguide_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>
+<div  id="cf_window1291072104464" class="yuiextdlg">
+	
+	<div  id="thetags_title" class="x-dlg-hd">
+		All Tags
+	 </div>
+	<div  id="thetags_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>
+                 
+<div  id="cf_window1291072104467" class="yuiextdlg">
+	
+	<div  id="theformats_title" class="x-dlg-hd">
+		Export Formats
+	 </div>
+	<div  id="theformats_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>	  
+                 
+<div  id="cf_window1291072104469" class="yuiextdlg">
+	
+	<div  id="theexplaination_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div  id="theexplaination_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>                                				 
+
+<div  id="cf_window1291072104471" class="yuiextdlg">
+	
+	<div  id="theservices_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div  id="theservices_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>   
+
+<div  id="cf_window1291072104473" class="yuiextdlg">
+	
+	<div  id="savetobinder_title" class="x-dlg-hd">
+		Save to Binder
+	 </div>
+	<div  id="savetobinder_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>
+
+
+  <script language="JavaScript">
+      window.onload = setDiv;
+  </script>
+
+
+</body>
+</html>

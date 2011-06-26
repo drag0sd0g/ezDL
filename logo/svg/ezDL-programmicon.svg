@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" id="Ebene_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="51.17" height="72.197"
+	 viewBox="0 0 51.17 72.197" overflow="visible" enable-background="new 0 0 51.17 72.197" xml:space="preserve">
+<linearGradient id="XMLID_5_" gradientUnits="userSpaceOnUse" x1="0.9902" y1="36.6084" x2="6.5044" y2="36.6084">
+	<stop  offset="0.1134" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.5558" style="stop-color:#FFA879"/>
+	<stop  offset="0.862" style="stop-color:#FF7022"/>
+	<stop  offset="1" style="stop-color:#FF5A00"/>
+</linearGradient>
+<polyline fill="url(#XMLID_5_)" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" points="6.504,3.706 0.99,3.357 
+	1.101,69.859 5.985,69.499 "/>
+<linearGradient id="XMLID_6_" gradientUnits="userSpaceOnUse" x1="5.8716" y1="36.5029" x2="12.7427" y2="36.5029">
+	<stop  offset="0.1741" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FF5A00"/>
+</linearGradient>
+<polyline fill="url(#XMLID_6_)" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" points="12.743,4.576 5.872,2.84 
+	5.985,70.167 12.042,68.633 "/>
+<linearGradient id="XMLID_7_" gradientUnits="userSpaceOnUse" x1="12.7397" y1="36.502" x2="19.2173" y2="36.502">
+	<stop  offset="0.0648" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.15" style="stop-color:#FFF6F1"/>
+	<stop  offset="0.3101" style="stop-color:#FFDFCD"/>
+	<stop  offset="0.528" style="stop-color:#FFB993"/>
+	<stop  offset="0.7921" style="stop-color:#FF8643"/>
+	<stop  offset="1" style="stop-color:#FF5A00"/>
+</linearGradient>
+<polyline fill="url(#XMLID_7_)" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" points="19.217,6.06 12.74,2.84 
+	12.855,70.164 18.911,68.631 "/>
+<linearGradient id="XMLID_8_" gradientUnits="userSpaceOnUse" x1="19.4253" y1="36.1924" x2="30.9185" y2="36.1924">
+	<stop  offset="0.0648" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.1709" style="stop-color:#FFF1E9"/>
+	<stop  offset="0.3916" style="stop-color:#FFCDB2"/>
+	<stop  offset="0.7046" style="stop-color:#FF9459"/>
+	<stop  offset="1" style="stop-color:#FF5A00"/>
+</linearGradient>
+<polyline fill="url(#XMLID_8_)" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" points="30.391,13.759 
+	19.425,0.949 19.673,71.436 30.918,62.087 "/>
+<polygon fill="#FFFFFF" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" points="42.723,61.856 30.393,70.756 
+	30.389,0.645 42.728,15.039 "/>
+<line fill="none" stroke="#FF5A00" stroke-width="1.9804" stroke-linejoin="bevel" x1="50.164" y1="2.081" x2="50.18" y2="70.164"/>
+</svg>

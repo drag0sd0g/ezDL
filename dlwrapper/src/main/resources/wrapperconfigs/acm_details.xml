@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wrapperconfiguration>
+
+	<fetch method="GET" url="$url" encoding="iso-8859-1">
+		<param name="preflayout" value="flat" />
+	</fetch>
+
+	<cleanOriginal>
+		<replace pattern="&amp;ldquo;" replacewith="" />
+		<replace pattern="&amp;rdquo;" replacewith="" />
+		<replace pattern="&amp;lquo;" replacewith="" />
+		<replace pattern="&amp;rquo;" replacewith="" />
+		<!-- &nbsp; -->
+		<replace pattern="&amp;nbsp;" replacewith=" " />
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+		<replace pattern="Pages:" replacewith="&lt;div
+      type=&#34;pages&#34;&gt;" />
+		<replace pattern="Year of Publication:" replacewith="&lt;div
+      type=&#34;year&#34;&gt;" />
+		<replace pattern="ISSN:" replacewith="&lt;div
+      type=&#34;issn&#34;&gt;" />
+		<replace pattern="Volume" replacewith="&lt;div
+      type=&#34;volume&#34;&gt;" />
+		<replace pattern="Issue" replacewith="&lt;div
+      type=&#34;issue&#34;&gt;" />
+		<replace pattern="ISBN:" replacewith="&lt;div
+      type=&#34;isbn&#34;&gt;" />
+	</cleanOriginal>
+
+
+
+	<parse>
+
+		<verify>
+			<expect regex=".*Bibliometrics.*">
+				<text
+					xpath="/html/body/div/table[2]/tr/td/div/table/tr/td[2]/table/tr[2]/td/a/text()" />
+			</expect>
+		</verify>
+
+
+		<extract key="title">
+			<text
+				xpath="/html/body/div/table[2]/tr/td/div[@id='divmain']/div/h1/strong/text()" />
+		</extract>
+
+		<extract key="fulltext">
+			<url xpath="//a[@name='FullTextPdf'][1]/@href">
+			</url>
+		</extract>
+
+		<extract key="authors">
+			<iterate
+				xpath="//tr[./td[contains(./text(),'Authors:') or contains(./text(),'Author:')]]/following-sibling::tr/td[2]/*|//tr[./td[contains(./text(),'Authors:') or contains(./text(),'Author:')]]/td[2]/*">
+				<text xpath="text()" />
+			</iterate>
+		</extract>
+
+		<extract key="classifications">
+			<iterate xpath="/html/body/div[2]/div[@class='flatbody']/p/strong/text()">
+				<find pattern="[A-Z]\.[0-9]\.[0-9]" />
+			</iterate>
+		</extract>
+
+		<extract key="abstract">
+			<collect separator=" ">
+				<iterate
+					xpath="//h1/a[contains(text(),'ABSTRACT')]/../../div[@class='flatbody'][1]//*/text()">
+					<text xpath="." />
+				</iterate>
+			</collect>
+		</extract>
+
+		<extract key="volume">
+			<text
+				xpath="/html/body/div/table[2]/tr/td/div/table/tr/td/table[3]/tr/td/table/tr[4]/td">
+				<findone pattern="\d+" />
+			</text>
+		</extract>
+
+		<extract key="issue">
+			<text
+				xpath="/html/body/div/table[2]/tr/td/div/table/tr/td/table[3]/tr/td/table/tr[4]/td/text()">
+				<findone pattern="Issue \d+">
+					<findone pattern="\d+" />
+				</findone>
+			</text>
+		</extract>
+
+		<extract key="pages">
+			<text xpath="//td[contains(text(), 'Pages')]/following-sibling::td/text()">
+				<findone pattern="^.*\d">
+				</findone>
+			</text>
+		</extract>
+
+		<extract key="year2">
+			<text xpath="/html/body/div/table[2]/tr/td/div/table/tr/td[2]/table/tr/td[2]/text()">
+				<findone pattern="\d+" />
+			</text>
+		</extract>
+
+		<extract key="year">
+			<text xpath="/html/head/meta[@name='citation_date']/@content">
+				<findone pattern="\d{4}+" />
+			</text>
+		</extract>
+
+		<extract key="issn">
+			<text xpath="//td[contains(text(), 'ISSN:')]/text()">
+			<findone pattern='[\d-]+'/>
+			</text>
+		</extract>
+
+		<extract key="publisher">
+			<text xpath="//h1/a/span[contains(text(), 'PUBLICATION')]/../../following-sibling::div/table/tr/td[contains(text(),'Publisher')]/following-sibling::td/text()">
+				<substitute pattern="\?" replacewith="" />
+			</text>
+		</extract>
+
+
+	</parse>
+
+</wrapperconfiguration>

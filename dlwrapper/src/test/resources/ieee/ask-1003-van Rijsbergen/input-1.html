@@ -1,0 +1,2989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	 	<title>IEEE Xplore - SearchResult</title>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+<style type="text/css" media="screen, print">
+	@import url(/assets/css/master.css);
+	@import url(/assets/css/endeca.css);
+</style>
+<script type="text/javascript">
+	var NTPT_IMAGE_LOCATION = 'http://tagxplore.ieee.org/';
+	var ASSETS_RELATIVE_PATH = '/assets';
+	var SPECIAL_CHARACTER_MAPS = '&:.AND.,=:.EQ.,+:.PLS.,#:.HSH.,(:.LB.,):.RB.,":.QT.';
+	var SPECIAL_CHARACTERS = new Array();
+	var SPECIAL_CHARACTER_REPLACEMENTS = new Array();
+	var characterMaps = SPECIAL_CHARACTER_MAPS.split(",");
+	for (var i = 0; i < characterMaps.length; i++) {
+		parts = characterMaps[i].split(":");
+		SPECIAL_CHARACTERS[i] = parts[0];
+		SPECIAL_CHARACTER_REPLACEMENTS[i] = parts[1];
+	}
+	
+</script>
+<script type="text/javascript" src="/assets/js/lib.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.new.js"></script>
+<script type="text/javascript" src="/assets/js/search.new.js"></script>
+</head>
+
+<body>
+
+
+	<p class="JumpLink" id="PageTop"><a href="#Body">Skip to Main Content</a></p>
+
+
+	<!-- BEGIN: LayoutWrapper -->
+	<div id="LayoutWrapper">
+		
+		<!-- BEGIN: HeaderWrapper -->		
+		
+			
+		
+
+
+<div id="UtilityNav">
+	<p class="links">
+	 
+	<a href="http://www.ieee.org" id="u-home" target="_blank">IEEE.org</a> &#160;|&#160; 
+	<span>IEEE <em>Xplore</em> Digital Library</span> &#160;|&#160; 
+	<a href="http://standards.ieee.org" id="u-standards" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitstandardsorg');">IEEE Standards Association</a> &#160;|&#160;
+	<a href="http://spectrum.ieee.org" id="u-spectrum" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitspectrum');">Spectrum Online</a> &#160;|&#160; 
+	<a href="http://www.ieee.org/web/services/general/sitemap.html" id="u-more" target="_blank" onclick="ntptEventTag('ev=external link&evLocation=exitmoreieeesites');">More IEEE Sites</a>
+	
+	</p>
+</div>
+
+<div id="HeaderWrapper">
+<!-- BEGIN: HeaderWrapper -->
+<div id="HeaderMetaNavigation">
+	
+</div>
+		<div id="Header">
+				<div id="logo-xplore">
+					<a href="/"><img src="/assets/img/logo.xplore.gif" width="230" height="45" alt="IEEE Xplore Digital Library" /></a>
+				</div>
+
+				<div id="logo-ieee">
+					<img src="/assets/img/logo.ieee.gif" alt="IEEE" />
+				</div>
+
+				<div id="search-field">
+						
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/js/Xplore.js"></script>
+
+
+<script>
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }
+  function loginRedirectForPageTagging(eventType) {
+	    ntptEventTag(eventType);
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+}
+  function showHideDiv(div,show) {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }  
+  function addFilter(filter,checked) { 
+	  if(checked)
+	  {
+		  document.getElementById("newsearch").value="partialPref"
+	  	  document.getElementById("filter").value=filter;
+		// put a large number so that it would not hit the server
+		  acompleter.options.minChars=3000;
+		  document.getElementById('search_suggestions').style.visibility = 'hidden';
+	  }
+	  else
+	  {
+		  document.getElementById("filter").value="";
+		  acompleter.options.minChars=3;
+		  document.getElementById('search_suggestions').style.visibility = 'visible';
+	  }
+  }
+	function submitForm() {
+		document.forms["search_form"].submit();
+	}  
+</script>
+
+
+<form id="search_form" name="search_form"  action='/search/searchresult.jsp' method="get"
+		onSubmit="return filterQuery('queryText');">
+
+<fieldset id="search-fieldset">
+<div class="field"><label for="search-query" class="superfluous">Search Term(s)</label> 
+<span class="input-wrap">
+
+<input type="hidden" name="newsearch" id="newsearch" value="true"/>
+
+	
+<input type="text" name="queryText" id="queryText"  value="" />
+</span>
+
+    <div id="search_suggestions" class="autocomplete">
+    <script>
+    	var acompleter=new Ajax.Autocompleter('queryText', 'search_suggestions', '/search/typeahead',
+    		{ paramName: 'searchRefinementTerm', frequency: '0.8', minChars: 3, method: 'get',
+					parameters: 'searchRefinementMaxResults=20', 
+					afterUpdateElement: "return filterQuery('queryText')"
+    		});
+    </script>
+    </div>
+
+<input type="image" name=""
+	src="/assets/img/btn.search.gif" alt="Search" class="form-action" /></div>
+<div class="tools">
+
+
+  
+<a href="/search/advsearch.jsp" onclick="ntptEventTag('ev=Search&evType=advancedsearch');">Advanced Search</a> &nbsp;|&nbsp;
+
+
+
+
+
+	
+	
+			 
+			<a href="#" onclick='loginRedirectForPageTagging("ev=Search&evType=preferences")'> Preferences</a>&nbsp;|&nbsp;
+			
+
+
+
+ 
+ 	<span id="search-tips-popup" onclick="ntptEventTag('ev=Search&evType=searchtips');">Search Tips</span>
+ 
+
+&nbsp;
+
+</fieldset>
+</form>
+
+				</div>
+	
+		</div>
+
+</div>
+<!-- END: HeaderWrapper -->
+		
+		
+		<!-- END: HeaderWrapper -->
+
+		<!-- BEGIN: ToolBarWrapper -->		
+		
+
+
+
+
+
+
+<div id="ToolBarWrapper">
+
+	<div id="ToolBar">
+	
+	<div id="Browse" class="DHTMLMenu">
+	<div id="browse-content">
+	<h3><a href="/xpl/browseHome.jsp">Browse</a></h3>
+	<div class="SubMenu">
+		
+
+	
+<ul class="button" id="browse-revealed-menu">
+  
+ <li><a href="/xpl/periodicals.jsp" onclick="ntptEventTag('ev=Browse&evtype=Journals_Mag');">Journals & Magazines</a></li>
+	<li><a href="/xpl/conferences.jsp" onclick="ntptEventTag('ev=Browse&evtype=ConfProceedings');">Conference Proceedings</a></li>
+	<li><a href="/xpl/standards.jsp" onclick="ntptEventTag('ev=Browse&evtype=Standards');">Standards</a></li>
+	<li><a href="/xpl/bkBrowse.jsp" onclick="ntptEventTag('ev=Browse&evtype=Books');">Books</a></li>
+	<li><a href="/xpl/modulebrowse.jsp" onclick="ntptEventTag('ev=Browse&evtype=EducationCourses');">Educational Courses</a></li>
+	<li><a href="/techsurvey/jsp/ts_browse.jsp" onclick="ntptEventTag('ev=Browse&evtype=TechnologySurveys');">Technology Surveys</a></li>
+ 
+</ul>
+
+	</div>
+	</div>
+	</div>
+	
+	
+	
+
+
+
+
+
+	
+
+<ul id="UserTools" class="DHTMLMenu">	
+	<li id="my-account">
+		<span>My Settings</span>
+		<div class="SubMenu">
+			<ul>
+					
+ 			    
+					<!-- BEGIN: Unica Page Tag -->
+					<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+					<li><a href="/xpl/tocalerts_list.jsp" onclick="ntptEventTag('ev=mysettings&evType=ALERTS');">Alerts</a></li>			
+					<li><a href="/articleSale/purchaseHistory.jsp" onclick="ntptEventTag('ev=mysettings&evType=PURCHASEHISTORY');">Purchase History</a></li>
+					<!-- END: Unica Page Tag -->
+					
+				
+					 		
+					<li><a href="/Xplore/login.jsp?url=search/savedsearches" onclick="ntptEventTag('ev=mysettings&evType=SAVEDSEARCHES');">Saved Searches</a></li>
+						
+				
+				
+					
+						
+						
+							 	
+								<li><a href="/Xplore/login.jsp?tp=&fromGateway=true&" onclick="ntptEventTag('ev=mysettings&evType=SIGNIN');">Sign In</a></li>
+								
+						
+									
+				 									
+				<li><a href="/Xplore/accessinfo.jsp" onclick="ntptEventTag('ev=mysettings&evType=WHATCANIACCESS');">What can I access?</a></li>
+					
+			</ul>
+		</div>
+	</li>
+
+	<li id="cart">
+		<a href="http://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=InvokeMethod&SWEService=IEEEAddToCartService&SWEMethod=GoToView&mem_type=Customer&Join=y&src=0&HideNew=N&SessionId=vNTRM31Mp0xWwJT6TpfGQvQPp1hDQF1nNnnMvnPQz0HCCGn5kjgN!-1388025253!1291304940772" target="cartwindow">Cart</a>
+	</li>
+</ul>				
+
+	
+
+
+<div class="support">
+	<a href="/xpl/termsOfUse.jsp"><span>Terms of Use</span></a>&nbsp;|	
+	<a href="/xpl/feedback.jsp"><span>Feedback</span></a>&nbsp;&nbsp;	
+	<a>
+		<img src="/assets/img/icon.support.gif" width="24" height="20" alt="" class="icon" />
+		<a href="/Xplorehelp/Help_start.html" target="blank"><span>Help</span></a>
+	</a>           
+</div>
+
+
+			 <table style='float: right; position: relative;' border='0' cellspacing='0' cellpadding='0'>
+	
+<td>
+
+
+       <div id="SignOut" class="DHTMLMenu">
+         
+         	<a href="/servlet/Login?logout=/Xplore/guesthome.jsp" border="0" onclick="ntptEventTag('ev=exitsignout');"><h3><font color='white'>Sign Out</font></h3></a>
+       	
+       </div>
+       
+</td>			
+
+</table>
+	
+	</div>
+
+</div>
+
+
+		<!-- END: ToolBarWrapper -->
+
+	
+		
+		<!-- BEGIN: BodyWrapper -->
+		<div id="BodyWrapper" class="Layout-Column-3">
+
+			<div id="Body">
+				
+				<div class="column-main" id='search' >
+					
+					
+
+
+
+
+
+
+
+
+
+<!---->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+  function gotoPage(pagenum) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'pageNumber' + '='+pagenum;
+    location.href = url_string;
+  }
+
+  function doSearch(searchTerm) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value  + '&'
+    + 'queryText' + '='+searchTerm;
+   // alert(url_string);
+    return url_string;
+  }
+
+  function showAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+    var url_string = '/search/srchabstract.jsp?'+ document.getElementById("oqs").value
+    + '&' + 'arnumber' +'='+ articleNumber;
+    url_string = url_string + '&resultAction=ABSTRACT';
+   // alert(url_string);
+    location.href = url_string;
+    
+  }
+
+  function showFreeAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+	    var url_string = '/search/freesrchabstract.jsp?'+ document.getElementById("oqs").value
+	    + '&' + 'arnumber' +'='+ articleNumber;
+	    url_string = url_string + '&resultAction=ABSTRACT';
+	   // alert(url_string);
+	    location.href = url_string;
+	    
+	  }
+
+  function sortAction(sortTypeValue) {	
+    var sortType = sortTypeValue.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'sortType' + '='+ sortType
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=SORT';
+    location.href = url_string;
+  }
+
+  function removeSearchWithin(term) {
+	  var filteredTerm = getFilteredTerms(term);
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value + '&'
+    + 'removeSearchWithin' + '=' + filteredTerm;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = encodeURI(url_string);
+  }
+
+  function removeRefinement(refineID) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRefinement' + '=' + refineID;
+    url_string = url_string + 
+     '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function removeRange(key) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRange' + '=' + key;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function rowsPerPageAction(rowsPerPageSelect) {
+	var  rowsPerPage=rowsPerPageSelect.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'rowsPerPage' + '='+rowsPerPage 
+    + '&' + 'pageNumber' + '='+ '1'+ '&resultAction=ROWS_PER_PAGE';
+    location.href = url_string;
+  }
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+}
+
+
+  function printSelect() {
+	  window.print();
+	  return false;
+}
+ 
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="search_results_form" id="search_results_form" action="search">
+  <input type="hidden" name="oqs" id="oqs" value="queryText=(((&#034;Author&#034;:van Rijsbergen)))&amp;openedRefinements=*&amp;matchBoolean=true&amp;rowsPerPage=100&amp;searchField=Search All">
+  <input type="hidden" name="pageNumber" id="pageNumber" >
+  <input type="hidden" name="prevArticle" id="prevArticle" />
+  <input type="hidden" name="nextArticle" id="nextArticle" />
+  <input type="hidden" name="savedSearchTitle" id="savedSearchTitle"
+      value="" />
+  
+   
+  
+  
+	
+	
+	
+	
+	
+	
+	
+  	
+  	
+		
+		
+	 
+	
+	
+  	
+  
+ 	 
+
+		
+  <div id="results-hdr">
+							<h2>Search Results</h2>
+							<div class="content" id="content">
+						  
+						  <div class="refinement">
+							<p>You searched for:
+							
+							  
+							  <strong class="search-term">((("Author":van Rijsbergen)))</strong>
+							
+								
+							
+							</p>
+							</div>
+							
+							
+						</div>
+					
+						<div>
+								
+						</div>
+				</div>	
+			 <div id="hiddenBreadcrumbContent" style="display:none" >
+							((("Author":van Rijsbergen)))::
+			  </div>	
+				<div id="hiddenEndecaQuery" style="display:none" >
+							N=0&Ntk=&Ntt=&Ntx=&Nty=1&Nrk=Search+All&Nrt=van+Rijsbergen&Nrr=Search+All&Nrm=matchany&Nrs=collection%28%29%2frecord%5b+%28++%28++%28+%28endeca%3amatches%28.%2c%22Author%22%2c%22van+Rijsbergen%22%2c%22allpartial%22%29%29+%29++%29++%29+%5d
+				</div>	
+				
+				 
+						  
+						  
+						  
+						  
+				 
+
+
+	
+			
+						<div class="page-tools">
+							  
+							  
+							  
+										
+							  
+							 	 
+							 						 
+							  
+							 
+							  
+								
+								
+								
+								
+								
+								
+								
+
+
+
+
+
+
+	
+				<fieldset>
+					<ul>
+						<span id="fromPage" style="display:none;">searchresults</span>				
+						<span id="formName" style="display:none;">search_results_form</span>							
+					
+					
+						
+										
+							  
+							   
+									<!-- BEGIN: Unica Page Tag -->
+									<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+									<li><img src="/assets/img/btn.save-this-search.gif" width="80" height="25" class="button" alt="Save this Search" onClick='loginRedirectForPageTagging("ev=savethissearch")'/></li>
+									<!-- END: Unica Page Tag -->
+							  	
+							  					 
+						
+							
+					
+						
+												
+							<li><img src="/assets/img/btn.dl-citations.gif" width="80" height="25" alt="Download Citations" class="button" id="popup-download-searchresult-citations" /></li>
+						
+						
+						
+						<li><img src="/assets/img/popup-email-selected-results.gif" width="100" height="25" alt="Email" class="button" id="popup-email-selected-results" /></li>
+						<li><img src="/assets/img/btn.print.gif" width="60" height="25" alt="Print" class="button" onclick="window.print();return false;"/></li>
+						
+				  
+					
+						<li>
+								
+								 
+							</li>
+					</ul>
+				</fieldset>
+							  	
+						</div>
+
+						<div class="results-display">
+						  <fieldset class="display-options">
+							    <label for="search-results-p-page">
+							      Results per Page 
+							    </label>
+							  
+							    <select name="rowsPerPage" id="rowsPerPage" onchange="javascript:rowsPerPageAction(this)">
+											<option  value="10" >10</option>
+											<option   value="25" >25</option> 
+											<option  value="50" >50</option> 
+											<option  selected  value="100" >100</option> 
+								</select>	
+								 </fieldset>
+						 
+						  <span class="display-status">
+						    Showing
+						    1 -  4 of
+						    4 results
+						    
+						    
+						    
+						      
+						      
+						      
+						      
+						    
+
+
+
+
+
+
+<div class="ClearFix"><!-- do not remove --></div>
+						    
+						  </span>
+						</div>
+
+						<div class="results-actions">
+						  <fieldset class="sort">
+						    <label for="search-results-sort-by">
+						      Sort By: 
+						    </label>
+						    <select name="sortType"	id="sortType" onchange="javascript:sortAction(this)">
+						      <option value="" >Relevance
+						      </option>
+						      
+						      <option  value="desc_Publication Year"
+						          >Newest First
+						      </option>
+						      
+						      <option  value="asc_Publication Year"
+						          >Oldest First
+						      </option>
+						      <option value="asc_Publication Title"
+						          >Publication Title AZ
+						      </option>
+						      
+						      <option value="desc_Publication Title"
+						          >Publication Title ZA
+						      </option>
+						    </select>
+						
+						  </fieldset>
+						
+						  <p class="links" id="toggle-all-checkboxes">
+						    <span id="select-all" class="link SelectAll">
+						      Select All
+						    </span>
+						    |
+						    <span id="deselect-all" class="link DeSelectAll">
+						      Deselect All
+						    </span>
+						  </p>
+						</div>
+
+	
+		 
+
+<!-- END IF NO RECORDS WERE FOUND -->
+
+
+			<!-- BEGIN: HeaderWrapper -->		
+			
+
+
+
+
+
+
+           
+ 
+
+
+
+
+<ul class="Results">
+	 
+
+          
+          
+          
+            <li class="noAbstract">
+          
+        
+         
+               
+        
+        
+          
+        
+        
+        
+        
+                               
+        
+        
+                 
+        <div class="header">
+          <div class="select">
+              	  
+              
+            <input name="" type="checkbox" value="" 
+            	id="1381205"/>
+           
+          </div>
+          <div class="detail">
+            <h3>           
+              	
+              		
+             			
+             				
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1381205&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					Topic based language models for ad hoc information retrieval
+             					</a>
+             				
+             				
+             			
+            	
+              
+          </h3>
+          
+          <!-- If user preference is Title only -->
+          
+            <p>
+               
+              Azzopardi, L.; Girolami, M.; van Rijsbergen, C.J.;
+			  
+              
+               	<br />                
+                <a href='../xpl/mostRecentIssue.jsp?punumber=9486'>
+                  Neural Networks, 2004. Proceedings. 2004 IEEE International Joint Conference on
+                </a>
+                
+              
+                <br/>                
+                Volume:
+                4 
+                
+              
+               
+             
+                <br/>Digital Object Identifier:
+                
+             	<a href="http://dx.doi.org/10.1109/IJCNN.2004.1381205" target="blank">10.1109/IJCNN.2004.1381205</a>
+                
+             
+              
+                <br/>Publication Year:
+                 2004
+               
+                
+                
+                  , Page(s):
+                  
+                    3281
+                    
+                      
+                        -
+                        3286 vol.4
+                        
+                       
+                        
+                		 </p>
+                      
+                      
+                        <p>
+                        
+                     	<span class="type">
+                      		IEEE Conferences
+                         </span>
+                      
+                 </p>
+                      
+                <p class="links">
+                 
+                 	                	
+                	<img alt="You have unlimited access to this document with your subscription." title="You have unlimited access to this document with your subscription."
+                      src="/assets/img/subid.gif" />
+               		
+                
+                 
+                
+                 
+                	
+                	
+                		
+                			
+                			
+                		  		<a  href='/search/srchabstract.jsp?tp=&arnumber=1381205&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+                		  		AbstractPlus
+                           	
+                		
+                      </a>
+                	
+                	
+                
+                
+                	
+                	
+                	
+                	
+                	
+                      &nbsp;|&nbsp;
+                    
+                    Full Text:  
+                      <a href="/stamp/stamp.jsp?tp=&arnumber=1381205">
+                       PDF</a>&nbsp;(436 KB)                     
+                	
+                
+                
+                
+                 
+            
+            	
+               
+               	
+ 			</p>
+              <!-- BEGIN OF OPEN URL -->
+               
+                <!-- END OF OPEN URL -->
+                  </div>
+               
+                  <div class="tools">
+                    <img width="80" height="25" alt="Quick Abstract" class="button quick-abstract RevealControl"
+                        src="/assets/img/btn.quick-abstract.collapsed.gif"                       
+                    />
+                  </div>
+                 
+                </div>
+               
+                <div class="abstract RevealContent" id="abstract-1">
+                  
+                    <p>
+                      We propose a topic based approach to language modelling for ad-hoc information retrieval (IR). Many smoothed estimators used for the multinomial query model in IR rely upon the estimated background collection probabilities. In this paper, we propose a topic based language modelling approach, that uses a more informative prior based on the topical content of a document. In our experiments, the proposed model provides comparable IR performance to the standard models, but when combined in a two stage language model, it outperforms all other estimated models.
+                      
+                 
+                	
+                	
+                	
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1381205&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					<span class="more">Read More&#187;</span> </a>
+             				
+             				                	
+                	
+                
+                  </p>
+                  
+                  </div>
+                
+                </li>
+                
+          
+          
+          
+            <li class="noAbstract">
+          
+        
+         
+               
+        
+        
+          
+        
+        
+        
+        
+                               
+        
+        
+                 
+        <div class="header">
+          <div class="select">
+              	  
+              
+            <input name="" type="checkbox" value="" 
+            	id="1000352"/>
+           
+          </div>
+          <div class="detail">
+            <h3>           
+              	
+              		
+             			
+             				
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1000352&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					Automatic query expansion based on directed divergence
+             					</a>
+             				
+             				
+             			
+            	
+              
+          </h3>
+          
+          <!-- If user preference is Title only -->
+          
+            <p>
+               
+              Cai, D.; van Rijsbergen, C.J.;
+			  
+              
+               	<br />                
+                <a href='../xpl/mostRecentIssue.jsp?punumber=7847'>
+                  Information Technology: Coding and Computing, 2002. Proceedings. International Conference on
+                </a>
+                
+              
+              
+               
+             
+                <br/>Digital Object Identifier:
+                
+             	<a href="http://dx.doi.org/10.1109/ITCC.2002.1000352" target="blank">10.1109/ITCC.2002.1000352</a>
+                
+             
+              
+                <br/>Publication Year:
+                 2002
+               
+                
+                
+                  , Page(s):
+                  
+                    8
+                    
+                      
+                        -
+                        15
+                        
+                       
+                        
+                		 </p>
+                      
+                      
+                        <p>
+                        
+                     	<span class="type">
+                      		IEEE Conferences
+                         </span>
+                      
+                 </p>
+                      
+                <p class="links">
+                 
+                 	                	
+                	<img alt="You have unlimited access to this document with your subscription." title="You have unlimited access to this document with your subscription."
+                      src="/assets/img/subid.gif" />
+               		
+                
+                 
+                
+                 
+                	
+                	
+                		
+                			
+                			
+                		  		<a  href='/search/srchabstract.jsp?tp=&arnumber=1000352&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+                		  		AbstractPlus
+                           	
+                		
+                      </a>
+                	
+                	
+                
+                
+                	
+                	
+                	
+                	
+                	
+                      &nbsp;|&nbsp;
+                    
+                    Full Text:  
+                      <a href="/stamp/stamp.jsp?tp=&arnumber=1000352">
+                       PDF</a>&nbsp;(342 KB)                     
+                	
+                
+                
+                
+                 
+            
+            	
+               
+               	
+ 			</p>
+              <!-- BEGIN OF OPEN URL -->
+               
+                <!-- END OF OPEN URL -->
+                  </div>
+               
+                  <div class="tools">
+                    <img width="80" height="25" alt="Quick Abstract" class="button quick-abstract RevealControl"
+                        src="/assets/img/btn.quick-abstract.collapsed.gif"                       
+                    />
+                  </div>
+                 
+                </div>
+               
+                <div class="abstract RevealContent" id="abstract-1">
+                  
+                    <p>
+                      To extract informative terms through known relevance information for query expansion is an important issue in the design of an effective text retrieval system. Various discriminant functions have been developed as a device for eliciting good terms. In this paper the notion of informativeness of terms is interpreted and discriminant functions are formalised both based on information-theoretic ideas for automatic query expansion. Preliminary results show that the approach adopted in this paper is worthy of continued investigation.
+                      
+                 
+                	
+                	
+                	
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=1000352&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					<span class="more">Read More&#187;</span> </a>
+             				
+             				                	
+                	
+                
+                  </p>
+                  
+                  </div>
+                
+                </li>
+                
+          
+          
+          
+            <li class="noAbstract">
+          
+        
+         
+               
+        
+        
+          
+        
+        
+        
+        
+                               
+        
+        
+                 
+        <div class="header">
+          <div class="select">
+              	  
+              
+            <input name="" type="checkbox" value="" 
+            	id="171928"/>
+           
+          </div>
+          <div class="detail">
+            <h3>           
+              	
+              		
+             			
+             				
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=171928&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					The application of vector envisionment to compartmental systems
+             					</a>
+             				
+             				
+             			
+            	
+              
+          </h3>
+          
+          <!-- If user preference is Title only -->
+          
+            <p>
+               
+              Coghill, G.M.; Asbury, A.J.; van Rijsbergen, C.J.; Gray, W.M.;
+			  
+              
+               	<br />                
+                <a href='../xpl/mostRecentIssue.jsp?punumber=1193'>
+                  Intelligent Systems Engineering, 1992., First International Conference on (Conf. Publ. No. 360)
+                </a>
+                
+              
+              
+               
+             
+              
+                <br/>Publication Year:
+                 1992
+               
+                
+                
+                  , Page(s):
+                  
+                    123
+                    
+                      
+                        -
+                        128
+                        
+                       
+                        
+                		 </p>
+                      
+                      
+                        <p>
+                        
+                     	<span class="type">
+                      		IET Conferences
+                         </span>
+                      
+                 </p>
+                      
+                <p class="links">
+                 
+                 	                	
+                	<img alt="You have unlimited access to this document with your subscription." title="You have unlimited access to this document with your subscription."
+                      src="/assets/img/subid.gif" />
+               		
+                
+                 
+                
+                 
+                	
+                	
+                		
+                			
+                			
+                		  		<a  href='/search/srchabstract.jsp?tp=&arnumber=171928&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+                		  		AbstractPlus
+                           	
+                		
+                      </a>
+                	
+                	
+                
+                
+                	
+                	
+                	
+                	
+                	
+                      &nbsp;|&nbsp;
+                    
+                    Full Text:  
+                      <a href="/stamp/stamp.jsp?tp=&arnumber=171928">
+                       PDF</a>&nbsp;(332 KB)                     
+                	
+                
+                
+                
+                 
+            
+            	
+               
+               	
+ 			</p>
+              <!-- BEGIN OF OPEN URL -->
+               
+                <!-- END OF OPEN URL -->
+                  </div>
+               
+                  <div class="tools">
+                    <img width="80" height="25" alt="Quick Abstract" class="button quick-abstract RevealControl"
+                        src="/assets/img/btn.quick-abstract.collapsed.gif"                       
+                    />
+                  </div>
+                 
+                </div>
+               
+                <div class="abstract RevealContent" id="abstract-1">
+                  
+                    <p>
+                      Vector envisionment (VE) is a qualitative modelling method, for reasoning about dynamic physical systems, based on qualitative vectors. An envisionment is the set of all possible qualitative behaviours that a system may exhibit for a particular input. Compartmental systems are a class of dynamic system composed of a finite set of homogeneous, well mixed, lumped subsystems called compartments; the behaviour of each compartment may be described by a first order differential equation. It is demonstrated that, for a linear time invariant compartmental system, VE can find all the distinct qualitative states in which the system may exist for a given input. From these a solution space is constructed which is divided in accordance with the critical points of the system. Each qualitatively distinct region of this space is associated with a particular range of magnitudes for the initial values for the state variable. An envisionment graph is also produced which, combined with the solution space, gives a means of overcoming the problem of chattering
+                      
+                 
+                	
+                	
+                	
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=171928&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					<span class="more">Read More&#187;</span> </a>
+             				
+             				                	
+                	
+                
+                  </p>
+                  
+                  </div>
+                
+                </li>
+                
+          
+          
+          
+            <li class="noAbstract">
+          
+        
+         
+               
+        
+        
+          
+        
+        
+        
+        
+                               
+        
+        
+                 
+        <div class="header">
+          <div class="select">
+              	  
+              
+            <input name="" type="checkbox" value="" 
+            	id="4624683"/>
+           
+          </div>
+          <div class="detail">
+            <h3>           
+              	
+              		
+             			
+             				
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=4624683&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					A Formalization of Logical Imaging for Information Retrieval Using Quantum Theory
+             					</a>
+             				
+             				
+             			
+            	
+              
+          </h3>
+          
+          <!-- If user preference is Title only -->
+          
+            <p>
+               
+              Zuccon, G.; Azzopardi, L.A.; van Rijsbergen, C.J.;
+			  
+              
+               	<br />                
+                <a href='../xpl/mostRecentIssue.jsp?punumber=4624650'>
+                  Database and Expert Systems Application, 2008. DEXA '08. 19th International Workshop on
+                </a>
+                
+              
+              
+               
+             
+                <br/>Digital Object Identifier:
+                
+             	<a href="http://dx.doi.org/10.1109/DEXA.2008.69" target="blank">10.1109/DEXA.2008.69</a>
+                
+             
+              
+                <br/>Publication Year:
+                 2008
+               
+                
+                
+                  , Page(s):
+                  
+                    3
+                    
+                      
+                        -
+                        8
+                        
+                       
+                        
+                		 </p>
+                      
+                      
+                        <p>
+                        
+                     	<span class="type">
+                      		IEEE Conferences
+                         </span>
+                      
+                 </p>
+                      
+                <p class="links">
+                 
+                 	                	
+                	<img alt="You have unlimited access to this document with your subscription." title="You have unlimited access to this document with your subscription."
+                      src="/assets/img/subid.gif" />
+               		
+                
+                 
+                
+                 
+                	
+                	
+                		
+                			
+                			
+                		  		<a  href='/search/srchabstract.jsp?tp=&arnumber=4624683&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+                		  		AbstractPlus
+                           	
+                		
+                      </a>
+                	
+                	
+                
+                
+                	
+                	
+                	
+                	
+                	
+                      &nbsp;|&nbsp;
+                    
+                    Full Text:  
+                      <a href="/stamp/stamp.jsp?tp=&arnumber=4624683">
+                       PDF</a>&nbsp;(467 KB)                     
+                	
+                
+                
+                
+                 
+            
+            	
+               
+               	
+ 			</p>
+              <!-- BEGIN OF OPEN URL -->
+               
+                <!-- END OF OPEN URL -->
+                  </div>
+               
+                  <div class="tools">
+                    <img width="80" height="25" alt="Quick Abstract" class="button quick-abstract RevealControl"
+                        src="/assets/img/btn.quick-abstract.collapsed.gif"                       
+                    />
+                  </div>
+                 
+                </div>
+               
+                <div class="abstract RevealContent" id="abstract-1">
+                  
+                    <p>
+                      In this paper we introduce a formalization of Logical Imaging applied to IR in terms of Quantum Theory through the use of an analogy between states of a quantum system and terms in text documents. Our formalization relies upon the Schrodinger Picture, creating an analogy between the dynamics of a physical system and the kinematics of probabilities generated by Logical Imaging. By using Quantum Theory, it is possible to model more precisely contextual information in a seamless and principled fashion within the Logical Imaging process. While further work is needed to empirically validate this, the foundations for doing so are provided.
+                      
+                 
+                	
+                	
+                	
+                			
+             				
+             					<a  href='/search/srchabstract.jsp?tp=&arnumber=4624683&queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>
+             					<span class="more">Read More&#187;</span> </a>
+             				
+             				                	
+                	
+                
+                  </p>
+                  
+                  </div>
+                
+                </li>
+                
+
+   </ul>
+
+            
+			<!-- END: HeaderWrapper -->
+
+
+            
+            
+              
+              
+              
+              
+            
+
+
+
+
+
+
+<div class="ClearFix"><!-- do not remove --></div>
+            
+          </form>	
+					
+				</div>
+				
+			
+				<div class="column-side column-side-left">
+					<!-- BEGIN: Search Refinements -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  function searchWithin() {
+	 // 
+ 	var good_query = filterQuery("swr_query");
+ 	if (good_query) {
+ 		var swr_query = getFilteredTerms(document.getElementById("swr_query").value);
+ 	    var url_string =  '/search/searchresult.jsp?' + 
+    	document.getElementById("oqs").value +'&'
+    	+ 'searchWithin'+ '=' + swr_query;
+    	 url_string = url_string 
+    	 +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    window.location = encodeURI(url_string);
+    } else {
+        return;
+    }
+  }
+  </script>
+  
+  
+
+  
+  
+  
+  
+
+  <!-- BEGIN: Search Refinements -->
+  <div class="box navigation">
+    <div class="header"><h3>Refine/Expand Results</h3></div>
+
+    <fieldset class="search-within-results" >
+      <label for="swr_query">Search within results:</label>
+      <input type="text" id="swr_query" name="swr_query" />
+      <input type="image" alt="Search" onclick="searchWithin()"
+          src="/assets/img/btn.search.sm.gif"/>
+    	<div id="search_within_suggestions" class="autocomplete" style="display:none">
+        <script type='text/javascript'>//<![CDATA[
+new Ajax.Autocompleter(
+'swr_query', 'search_within_suggestions', '/search/typeahead',
+{ paramName: 'searchRefinementTerm', frequency: '1.0', minChars: 3, method: 'get', parameters: encodeURI('queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All') + '&searchRefinementId=3344', afterUpdateElement: searchWithin  }
+);
+//]]></script>
+
+      </div>
+    </fieldset>
+
+    
+ 			
+     		
+     		
+      
+
+        
+        	            
+          
+						
+            
+              
+              
+
+              <fieldset class="search-refine slider-refine">
+                <h4>Publication Year</h4>
+                <div>
+                  <label for="radio_single">
+                    <input type="radio" id="radio_single" name="date_selection_type" value="single"
+                        onclick="DateSlider.handleSelectionTypeChoice.bind(DateSlider)(this);" class="selection-type-button"/>
+                    <span>Single Year</span>
+                  </label>
+                  
+                  <label for="radio_range">
+                    <input type="radio" id="radio_range" name="date_selection_type" value="range" checked="checked"
+                        onclick="DateSlider.handleSelectionTypeChoice.bind(DateSlider)(this);" class="selection-type-button"/>
+                    <span>Range</span>
+                  </label>
+
+                  <table><tbody>
+                    <tr>
+                      <td class="date-boundary">1992</td>
+
+                      <td>
+                        <div id="Date-slider" class="slider-bar">
+                          <div id="start-date-slider" class="slider-handle">
+                            <img id="start-date-slider-image"
+                                src="/assets/img/icon.slider-top.gif"/>
+                          </div>
+                          
+                          <div id="end-date-slider" class="slider-handle">
+                            <img  id="end-date-slider-image"
+                                src="/assets/img/icon.slider-bottom.gif"/>
+                          </div>
+                          
+                          <script type="text/javascript">
+                          <!--
+                            DateValues = new Array();
+                            var DateRange = 16;
+                            
+                            	DateValues.push(1992);
+                            	if (DateRange > 0) {
+                              	var DatePercentage = 0/DateRange*100;
+                              	document.writeln("<div style='left: " + DatePercentage
+                              		+ "%;' class='slider-value-marker'></div>");
+                            	}
+                            
+                            	DateValues.push(2002);
+                            	if (DateRange > 0) {
+                              	var DatePercentage = 10/DateRange*100;
+                              	document.writeln("<div style='left: " + DatePercentage
+                              		+ "%;' class='slider-value-marker'></div>");
+                            	}
+                            
+                            	DateValues.push(2004);
+                            	if (DateRange > 0) {
+                              	var DatePercentage = 12/DateRange*100;
+                              	document.writeln("<div style='left: " + DatePercentage
+                              		+ "%;' class='slider-value-marker'></div>");
+                            	}
+                            
+                            	DateValues.push(2008);
+                            	if (DateRange > 0) {
+                              	var DatePercentage = 16/DateRange*100;
+                              	document.writeln("<div style='left: " + DatePercentage
+                              		+ "%;' class='slider-value-marker'></div>");
+                            	}
+                            
+                          -->
+                          </script>
+                          
+                        </div>
+                      </td>
+                      
+                      <td class="date-boundary">2008</td>
+                    </tr>
+                  </tbody></table>
+
+                  <script type="text/javascript">
+                    addDateSlider(1992, 2008);
+                    $('Date-slider').stopObserving('mousedown');
+                  </script>
+
+                  <div id="start-year-input" class="year-input">
+                    <label for="text_startyear">From:</label>
+                    <input type="text" size="4" id="text_startyear" name="text_startyear" 
+                    	value="1992" class="TextInput" onchange="DateSlider.selectClosestValue.bind(DateSlider)(this, 0);"/>
+                  </div>
+                  <div class="ClearFix"></div>
+
+                  <div id="end-year-input" class="year-input">
+                    <label for="text_endyear">To:</label>
+                    <input  type="text" size="4" id="text_endyear" name="text_endyear"
+                    	value="2008" class="TextInput" onchange="DateSlider.selectClosestValue.bind(DateSlider)(this, 1);"/>
+                  </div>
+                  <div class="ClearFix"></div>
+                  
+                  <div class="update-button" style="display:none">
+                  	<input  type="image" alt="Update Results" 
+                  	onclick="javascript:applyDateRange('/search/searchresult.jsp?', '&addRange', 'Publication_Year');"
+                      src="/assets/img/btn.update-results.gif"/> 
+                  </div>
+                  <div class="ClearFix"></div>
+                </div>
+              </fieldset>
+            
+
+			
+						
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Author</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Author-search-field" style='display:none'>Search for Author</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Author-search-field" name="Author-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Author-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Author-refinements" style="height: 20.0em">
+                  
+                  
+                    
+                      <li id="4294025939">
+                        <div>
+                          <label for="Author_4294025939">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4294025939" name="Author"
+                                value="4294025939"
+                            />
+                            <span class="refinement">
+                              van Rijsbergen, C.J.
+                              <span class="refinement-count">
+                              	(4)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294947007">
+                        <div>
+                          <label for="Author_4294947007">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4294947007" name="Author"
+                                value="4294947007"
+                            />
+                            <span class="refinement">
+                              Asbury, A.J.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294856970">
+                        <div>
+                          <label for="Author_4294856970">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4294856970" name="Author"
+                                value="4294856970"
+                            />
+                            <span class="refinement">
+                              Gray, W.M.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294182669">
+                        <div>
+                          <label for="Author_4294182669">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4294182669" name="Author"
+                                value="4294182669"
+                            />
+                            <span class="refinement">
+                              Cai, D.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294025940">
+                        <div>
+                          <label for="Author_4294025940">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4294025940" name="Author"
+                                value="4294025940"
+                            />
+                            <span class="refinement">
+                              Coghill, G.M.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4292709609">
+                        <div>
+                          <label for="Author_4292709609">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4292709609" name="Author"
+                                value="4292709609"
+                            />
+                            <span class="refinement">
+                              Girolami, M.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4289662436">
+                        <div>
+                          <label for="Author_4289662436">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4289662436" name="Author"
+                                value="4289662436"
+                            />
+                            <span class="refinement">
+                              Azzopardi, L.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4287084317">
+                        <div>
+                          <label for="Author_4287084317">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4287084317" name="Author"
+                                value="4287084317"
+                            />
+                            <span class="refinement">
+                              Zuccon, G.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4287084316">
+                        <div>
+                          <label for="Author_4287084316">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_4287084316" name="Author"
+                                value="4287084316"
+                            />
+                            <span class="refinement">
+                              Azzopardi, L.A.
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Author-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Author-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Author_defaultRefinements = $('Author-refinements').childElements();
+var Author_selections = $A([]);
+var AuthorAutocompleter = new IEEERefinementAutocompleter(
+  'Author-search-field', 'Author-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3299&addCheckBox=true&refinementName=Author', 
+    refinementList: $('Author-refinements'), 
+    selectedList: $('Author-selections'), 
+    defaultItems: Author_defaultRefinements, 
+    selectedItems: Author_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+AuthorAutocompleter.replaceRefinementListContents(Author_defaultRefinements);
+$('Author-search-field').observe('keyup', AuthorAutocompleter.onKeyUp.bindAsEventListener(AuthorAutocompleter));
+$('Author-search-field').next('.clear-button').observe('click', AuthorAutocompleter.onClearButton.bindAsEventListener(AuthorAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Affiliation</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Author_Affiliation-search-field" style='display:none'>Search for Affiliation</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Author_Affiliation-search-field" name="Author_Affiliation-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Author_Affiliation-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Author_Affiliation-refinements" style="height: 14.0em">
+                  
+                  
+                    
+                      <li id="4294874888">
+                        <div>
+                          <label for="Author_Affiliation_4294874888">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_Affiliation_4294874888" name="Author_Affiliation"
+                                value="4294874888"
+                            />
+                            <span class="refinement">
+                              Heriot-Watt Univ., Edinburgh
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294105451">
+                        <div>
+                          <label for="Author_Affiliation_4294105451">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_Affiliation_4294105451" name="Author_Affiliation"
+                                value="4294105451"
+                            />
+                            <span class="refinement">
+                              Glasgow Univ., UK
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4289662431">
+                        <div>
+                          <label for="Author_Affiliation_4289662431">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_Affiliation_4289662431" name="Author_Affiliation"
+                                value="4289662431"
+                            />
+                            <span class="refinement">
+                              Sch. of ICT, Paisley Univ., UK
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4288107968">
+                        <div>
+                          <label for="Author_Affiliation_4288107968">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Author_Affiliation_4288107968" name="Author_Affiliation"
+                                value="4288107968"
+                            />
+                            <span class="refinement">
+                              Dept. of Comput. Sci., Univ. of Glasgow, Glasgow
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Author_Affiliation-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Author_Affiliation-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Author_Affiliation_defaultRefinements = $('Author_Affiliation-refinements').childElements();
+var Author_Affiliation_selections = $A([]);
+var Author_AffiliationAutocompleter = new IEEERefinementAutocompleter(
+  'Author_Affiliation-search-field', 'Author_Affiliation-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3325&addCheckBox=true&refinementName=Author_Affiliation', 
+    refinementList: $('Author_Affiliation-refinements'), 
+    selectedList: $('Author_Affiliation-selections'), 
+    defaultItems: Author_Affiliation_defaultRefinements, 
+    selectedItems: Author_Affiliation_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+Author_AffiliationAutocompleter.replaceRefinementListContents(Author_Affiliation_defaultRefinements);
+$('Author_Affiliation-search-field').observe('keyup', Author_AffiliationAutocompleter.onKeyUp.bindAsEventListener(Author_AffiliationAutocompleter));
+$('Author_Affiliation-search-field').next('.clear-button').observe('click', Author_AffiliationAutocompleter.onClearButton.bindAsEventListener(Author_AffiliationAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Publication Title</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Publication_Title-search-field" style='display:none'>Search for Publication Title</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Publication_Title-search-field" name="Publication_Title-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Publication_Title-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Publication_Title-refinements" style="height: 14.0em">
+                  
+                  
+                    
+                      <li id="4294027339">
+                        <div>
+                          <label for="Publication_Title_4294027339">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publication_Title_4294027339" name="Publication_Title"
+                                value="4294027339"
+                            />
+                            <span class="refinement">
+                              Intelligent Systems Engineering, 1992., First International Conference on (Conf. Publ. No. 360)
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4290832762">
+                        <div>
+                          <label for="Publication_Title_4290832762">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publication_Title_4290832762" name="Publication_Title"
+                                value="4290832762"
+                            />
+                            <span class="refinement">
+                              Information Technology: Coding and Computing, 2002. Proceedings. International Conference on
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4289672735">
+                        <div>
+                          <label for="Publication_Title_4289672735">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publication_Title_4289672735" name="Publication_Title"
+                                value="4289672735"
+                            />
+                            <span class="refinement">
+                              Neural Networks, 2004. Proceedings. 2004 IEEE International Joint Conference on
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4284131047">
+                        <div>
+                          <label for="Publication_Title_4284131047">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publication_Title_4284131047" name="Publication_Title"
+                                value="4284131047"
+                            />
+                            <span class="refinement">
+                              Database and Expert Systems Application, 2008. DEXA '08. 19th International Workshop on
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Publication_Title-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Publication_Title-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Publication_Title_defaultRefinements = $('Publication_Title-refinements').childElements();
+var Publication_Title_selections = $A([]);
+var Publication_TitleAutocompleter = new IEEERefinementAutocompleter(
+  'Publication_Title-search-field', 'Publication_Title-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3300&addCheckBox=true&refinementName=Publication_Title', 
+    refinementList: $('Publication_Title-refinements'), 
+    selectedList: $('Publication_Title-selections'), 
+    defaultItems: Publication_Title_defaultRefinements, 
+    selectedItems: Publication_Title_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+Publication_TitleAutocompleter.replaceRefinementListContents(Publication_Title_defaultRefinements);
+$('Publication_Title-search-field').observe('keyup', Publication_TitleAutocompleter.onKeyUp.bindAsEventListener(Publication_TitleAutocompleter));
+$('Publication_Title-search-field').next('.clear-button').observe('click', Publication_TitleAutocompleter.onClearButton.bindAsEventListener(Publication_TitleAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Publisher</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Publisher_Name-search-field" style='display:none'>Search for Publisher</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Publisher_Name-search-field" name="Publisher_Name-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Publisher_Name-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Publisher_Name-refinements" style="height: 4.0em">
+                  
+                  
+                    
+                      <li id="4294967187">
+                        <div>
+                          <label for="Publisher_Name_4294967187">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publisher_Name_4294967187" name="Publisher_Name"
+                                value="4294967187"
+                            />
+                            <span class="refinement">
+                              IEEE
+                              <span class="refinement-count">
+                              	(3)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294967268">
+                        <div>
+                          <label for="Publisher_Name_4294967268">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Publisher_Name_4294967268" name="Publisher_Name"
+                                value="4294967268"
+                            />
+                            <span class="refinement">
+                              IET
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Publisher_Name-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Publisher_Name-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Publisher_Name_defaultRefinements = $('Publisher_Name-refinements').childElements();
+var Publisher_Name_selections = $A([]);
+var Publisher_NameAutocompleter = new IEEERefinementAutocompleter(
+  'Publisher_Name-search-field', 'Publisher_Name-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3343&addCheckBox=true&refinementName=Publisher_Name', 
+    refinementList: $('Publisher_Name-refinements'), 
+    selectedList: $('Publisher_Name-selections'), 
+    defaultItems: Publisher_Name_defaultRefinements, 
+    selectedItems: Publisher_Name_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+Publisher_NameAutocompleter.replaceRefinementListContents(Publisher_Name_defaultRefinements);
+$('Publisher_Name-search-field').observe('keyup', Publisher_NameAutocompleter.onKeyUp.bindAsEventListener(Publisher_NameAutocompleter));
+$('Publisher_Name-search-field').next('.clear-button').observe('click', Publisher_NameAutocompleter.onClearButton.bindAsEventListener(Publisher_NameAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Subject</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Subject-search-field" style='display:none'>Search for Subject</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Subject-search-field" name="Subject-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Subject-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Subject-refinements" style="height: 14.0em">
+                  
+                  
+                    
+                      <li id="4294965803">
+                        <div>
+                          <label for="Subject_4294965803">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Subject_4294965803" name="Subject"
+                                value="4294965803"
+                            />
+                            <span class="refinement">
+                              Computing & Processing (Hardware/Software)
+                              <span class="refinement-count">
+                              	(4)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294967105">
+                        <div>
+                          <label for="Subject_4294967105">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Subject_4294967105" name="Subject"
+                                value="4294967105"
+                            />
+                            <span class="refinement">
+                              Communication, Networking & Broadcasting
+                              <span class="refinement-count">
+                              	(2)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294930523">
+                        <div>
+                          <label for="Subject_4294930523">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Subject_4294930523" name="Subject"
+                                value="4294930523"
+                            />
+                            <span class="refinement">
+                              Signal Processing & Analysis
+                              <span class="refinement-count">
+                              	(2)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294959726">
+                        <div>
+                          <label for="Subject_4294959726">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Subject_4294959726" name="Subject"
+                                value="4294959726"
+                            />
+                            <span class="refinement">
+                              Components, Circuits, Devices & Systems
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Subject-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Subject-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Subject_defaultRefinements = $('Subject-refinements').childElements();
+var Subject_selections = $A([]);
+var SubjectAutocompleter = new IEEERefinementAutocompleter(
+  'Subject-search-field', 'Subject-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=8&addCheckBox=true&refinementName=Subject', 
+    refinementList: $('Subject-refinements'), 
+    selectedList: $('Subject-selections'), 
+    defaultItems: Subject_defaultRefinements, 
+    selectedItems: Subject_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+SubjectAutocompleter.replaceRefinementListContents(Subject_defaultRefinements);
+$('Subject-search-field').observe('keyup', SubjectAutocompleter.onKeyUp.bindAsEventListener(SubjectAutocompleter));
+$('Subject-search-field').next('.clear-button').observe('click', SubjectAutocompleter.onClearButton.bindAsEventListener(SubjectAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Conference Country</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Conference_Country-search-field" style='display:none'>Search for Conference Country</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Conference_Country-search-field" name="Conference_Country-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Conference_Country-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Conference_Country-refinements" style="height: 3.0em">
+                  
+                  
+                    
+                      <li id="4294967267">
+                        <div>
+                          <label for="Conference_Country_4294967267">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Conference_Country_4294967267" name="Conference_Country"
+                                value="4294967267"
+                            />
+                            <span class="refinement">
+                              UK
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Conference_Country-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Conference_Country-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Conference_Country_defaultRefinements = $('Conference_Country-refinements').childElements();
+var Conference_Country_selections = $A([]);
+var Conference_CountryAutocompleter = new IEEERefinementAutocompleter(
+  'Conference_Country-search-field', 'Conference_Country-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3337&addCheckBox=true&refinementName=Conference_Country', 
+    refinementList: $('Conference_Country-refinements'), 
+    selectedList: $('Conference_Country-selections'), 
+    defaultItems: Conference_Country_defaultRefinements, 
+    selectedItems: Conference_Country_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+Conference_CountryAutocompleter.replaceRefinementListContents(Conference_Country_defaultRefinements);
+$('Conference_Country-search-field').observe('keyup', Conference_CountryAutocompleter.onKeyUp.bindAsEventListener(Conference_CountryAutocompleter));
+$('Conference_Country-search-field').next('.clear-button').observe('click', Conference_CountryAutocompleter.onClearButton.bindAsEventListener(Conference_CountryAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+						
+            
+              <fieldset class="search-refine">
+                <h4>Conference Location</h4>
+                
+                
+                
+                
+
+                
+                
+                
+                <label for="Conference_Location-search-field" style='display:none'>Search for Conference Location</label>
+                <div class="autocomplete-field-container" style='display:none'>
+                  <input  type="text" class="autocomplete-field" id="Conference_Location-search-field" name="Conference_Location-search-field" />
+                  <a class="clear-button" style="display:none;">
+                  		<img src="/assets/img/btn.clear-x.gif" 
+                  			alt="(clear)" title="Clear"/>
+                  	</a>
+                </div>
+                  
+                
+                <div id="Conference_Location-autocomplete" class="autocomplete" 
+                		style="display:none;height:0;overflow:hidden;border:none;">
+                </div>
+
+                
+                              
+                                
+                <ul class="Inputs" id="Conference_Location-refinements" style="height: 5.0em">
+                  
+                  
+                    
+                      <li id="4294898272">
+                        <div>
+                          <label for="Conference_Location_4294898272">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Conference_Location_4294898272" name="Conference_Location"
+                                value="4294898272"
+                            />
+                            <span class="refinement">
+                              Edinburgh
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4294354221">
+                        <div>
+                          <label for="Conference_Location_4294354221">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Conference_Location_4294354221" name="Conference_Location"
+                                value="4294354221"
+                            />
+                            <span class="refinement">
+                              Budapest
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                  
+                    
+                      <li id="4293158393">
+                        <div>
+                          <label for="Conference_Location_4293158393">
+                          
+                            <input  type="checkbox" class="refinement-selector"
+                                id="Conference_Location_4293158393" name="Conference_Location"
+                                value="4293158393"
+                            />
+                            <span class="refinement">
+                              Turin
+                              <span class="refinement-count">
+                              	(1)
+                              </span>
+                            </span>
+                           </label>
+                        </div>
+                        <div class="ClearFix"></div>
+                      </li>
+                    
+                  
+                </ul>
+                  
+                
+                <h5 style="display:none;">You have selected:</h5>
+                
+                <ul id="Conference_Location-selections" class="Selections" style="display:none;">
+                </ul>
+                
+                
+                <div class="ClearFix"></div>
+                  <div class="update-button" style="display:none;">
+                  <input  type="image" alt="Refine"
+                      onclick="javascript:applyRefinements('Conference_Location-selections', '/search/searchresult.jsp?', 'refinements');"
+                      src="/assets/img/btn.update-results.gif"
+                  />                
+                </div>     
+
+                <script type='text/javascript'>var Conference_Location_defaultRefinements = $('Conference_Location-refinements').childElements();
+var Conference_Location_selections = $A([]);
+var Conference_LocationAutocompleter = new IEEERefinementAutocompleter(
+  'Conference_Location-search-field', 'Conference_Location-autocomplete', '/search/typeahead', 
+  { method: 'get', paramName: 'searchRefinementTerm', 
+    frequency: 0.8, minChars: 2, 
+    parameters: 'queryText=((("Author":van Rijsbergen)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All&searchRefinementId=3323&addCheckBox=true&refinementName=Conference_Location', 
+    refinementList: $('Conference_Location-refinements'), 
+    selectedList: $('Conference_Location-selections'), 
+    defaultItems: Conference_Location_defaultRefinements, 
+    selectedItems: Conference_Location_selections, 
+    selectorClass: 'refinement-selector', 
+    refinementClass: 'refinement', 
+    clearButtonClass: 'clear-button', 
+    updateButtonClass: 'update-button', 
+    backgroundColor: '#ffffff', highlightColor: '#ffffcc'
+  }
+);
+Conference_LocationAutocompleter.replaceRefinementListContents(Conference_Location_defaultRefinements);
+$('Conference_Location-search-field').observe('keyup', Conference_LocationAutocompleter.onKeyUp.bindAsEventListener(Conference_LocationAutocompleter));
+$('Conference_Location-search-field').next('.clear-button').observe('click', Conference_LocationAutocompleter.onClearButton.bindAsEventListener(Conference_LocationAutocompleter));
+</script>
+
+              </fieldset> 
+                    
+          
+        
+      
+
+        
+        	            
+          
+						
+            
+
+			
+			
+						
+                    
+          
+        
+      
+    
+    
+  </div>	
+					<!-- BEGIN: Search Refinements -->	
+				</div>
+
+				<div class="column-side column-side-right">
+
+					
+
+
+
+
+
+		
+
+
+	<div class="box box-style-2">
+	
+	<div class="header">
+	<h3>Brought to you by</h3>
+	</div>
+		
+	<div class="section">
+	<h4>University Duisburg Essen</h4>
+												
+	<ul> 
+		<li>Your institute subscribes to:</li>
+		<li><B>IEEE/IET Electronic Library (IEL), IBM Journal of Research and Development</B></li>
+		
+		
+	    
+		<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+	    
+	    
+	    
+	</ul>
+	</div>
+	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a>
+	
+	</div>
+	
+
+
+
+
+
+
+	
+<br/>
+
+					
+					
+					<!-- BEGIN: Search History -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="box">
+<div class="header">
+<h3>SEARCHES FOR THIS SESSION</h3>
+
+</div>
+
+<div class="section">
+<ul>
+<input type="hidden" name="queryText"  /> 
+	
+	
+				<li><a href='/search/searchresult.jsp?queryText%3D%28%28%28%22Author%22%3Avan+Rijsbergen%29%29%29%26openedRefinements%3D*%26searchRefinementMaxResults%3D20%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>((("Author":van Rijsbergen))) (4)</a></li>
+	
+				
+			
+
+	
+	
+		<li><a href="/search/jsp/search/searchHistoryMore.jsp?pageAction=search">More Search History</a></li>
+	
+</ul>
+</div>
+</div>
+
+
+<div class="box">
+	<div class="header">
+		<h3>Additional Results</h3>
+	</div>
+	<div class="section">
+		<p><a href="/search/globalspecresults.jsp?queryText='(((&#034;Author&#034;:van Rijsbergen)))'">Application Notes (beta)</a></p>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+function doSearch(pageaction, searchTerm)
+{
+	alert(searchTerm);
+	var url_string = '/search/searchresult.jsp?' + 'queryText'+'='+searchTerm+'matchBoolean=true';	
+alert(url_string);
+	location.href = url_string;
+}
+
+function gotoSearchHistory(actionURL)
+{
+	var url_string = actionURL +'pageAction=' + 'search' ;	
+	location.href = url_string;
+}
+		
+</script>	
+					<!-- BEGIN: Search History -->		
+					
+				
+			</div>
+
+			</div>
+
+		</div>
+		<!-- END: BodyWrapper -->
+		
+
+
+		<!-- BEGIN: FooterWrapper -->
+		
+			
+
+
+
+
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- BEGIN: FooterWrapper -->
+		<div id="FooterWrapper">
+
+			<div id="logo-inspec">
+				<img src="/assets/img/logo.inspec.gif" width="95" height="45" alt="Indexed by Inspec" />
+			</div>
+			
+			<p class="links">
+			<a href="/Xplorehelp/Help_Welcome_to_IEEE_Xplore.html" target="blank" onclick="ntptEventTag('ev=Help');">Help</a> | 
+			<a href="/xpl/techform.jsp" onclick="ntptEventTag('ev=ContactUs');">Contact Us</a> | 
+			<a href="http://www.ieee.org/portal/site/mainsite/menuitem.818c0c39e85ef176fb2275875bac26c8/index.jsp?&pName=corp_level1&path=about/documentation/copyright&file=privacy.xml&xsl=generic.xsl" target="blank" onclick="ntptEventTag('ev=Privacy');">Privacy &amp; Security</a> | 
+			<a href="/xpl/sitemap.jsp" onclick="ntptEventTag('ev=SiteMap');">Site Map</a> | 
+			<a target="blank" href="http://www.ieee.org" onclick="ntptEventTag('ev=external link&evLocation=exitmoreieeesites');">IEEE.org</a> | 
+			<a target="blank" href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html" onclick="ntptEventTag('ev=NondiscriminationPolicy');">Nondiscrimination Policy</a> | 
+			<a target="blank" href="/xpl/jsp/common/termsOfUse.jsp" onclick="ntptEventTag('ev=TermsofUse');">Terms of Use</a></p>
+			
+			<p>&#169; Copyright 2010 IEEE &#8211; All Rights Reserved</p>
+			
+			<!-- BEGIN: Unica Page Tag -->
+			<!-- Copyright 2004-2006 Unica Corporation.  All rights reserved. -->
+			<script language ="JavaScript">
+			var unValue =  '94870';
+			var NTPT_PGEXTRA="un="+unValue+"&ip="+'134.91.35.240';
+			</script>
+			<script language="JavaScript" src="/assets/js/ntpagetag.js"></script>
+			<!-- END: Unica Page Tag -->
+			
+		</div>
+		<!-- END: FooterWrapper -->
+			
+					
+			
+		<!-- END: FooterWrapper -->
+			
+	</div>
+	<!-- END: LayoutWrapper -->
+
+	<p class="JumpLink"><a href="#PageTop">Back to Top</a></p>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://www.w3.org/2005/11/profile http://a9.com/-/spec/opensearch/1.1/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="/css/csxsecondary.css" type="text/css" />
+  <!-- for mobile devices    <link type="text/css" rel="stylesheet" href="handheldstyle.css" media="handheld" /> -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  
+
+  <link rel="search" title="CiteSeerX" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_general.xml" />
+  <link rel="search" title="CiteSeerX Author" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_author.xml" />
+  <link rel="search" title="CiteSeerX Title" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_title.xml" />
+  <!-- Next are the calls for nifty rounded corners -->
+  <link rel="stylesheet" type="text/css" href="/css/niftyCorners.css" />
+  <script type="text/javascript" src="/js/niftycube.js"></script>
+  <script type="text/javascript" src="/dwr/interface/MetadataCartJS.js"></script>
+  <script type="text/javascript" src="/dwr/interface/GetContextJS.js"></script>
+  <script type="text/javascript" src="/dwr/engine.js"></script>
+  <script type="text/javascript" src="/js/metacart.js"></script>
+  <script type="text/javascript" src="/js/mootools.js"></script>
+  <script type="text/javascript" src="/js/mootabs.js"></script>
+  <script type="text/javascript" src="/js/searchbox.js"></script>
+  <script type="text/javascript" src="/js/citecontext.js"></script>
+  <!-- Next is a call for IE. It applies the 'sfhover' class to li elements in the 'secondary_nav' id'd ul element when they are 'moused over' and removes it, using a regular expression, when 'moused out'. -->
+  <script type="text/javascript" src="/js/mousedout.js"></script>
+  <!-- Google Analytics - Bernie -->
+  <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+  <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-15733938-1");
+        pageTracker._trackPageview();
+        } catch(err) {}
+ </script>
+  
+  
+  
+    <link rel="stylesheet" href="/css/wforms.css" type="text/css" />
+    <script type="text/javascript" src="/js/correctionutils.js"></script>
+  
+ 
+  <!-- Next is an Internet Explorer Conditional Comment (IECC) which will give the topic_heading the layout it needs to prevent the three pixel gap. This gap is caused by an inline declared item adjacent to a float making a 3px margin between the item and the float. The 3px margin disappears as soon as the content clears the float, causing a 3 pixel text jog. In other words a yucky gap. -->
+  <!--[if IE]><style type="text/css"> h2.topic_heading { zoom: 1;}</style><![endif]-->
+  
+  
+    <title>CiteSeerX &#8212; Search Results &amp;mdash; ((title:(information)) OR (title:(retrieval))) AND year:2000</title>
+  
+  
+    <meta name="description" content="CiteSeerX - Scientific articles matching the query: ((title:(information)) OR (title:(retrieval))) AND year:2000" />
+  
+  
+    <meta name="keywords" content="CiteSeerX, ((title:(information)) OR (title:(retrieval))) AND year:2000" />
+  
+</head>
+<body onload='Nifty("ul#secondary_nav a","transparent");Nifty("ul.button_nav a","transparent");'>
+  <!-- Begin header for the primary, secondary, tertiary, etc. pages, can be placed in one external file to be called by all pages. -->
+  
+<div id="top_nav_bar" class="top_nav clearfix">
+ <div id="top_nav_bar_main">
+  <ul><li><a class="lightlink" href="/" title="CiteSeerX Home page and Statistics">Home&#124;Statistics</a></li><li><a class="lightlink" href="/about/site" title="About CiteSeerX">About</a></li><li><a class="lightlink" href="http://csxblog.ist.psu.edu/" title="Updates and New Features">Bulletin</a></li><li><a class="lightlink" href="/submit" title="Add Your Document">Submit Documents</a></li><li><a class="lightlink" href="/feedback" title="Submit Your Feedback">Feedback</a></li></ul>
+ </div>
+ <div id="top_nav_bar_user">
+   <span id="cartspan"><a class="lightlink" href="/metacart">MetaCart</a></span>
+   
+     
+      <span id="userspan">Sign in to <a class="lightlink" href="/myciteseer/action/accountHome">MyCiteSeerX</a></span>
+     
+   
+ </div>
+</div> <!-- End top_nav_bar -->
+
+  
+  <div id="logo"> <!-- Contains logo div -->
+    <a class="remove" href="/" title="CiteSeerX Home page and Statistics"><img src="/images/blank.gif" alt="CiteSeerX logo" /></a>
+  </div> <!-- End logo -->
+  <!-- First are the floating containers -->
+  
+<div id="search_meta_box">
+ <div id="search_tabs">
+  <ul id="tabs_titles" class="mootabs_title">
+   <li title="docs_tab" class="active"><div>Documents</div></li>
+   <li title="auth_tab"><div>Authors</div></li>
+   <li title="table_tab" class="yellow">
+   <div>Tables <span class="style1" style="color:#FF0000; font-style:italic; font-weight:bold; font:"Times New Roman", Times, serif">!</span></div>
+   </li>
+  </ul><!-- remove extra whitespace by coding in-line lists on one line -->
+  
+  <div id="docs_tab" class="mootabs_panel">
+   <form method="get" action="/search" enctype="application/x-www-form-urlencoded" id="doc_search_form">
+    <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
+    <fieldset class="rightAligned">
+     <p><input class="query csx" type="text" name="q" value="((title:(information)) OR (title:(retrieval))) AND year:2000" size="50" />
+        <input class="button csx" type="submit" name="submit" value="Search" alt="Search" /></p>
+        <input type="hidden" name="sort" value="rlv" />
+     <p><input type="checkbox" name="ic" value="1"  /> Include Citations &#124; <a href="/advanced_search" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a> &#124; <a href="/help/search" title="Get Help">Help</a></p>             
+    </fieldset>
+   </form>
+  </div> <!-- End docs_tab -->
+  
+  <div id="auth_tab" class="mootabs_panel">
+   <form method="get" action="/search" enctype="application/x-www-form-urlencoded" id="auth_search_form">
+    <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
+    <fieldset class="rightAligned">
+     <p><input class="query csx" type="text" name="q" value="((title:(information)) OR (title:(retrieval))) AND year:2000" size="50" />
+        <input class="button csx" type="submit" name="submit" value="Search" alt="Search" />
+        <input type="hidden" name="sort" value="rlv" />
+        <input type="hidden" name="t" value="auth" /></p>
+     <p>
+	<input type="checkbox" name="uauth" value="1" checked/> Disambiguated Search &#124;
+	<input type="checkbox" name="ic" value="1"  /> Include Citations &#124; 
+	<a href="/advanced_search" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a> &#124; <a href="/help/search" title="Get Help">Help</a></p>             
+    </fieldset>
+   </form>
+  </div> <!-- End auth_tab -->
+  
+  <div id="table_tab" class="mootabs_panel">
+   <form method="get" action="/search" enctype="application/x-www-form-urlencoded" id="table_search_form">
+    <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
+    <fieldset class="rightAligned">
+     <p><input class="query csx" type="text" name="q" value="((title:(information)) OR (title:(retrieval))) AND year:2000" size="50" />
+        <input class="button csx" type="submit" name="submit" value="Search" alt="Search" />        
+        <input type="hidden" name="t" value="table" /></p>
+     <p><a href="/help/search" title="Get Help">Help</a></p>             
+    </fieldset>
+   </form>
+  </div> <!-- End table_tab -->
+
+ </div> <!-- End search_tabs -->
+</div> <!-- End search_meta_box -->
+<script type="text/javascript">
+ <!--
+  window.addEvent('domready', function(){
+   
+     startSearchTabs('docs_tab');
+   
+   
+   
+   
+  });
+ // -->
+</script>
+
+  <!-- End of the floating containers -->
+  <!-- End header for the primary, secondary, tertiary, etc. pages -->
+  <div id="page_wrapper" class="clearfix"> <!-- Contains all the divisions (div's) within the page (not including top navigation bar, search box and meta information) -->
+
+  <div id="page_wrapper" class="clearfix"> <!-- Contains all the divisions (div's) within the page (not including top navigation bar, search box and meta information) -->
+    <div id="center_content" class="clearfix"> <!-- Contains header div -->
+      <div id="primary_content">
+        <h1 class="primaryheader">Searching for <span class="char3">((title:(information)) OR (title:(retrieval))) AND year:2000</span> &ndash; sorted by Relevance. </h1>
+        <div id="introduction" class="char_increased padded">
+          <div class="padded">Order by:
+            
+              <a href='/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=cite'>Citations</a> |
+              <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=date">Year (Descending)</a> |
+              <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=ascdate">Year (Ascending)</a> |
+              <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=recent">Recency</a>
+            
+            
+            
+            
+            
+          </div>
+          <div class="padded">Try your query at:
+            
+            
+            
+            
+            
+            <a href="http://scholar.google.com/scholar?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000&amp;hl=en&amp;btnG=Search" title="Google Scholar search engine">Scholar</a> &#124;
+            <a href="http://search.yahoo.com/search?p=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Yahoo Web Search">Yahoo!</a> &#124;
+            <a href="http://www.ask.com/web?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Ask.com Search Engine">Ask</a> &#124;
+            <a href="http://search.live.com/results.aspx?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Bing">Bing</a> &#124;
+            <a href="http://liinwww.ira.uka.de/csbib/index?query=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000&amp;submit=Search" title="Collection of Computer Science Bibliographies">CSB</a>
+          </div>                
+        </div> <!-- End introduction -->
+        <div class="information_bar char_increased">
+         <div class="left_content">
+          <a class="remove" href="/help/search"><img class="icon" src="/images/iconqust.gif" alt="Help&#33;"/></a>
+          1,341 documents found, showing 11 through 20.
+          <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;start=20">Next 10 &#8594;</a>
+         </div>
+         <div class="right_content"><a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;feed=atom"><img src="/icons/atom.gif" alt="ATOM"/></a> <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;feed=rss"><img src="/icons/rss.gif" alt="RSS"/></a></div>
+         <div style="clear:both;"></div>
+        </div> <!-- End information_bar top -->
+        <div id="main_content"> 
+          <div class="searchresult">
+            
+            
+            <!--LRIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::Lexical ambiguity is a pervasive problem in natural language processing. However, little  quantitative information is available about the extent of the problem, or about the impact  that it has on information retrieval systems. We report on an analysis of lexical  ambiguity in information retrieval test collections, and on experiments to determine  the utility of word meanings for separating relevant from non-relevant documents. The  experiments show that there is considerable ambiguity even in a specialized database. Word senses"><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.11.1928"><em class="title">Lexical Ambiguity and Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.11.1928&amp;rft.atitle=Lexical+Ambiguity+and+Information+Retrieval&amp;rft.jtitle=ACM+TRANSACTIONS+ON+INFORMATION+SYSTEMS&amp;rft.date=2000&amp;rft.volume=10&amp;rft.spage=115&amp;rft.epage=141&amp;rft.pages=115--141&amp;rft.genre=article&amp;rft.aulast=Krovetz&amp;rft.aufirst=+Robert&amp;rft.au=Krovetz%2C+Robert&amp;rft.au=Croft%2C+W.+Bruce">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Robert Krovetz , W. Bruce Croft
+                      
+                       &#8212; 2000
+                       &#8212; ACM TRANSACTIONS ON INFORMATION SYSTEMS
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;Lexical Ambiguity and <em>Information</em> <em>Retrieval</em>
+
+Robert Krovetz
+W. Bruce Croft
+Computer and <em>Information</em>&#0133;</li>
+                    <li class="char_increased"><a class="citation remove" href="/showciting?cid=38701" title="number of citations">Cited by 102 (3 self)</a> &ndash;
+                      <span class="actionspan" onclick="addToCartProxy(38701)">Add To MetaCart</span> <span id="cmsg_38701" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::Information retrieval systems are built to handle texts as topical items: texts are tabulated by occurrence frequencies of content words in them, under the assumption that text topic is reasonably well modeled by content word occurrence. But texts have several interesting characteristics beyond topic. The experiments described in this text investigate stylistic variation. Roughly put, style is the difference between two ways of saying the same thing -- and systematic stylistic variation can be used to characterize the genre of documents. These experiments investigate if stylistic information is distinguishable using simple language engineering methods, and if in that case this type of information can be used to improve information retrieval systems."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.16.7385"><em class="title">Stylistic Experiments For Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.16.7385&amp;rft.atitle=Stylistic+Experiments+For+Information+Retrieval&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Karlgren&amp;rft.aufirst=+Jussi&amp;rft.au=Karlgren%2C+Jussi">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Jussi Karlgren
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;.
+
+Abstract
+<em>Information</em> <em>retrieval</em> systems are built to handle texts as topical items: texts are tabulated&#0133;</li>
+                    <li class="char_increased"><a class="citation remove" href="/showciting?cid=159284" title="number of citations">Cited by 45 (6 self)</a> &ndash;
+                      <span class="actionspan" onclick="addToCartProxy(159284)">Add To MetaCart</span> <span id="cmsg_159284" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::This paper captivates the reader by presenting an overview of the topic detection and tracking (TDT) problem, whose purpose is to organize broadcast news stories by the real-world events that they discuss. The paper describes the research problems considered in all three phases of the TDT and focuses on the solutions developed at CIIR for one of the problems, namely the detection problem--that is, identifying when new topics have appeared in the news stream. The approach discussed is both practical and technically interesting as it presents both new algorithms and modifications of existing IR techniques for the TDT problem"><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.19.1541"><em class="title">Advances in Information Retrieval: Recent Research from the Center for Intelligent Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.19.1541&amp;rft.atitle=Advances+in+Information+Retrieval%3A+Recent+Research+from+the+Center+for+Intelligent+Information+Retrieval&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Editor&amp;rft.aufirst=+Bruce+Croft&amp;rft.au=Editor%2C+Bruce+Croft&amp;rft.au=Harabagiu%2C+Sanda">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Bruce Croft Editor, Sanda Harabagiu
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;﻿Book Reviews
+Advances in <em>Information</em> <em>Retrieval</em>: Recent Research from the Center
+for Intelligent&#0133;</li>
+                    <li class="char_increased">
+                      <span class="actionspan" onclick="addToCartProxy(8549363)">Add To MetaCart</span> <span id="cmsg_8549363" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::Future information retrieval systems will be expected to fetch specific facts, answer questions, give advice, or compose reports that satisfy users ever more demanding information needs. We discuss an early prototype of a next generation IR system (NGIR) where users can interactively assemble information briefs on topics of interest. Preamble  Future information retrieval systems will be expected to fetch specific facts, answer questions, give advice, or compose reports that satisfy users ever more demanding information needs. Moreover, this information will have to be presented in a manner which is immediately understandable and usable. A ranked list of documents returned by today&#039;s search engines may be understandable (though often misunderstood) , but it is rarely usable. A list of `hits&#039; is easy enough to produce, however to prepare an effective and useful information takes a good deal more effort, as exemplified by, for example, the news production process. A producer (television ..."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.26.188"><em class="title">Towards the Next Generation Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.26.188&amp;rft.atitle=Towards+the+Next+Generation+Information+Retrieval&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Strzalkowski&amp;rft.aufirst=+Tomek&amp;rft.au=Strzalkowski%2C+Tomek&amp;rft.au=Stein%2C+Gees+C.&amp;rft.au=Wise%2C+G.+Bowden&amp;rft.au=Bagga%2C+Amit">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Tomek Strzalkowski, Gees C. Stein, G. Bowden Wise,  Amit Bagga
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;Towards the Next Generation <em>Information</em> <em>Retrieval</em>
+
+Tomek Strzalkowski, Gees C. Stein, G. Bowden&#0133;</li>
+                    <li class="char_increased">
+                      <span class="actionspan" onclick="addToCartProxy(8176131)">Add To MetaCart</span> <span id="cmsg_8176131" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::Users often search in information retrieval systems iteratively. We claim that changing the underlying  retrieval algorithm and query expansion algorithm during these iterations yields improved results. In the  first part of this paper, results of preliminary experiments are presented which indicate the viability of  our claim.  In the second part, we focus on our approach for the dynamic selection of the proper retrieval  algorithms and query expansion algorithms. Our approach is based on case-based planning: A retrieval  algorithm sequence which holds certain quality criteria is set up due to the consideration of previous  experiences and cases.  1 Introduction  Usually, information retrieval systems (IRS) are used iteratively to find the information looked for. Depending on the query result, the query is modified several times. Our hypothesis is that a sequential execution of different retrieval algorithms and query expansion algorithms can have synergy effects. Hence, our informati..."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.27.9850"><em class="title">Dynamic Selection of Information Retrieval Algorithms</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.27.9850&amp;rft.atitle=Dynamic+Selection+of+Information+Retrieval+Algorithms&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Ralf&amp;rft.aufirst=+Claudia+Rolker&amp;rft.au=Ralf%2C+Claudia+Rolker&amp;rft.au=Kramer%2C+Ralf">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Claudia Rolker Ralf, Ralf Kramer
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;Dynamic Selection of <em>Information</em> <em>Retrieval</em> Algorithms
+
+Claudia Rolker, Ralf Kramer&#0133;</li>
+                    <li class="char_increased">
+                      <span class="actionspan" onclick="addToCartProxy(8360553)">Add To MetaCart</span> <span id="cmsg_8360553" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::This paper describes a tool that will use image templates as search queries instead of conventional searching using keywords. The project tries to automate searching with use of a visually oriented interface. Lastly, part of the goals of the paper is to study, select, and use relevant visual information retrieval tools for the system.  Keywords  Visual information retrieval, picture search, image retrieval, image matching.  1. "><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.21.8241"><em class="title">A Visual Information Retrieval System</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.21.8241&amp;rft.atitle=A+Visual+Information+Retrieval+System&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Bautista&amp;rft.aufirst=+Ma.+Liza+Minerva&amp;rft.au=Bautista%2C+Ma.+Liza+Minerva&amp;rft.au=Jordan%2C+Canlas+Percival&amp;rft.au=De+La&amp;rft.au=De+La">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Ma. Liza Minerva Bautista, Canlas Percival Jordan, De La, De La
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133; Visual <em>Information</em> <em>Retrieval</em> System
+Canlas, Percival Jordan
+De La Salle University
+2401 Taft Avenue&#0133;</li>
+                    <li class="char_increased">
+                      <span class="actionspan" onclick="addToCartProxy(8400590)">Add To MetaCart</span> <span id="cmsg_8400590" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::A lattice-based model for information retrieval has been suggested in  the 1960&#039;s but has been seen as a theoretical possibility hard to practically apply  ever since. This paper attempts to revive the lattice model and demonstrate its  applicability in an information retrieval system, FaIR, that incorporates a graphical  representation of a faceted thesaurus. It shows how Boolean queries can be  lattice-theoretically related to the concepts of the thesaurus and visualized within  the thesaurus display. An advantage of FaIR is that it allows for a high level of  transparency of the system which can be controlled by the user."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.60.2145"><em class="title">Lattice-based Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.60.2145&amp;rft.atitle=Lattice-based+Information+Retrieval&amp;rft.jtitle=KNOWLEDGE+ORGANIZATION&amp;rft.date=2000&amp;rft.volume=27&amp;rft.spage=132&amp;rft.epage=142&amp;rft.pages=132--142&amp;rft.genre=article&amp;rft.aulast=School&amp;rft.aufirst=+Uta+Priss&amp;rft.au=School%2C+Uta+Priss&amp;rft.au=Priss%2C+Uta">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Uta Priss School, Uta Priss
+                      
+                       &#8212; 2000
+                       &#8212; Knowledge Organization
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;﻿Lattice-based <em>Information</em> <em>Retrieval</em>
+Uta Priss
+School of Library and <em>Information</em> Science, Indiana&#0133;</li>
+                    <li class="char_increased">
+                      <span class="actionspan" onclick="addToCartProxy(8967528)">Add To MetaCart</span> <span id="cmsg_8967528" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::We describe five major concepts that are essential for multimedia retrieval: uncertain inference addresses vagueness of queries and imprecision of content representations. Predicate logic allows for dealing with spatial and temporal relationships. The document structure has to be considered in order to retrieve the most relevant part of a document in response to a query. Whereas fact retrieval employs an open world assumption, content-based retrieval should be based on an open world assumption. In order to perform inferences based on the content of multimedia objects, inconsistencies have to be dealt with. Based on these concepts, we present DOLORES, a logic-based multimedia retrieval system with a multilayered architecture. Below the top-level presentation layer, the semantic layer uses a conceptual model for structured documents which is transformed into a probabilistic object-oriented logic  (POOL) supporting aggregated objects, di#erent kinds of propositions (terms, classifications and attributes) and even rules as being contained in objects. This four-valued logic is translated into probabilistic Datalog which is interpreted by the HySpirit inference engine. Multimedia objects are stored either in a relational database management system or an information retrieval engine."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.12.1604"><em class="title">Information Retrieval Methods For Multimedia Objects</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.12.1604&amp;rft.atitle=Information+Retrieval+Methods+For+Multimedia+Objects&amp;rft.jtitle=&amp;rft.date=2000&amp;rft.pages=&amp;rft.genre=unknown&amp;rft.aulast=Fuhr&amp;rft.aufirst=+Norbert&amp;rft.au=Fuhr%2C+Norbert">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Norbert Fuhr
+                      
+                       &#8212; 2000
+                      
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;﻿Chapter 1
+<em>INFORMATION</em> <em>RETRIEVAL</em> METHODS
+FOR MULTIMEDIA OBJECTS
+Norbert Fuhr
+University of Dortmund&#0133;</li>
+                    <li class="char_increased"><a class="citation remove" href="/showciting?cid=85631" title="number of citations">Cited by 8 (0 self)</a> &ndash;
+                      <span class="actionspan" onclick="addToCartProxy(85631)">Add To MetaCart</span> <span id="cmsg_85631" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::Finding useful information from large multimodal document  collections such as the WWW without encountering numerous false positives poses a challenge to multimodal information retrieval systems (MMIR). A general model for multimodal information retrieval is proposed by which a user&#039;s information need is expressed through composite, multimodal queries, and the most appropriate weighted combination of indexing techniques is determined by a machine learning approach in order to best satisfy the information need. The focus is on improving precision and recall in a MMIR system by optimally combining text and image similarity. Experiments are presented which demonstrate the utility of individual indexing systems in improving overall average precision.  Keywords: Multimodal Information Retrieval, Contentbased Retrieval, Image Retrieval, Multimodal Query, Machine Learning  1. "><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.21.2990"><em class="title">A Model For Multimodal Information Retrieval</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.21.2990&amp;rft.atitle=A+Model+For+Multimodal+Information+Retrieval&amp;rft.jtitle=IEEE+INTERNATIONAL+CONFERENCE+ON+MULTIMEDIA+AND+EXPO+%28II%29+2000&amp;rft.date=2000&amp;rft.volume=2&amp;rft.spage=701&amp;rft.epage=704&amp;rft.pages=701--704&amp;rft.genre=article&amp;rft.aulast=Srihari&amp;rft.aufirst=+Rohini&amp;rft.au=Srihari%2C+Rohini&amp;rft.au=Rao%2C+Aibing&amp;rft.au=Han%2C+Benjamin&amp;rft.au=Munirathnam%2C+Srikanth&amp;rft.au=Wu%2C+Xiaoyun">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Rohini Srihari,  Aibing Rao,  Benjamin Han, Srikanth Munirathnam,  Xiaoyun Wu
+                      
+                       &#8212; 2000
+                       &#8212; IEEE International Conference on Multimedia and Expo (II) 2000
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;A MODEL FOR MULTIMODAL <em>INFORMATION</em> <em>RETRIEVAL</em>
+
+Rohini K. Srihari, Aibing Rao, Benjamin Han, Srikanth&#0133;</li>
+                    <li class="char_increased"><a class="citation remove" href="/showciting?cid=359114" title="number of citations">Cited by 4 (0 self)</a> &ndash;
+                      <span class="actionspan" onclick="addToCartProxy(359114)">Add To MetaCart</span> <span id="cmsg_359114" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+              <!--RIS-->  
+              
+                <div class="blockhighlight_box">
+                  <ul class="blockhighlight">
+                    <li class="padded">
+                      
+                        <a class="paper-tips" href="#" title="&lt;h3&gt;Abstract&lt;/h3&gt;::In this paper we survey algorithmic aspects of Web information  retrieval. As an example, we discuss ranking of search engine results  using connectivity analysis."><img class="icon remove" src="/icons/iconarrwor.gif" alt=""/></a>
+			          
+                      
+                      <a class="remove doc_details" href="/viewdoc/summary?doi=10.1.1.13.4113"><em class="title">Web Information Retrieval - an Algorithmic Perspective</em></a>
+                      
+                        <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.13.4113&amp;rft.atitle=Web+Information+Retrieval+-+an+Algorithmic+Perspective&amp;rft.jtitle=PROCEEDINGS+OF+THE+8+TH+ANNUAL+EUROPEAN+SYMPOSIUM+ON+ALGORITHMS%2C+%28ESA&amp;rft.date=2000&amp;rft.spage=1&amp;rft.epage=8&amp;rft.pages=1--8&amp;rft.genre=article&amp;rft.aulast=Henzinger&amp;rft.aufirst=+Monika&amp;rft.au=Henzinger%2C+Monika">&nbsp;</span>
+                      
+                    </li>
+                    <li class="author char6 padded">by Monika Henzinger
+                      
+                       &#8212; 2000
+                       &#8212; Proceedings of the 8 th Annual European Symposium on Algorithms, (ESA
+                    </li>
+                    <li class="doc_clipping char_increased padded">&#0133;Web <em>Information</em> <em>Retrieval</em> - an Algorithmic
+Perspective
+
+Monika Henzinger
+
+1
+Google, Inc., Mountain&#0133;</li>
+                    <li class="char_increased"><a class="citation remove" href="/showciting?cid=460532" title="number of citations">Cited by 3 (0 self)</a> &ndash;
+                      <span class="actionspan" onclick="addToCartProxy(460532)">Add To MetaCart</span> <span id="cmsg_460532" class="cartmsg"></span>
+                    </li>
+			      </ul>
+                </div> <!-- End blockhighlight_box -->
+              
+              
+              <!--end RIS-->
+            
+            <!--End LRIS -->
+          </div> <!-- End searchresult -->
+        </div> <!-- End main_content -->
+        <div class="information_bar char_increased">
+          <div class="left_content">
+            <a class="remove" href="/help/search">
+            <img class="icon" src="/images/iconqust.gif" alt="Help&#33;"/></a>
+            Showing 11 through 20.
+            <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;start=20">Next 10 &#8594;</a>
+          </div>
+          <div class="right_content"><a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;feed=atom"><img src="/icons/atom.gif" alt="ATOM"/></a> <a href="/search?q=%28%28title%3A%28information%29%29+OR+%28title%3A%28retrieval%29%29%29+AND+year%3A2000&amp;sort=rlv&amp;feed=rss"><img src="/icons/rss.gif" alt="RSS"/></a></div>
+            <div style="clear:both;"></div>
+          </div>
+          <div id="conclusion">		
+            <div class="para4">
+              Try your query at:
+              <a href="http://scholar.google.com/scholar?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000&amp;hl=en&amp;btnG=Search" title="Google Scholar search engine">Scholar</a> &#124;
+              <a href="http://search.yahoo.com/search?p=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Yahoo Web Search">Yahoo!</a> &#124;
+              <a href="http://www.ask.com/web?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Ask.com Search Engine">Ask</a> &#124;
+              <a href="http://search.live.com/results.aspx?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Microsoft Bing Search Engine">Bing</a> &#124;
+              <a href="http://search.live.com/results.aspx?q=((title%3a(information))+OR+(title%3a(retrieval)))+AND+year%3a2000" title="Collection of Computer Science Bibliographies">CSB</a>
+            </div>
+          </div> <!-- End conclusion -->
+      </div> <!-- End primary_content -->
+    </div> <!-- End center-content -->
+<script type="text/javascript">
+<!--
+if (window != top) 
+top.location.href = location.href;
+function sf(){document.forms['doc_search_form'].q.focus();}
+
+ $$('div.blockhighlight_box').each(function(elem) {
+  // add offblock class to each search result
+  elem.addClass('offblock');
+ 
+  // Add mouse over and out events to search results.
+  elem.addEvent('mouseover', function(event) {
+   var event = new Event(event);
+   event.stop();
+   elem.removeClass('offblock');
+   elem.addClass('overblock');
+  });
+ 
+ elem.addEvent('mouseout', function(event) {
+   var event = new Event(event);
+   event.stop();
+   elem.removeClass('overblock');
+   elem.addClass('offblock');
+  });
+ });
+ 
+window.addEvent('domready', function(){
+ /* paperTips */
+ var paperTips = new Tips($$('.paper-tips'), {
+  maxTitleChars:150,
+  className:'paper-tool'
+ });
+});
+// -->
+</script>
+
+  <div id="footer">
+    <p><a href="/" title="CiteSeerX Home Page">Home Page</a> &#124;
+    <a href="/about/site" title="Learn more about this scientific literature digital library and search engine">About CiteSeer<sup>x</sup></a> &#124;
+    <a href="http://csxblog.ist.psu.edu/" title="Updates and New Features">Bulletin</a> &#124;
+    <a href="/myciteseer/action/submitUrl" title="Add Your Document">Submit Documents</a> &#124;
+    <a href="/feedback" title="Submit Your Feedback">Feedback</a> &#124;
+    <a href="/privacy" title="Privacy Policy">Privacy Policy</a> &#124;
+    <a href="/about/metadata" title="CiteSeerX Data">CiteSeer<sup>x</sup> Data</a> &#124;
+    <a href="http://sourceforge.net/projects/citeseerx/" title="Get SeerSuite Source Code">Source Code</a></p>
+    <p>&copy; 2007-2010 <a href="http://www.psu.edu">The Pennsylvania State University</a></p>
+    <p>Developed at and hosted by <a href="http://ist.psu.edu/">The College of Information Sciences and Technology</a> at Penn State</p>
+    <p><a class="remove" href="http://ist.psu.edu/" title="Penn State College of Information Sciences and Technology">
+    <img id="ist" src="/images/istlogo.gif" alt="IST logo" /></a></p>
+  </div>
+</div> <!-- page_wrapper opened on IncludeTop -->
+</body>
+</html>
+

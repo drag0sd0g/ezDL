@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>ezDL Log</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="expires" content="0">
+<META http-equiv="pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="/ezdl.css">
+</head>
+
+<body id="agentlog">
+
+<div id="main">
+<h1>Agent "<% agent %>" - Log</h1>
+
+<table>
+<% loglist %>
+  <tr class="odd"><td class="name"><span class="type"><% type %></span> <span class="time">(<% timestamp %>)</span></td></tr>
+  <tr class="even recordend"><td class="info"><div class="log"><% log %></div></td></tr>
+<% /loglist %>
+</table>
+</div>
+
+<div id="menu">
+<ul>
+<li><a href="/agentlist">Agent List</a></li>
+<li><a href="/dirprops">Properties</a></li>
+</ul>
+</div>
+
+</body>
+</html>

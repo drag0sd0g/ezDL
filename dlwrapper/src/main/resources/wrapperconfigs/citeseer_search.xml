@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wrapperconfiguration>
+			
+	<usecookies/>			
+			
+	<fetch minPage="1" maxPage="1" method="GET" url="$rooturl" encoding="utf8">
+	</fetch>	
+
+	<fetch minPage="1" method="GET" url="$url" encoding="utf8">
+		<param name="q" value="$query" />
+	</fetch>	
+	
+	
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+		
+		<replace pattern="&lt;style&gt;[^&lt;]+&lt;\/style&gt;"
+			replacewith="" />
+		<substitute pattern="\t" replacewith="" />
+		<substitute pattern="\n" replacewith="" />
+	</cleanOriginal>
+	
+	
+	<parse>
+ 
+		<verify>
+			<expect regex=".*Searching for.*">
+				<text xpath="//div[@id='center_content']/div[@id='primary_content']/h1[@class='primaryheader']" />
+			</expect>
+		</verify>
+
+		<iterate xpath="//div[@id='center_content']/div[@id='primary_content']/div[@id='main_content']/div[@class='searchresult']/div[@class='blockhighlight_box']">
+			
+			<extract key="nextpage">
+				<url xpath="//div[@id='center_content']/div[@id='primary_content']/div[@class='information_bar char_increased'][1]/div[@class='left_content'][1]/a[2]/@href" />
+			</extract>
+			
+			<extract key="details">
+				<text xpath="./ul[@class='blockhighlight']/li[@class='padded']/a[@class='remove doc_details']/@href" />
+			</extract>
+			
+			<extract key="detaillink">
+				<url xpath="./ul[@class='blockhighlight']/li[@class='padded']/a[@class='remove doc_details']/@href" />
+			</extract>
+			
+			<extract key="title">
+				<text xpath="./ul[@class='blockhighlight']/li[@class='padded']/a[@class='remove doc_details']/em[@class='title']/text()" />
+			</extract>
+ 			
+			<extract key="authors">
+				<text xpath="./ul[@class='blockhighlight']/li[@class='author char6 padded']/text()" />
+			</extract>
+		
+			<extract key="year">
+				<text xpath="./ul[@class='blockhighlight']/li[@class='author char6 padded']/text()">
+					<findone pattern="\d{4}" />
+				</text>
+			</extract>
+			
+		</iterate>
+		
+	</parse>
+	
+</wrapperconfiguration>

@@ -1,0 +1,22 @@
+ezDL-code-formatting-eclipse.xml
+
+Sollte als Codeformatierungsstil in Eclipse importiert werden.
+
+
+
+ezDL-cleanup.xml
+
+Sollte als Cleanupstil in Eclipse importiert werden.
+Die Sortierreihenfolge von Membern muss per Hand geändert werden:
+
+Java -> Appearance -> Members Sort Order
+
+static fields
+static initializers
+initializers
+fields
+constructors
+methods
+static methods 
+
+

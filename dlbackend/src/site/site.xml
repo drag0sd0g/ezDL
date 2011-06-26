@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<publishDate position="navigation-bottom" format="yyyy-dd-MM" />
+	<body>
+		<menu ref="parent" />
+		<menu ref="modules" />
+		<menu ref="reports" />
+		<!-- <menu ref="reports"/> -->
+		<menu name="Overview">
+			<item name="Home" href="index.html" />
+		</menu>
+	</body>
+</project>

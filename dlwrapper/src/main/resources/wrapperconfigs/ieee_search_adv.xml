@@ -1,0 +1,85 @@
+<wrapperconfiguration>
+
+
+	<fetch method="GET" url="$url" encoding="ISO-8859-1">
+		<param name="action" value="search" />
+		<param name="sortType" value="" />
+		<param name="rowsPerPage" value="$maxResults" />
+		<param name="searchField" value="Search All" />
+		<param name="matchBoolean" value="true" />
+		<param name="queryText" value="$query" />
+		<param name="addRange" value="$yearRange" />
+	</fetch>
+
+
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+
+		<substitute pattern="\t" replacewith="" />
+		<!-- substitute pattern="\n" replacewith="##" /-->
+		<!-- substitute pattern='&lt;!DOCTYPE.*dtd"&gt;' replacewith="" /-->
+	</cleanOriginal>
+
+
+
+	<parse>
+		<verify>
+			<expect regex=".*Search Results.*">
+				<text xpath="//div[@id='results-hdr']/h2/text()"/>
+			</expect>
+		</verify>
+
+
+		<iterate xpath="//ul[@class='Results']/li[@class='noAbstract']">
+
+			<extract key="title">
+				<text xpath="div[@class='header']/div[@class='detail']/h3/a">
+				</text>
+			</extract>
+
+
+			<extract key="metadata">
+				<text xpath="./div[@class='header']/div[@class='detail']/p">
+				</text>
+			</extract>
+
+			<extract key="details">
+				<text xpath="./div[@class='header']/div[@class='detail']/h3/a/@href">
+					<substitute pattern="&amp;queryText.*" replacewith="">
+						<substitute pattern=".*arnumber=" replacewith="">
+						</substitute>
+					</substitute>
+				</text>
+			</extract>
+
+			<extract key="detaillink">
+				<text xpath="./div[@class='header']/div[@class='detail']/h3/a/@href">
+					<substitute pattern="&amp;queryText.*" replacewith="">
+					</substitute>
+				</text>
+			</extract>
+
+			<extract key="abstract">
+				<collect separator=" ">
+					<iterate
+						xpath="./div[@class='abstract RevealContent']/p/descendant-or-self::*/text()">
+						<text xpath=".">
+							<substitute pattern="Read More»" replacewith="" />
+						</text>
+					</iterate>
+				</collect>
+			</extract>
+
+			<extract key="fulltext">
+				<url
+					xpath=".//div[@class='detail']/p[@class='links']/a[contains(text(),'PDF')]/@href">
+				</url>
+			</extract>
+
+		</iterate>
+	</parse>
+
+</wrapperconfiguration>

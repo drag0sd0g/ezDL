@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wrapperconfiguration>
+			
+	<fetch method="GET" url="$url" encoding="utf8">
+		<param name="k" value="$query" />
+		<param value="$yearRange" />
+	</fetch>	
+	
+	
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+		
+		<replace pattern="&lt;style&gt;[^&lt;]+&lt;\/style&gt;"
+			replacewith="" />
+		<substitute pattern="\t" replacewith="" />
+		<substitute pattern="\n" replacewith="" />
+	</cleanOriginal>
+	
+	
+	<parse>
+
+		<verify>
+			<expect regex=".*Search results.*">
+				<text xpath="//body/form[@id='aspnetForm']/div[@id='Content']/div[@id='ContentHeader']/div[@id='ContentHeading']/div[@class='heading view simple content']/div[@class='filters']/text()[1]" />
+			</expect>
+		</verify>
+		
+		<iterate xpath="//body/form[@id='aspnetForm']/div[@id='Content']/div[@id='ContentPrimary']/ul[@id='PrimaryManifest']/li">
+			
+			<extract key="nextpage">
+				<url xpath="//body/form[@id='aspnetForm']/div[@id='Content']/div[@id='ContentPrimary']/div[@class='heading view pagination'][1]/ul[@class='transport']/li[last()]/a/@href" />
+			</extract>
+			
+			<extract key="details">
+				<text xpath="./p[@class='title']/a[1]/@href" />
+			</extract>
+			
+			<extract key="detaillink">
+				<url xpath="./p[@class='title']/a[1]/@href" />
+			</extract>
+			
+			<extract key="title">
+				<text xpath="./p[@class='title']/a[1]/text()" />
+			</extract>
+			
+			<extract key="authors">
+				<iterate xpath="./p[(@class='authors') or (@class='editors')]/a">
+					<text xpath="./text()"/>
+				</iterate>
+			</extract>
+			
+			<extract key="journal">
+				<text xpath="./p[@class='enumeration']/span[@class='publication']/a/text()" />
+			</extract>
+			
+			<extract key="year">
+				<text xpath="./p[@class='enumeration']/span[@class='volume']/text()">
+					<substitute pattern="^\S*\s" replacewith="">
+						<findone pattern="\d\d\d\d" />
+					</substitute>
+				</text>
+			</extract>
+			
+			<extract key="volume">
+				<text xpath="./p[@class='enumeration']/span[@class='volume']/text()">
+					<substitute pattern="^.*Volume " replacewith="">
+						<substitute pattern="\s+$" replacewith="" />
+					</substitute>
+				</text>
+			</extract>
+						
+			<extract key="fulltext">
+				<url xpath="./ul[@class='resources fulltextResources']/li[@class='pdf']/a[@class='sprite pdf-resource-sprite']/@href" />
+			</extract>
+			
+		</iterate>
+		
+	</parse>
+	
+</wrapperconfiguration>

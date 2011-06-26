@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wrapperconfiguration>
+
+	<fetch method="GET" url="$url" encoding="utf8" />
+
+	<cleanOriginal>
+		<replace pattern="&amp;ldquo;" replacewith="" />
+		<replace pattern="&amp;rdquo;" replacewith="" />
+		<replace pattern="&amp;lquo;" replacewith="" />
+		<replace pattern="&amp;rquo;" replacewith="" />
+		<!-- &nbsp; -->
+		<replace pattern="&amp;nbsp;" replacewith=" " />
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+	</cleanOriginal>
+
+
+	<parse>
+
+		<extract key="abstract">
+			<collect separator=" ">
+				<iterate
+					xpath="/html/body/form[@name='aspnetForm']/div[@id='Content']/div[@id='ContentPrimary']/div[@class='section']/div[@class='abstractText']/div[@class='Abstract']/text()">
+					<text xpath="." />
+				</iterate>
+			</collect>
+		</extract>
+
+		<extract key="journal">
+			<text
+				xpath="/html/body/form[@name='aspnetForm']/div[@id='Content']/div[@id='ContentHeader']/div[@id='ContentHeading']/div[@class='heading enumeration']/div[@class='primary']/a/text()" />
+		</extract>
+
+		<extract key="volume">
+			<collect separator=" ">
+				<iterate
+					xpath="/html/body/form[@name='aspnetForm']/div[@id='Content']/div[@id='ContentHeader']/div[@id='ContentHeading']/div[@class='heading enumeration']/div[@class='secondary']//text()">
+					<text xpath=".">
+					<findone pattern="Volume +.*," />
+					</text>
+				</iterate>
+			</collect>
+		</extract>
+
+		<extract key="pages">
+			<text
+				xpath="/html/body/form[@name='aspnetForm']/div[@id='Content']/div[@id='ContentHeader']/div[@id='ContentHeading']/div[@class='heading enumeration']/div[@class='secondary']/span[@class='pagination']/text()" />
+		</extract>
+
+
+	</parse>
+
+</wrapperconfiguration>

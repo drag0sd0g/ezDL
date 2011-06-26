@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	 	<title>IEEE Xplore - SearchResult</title>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
+<style type="text/css" media="screen, print">
+	@import url(/assets/css/master.css);
+	@import url(/assets/css/endeca.css);
+</style>
+<script type="text/javascript">
+	var ASSETS_RELATIVE_PATH = '/assets';
+	var SPECIAL_CHARACTER_MAPS = '&:.AND.,=:.EQ.,+:.PLS.,#:.HSH.,(:.LB.,):.RB.,":.QT.';
+	var SPECIAL_CHARACTERS = new Array();
+	var SPECIAL_CHARACTER_REPLACEMENTS = new Array();
+	var characterMaps = SPECIAL_CHARACTER_MAPS.split(",");
+	for (var i = 0; i < characterMaps.length; i++) {
+		parts = characterMaps[i].split(":");
+		SPECIAL_CHARACTERS[i] = parts[0];
+		SPECIAL_CHARACTER_REPLACEMENTS[i] = parts[1];
+	}
+	
+</script>
+<script type="text/javascript" src="/assets/js/lib.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.new.js"></script>
+<script type="text/javascript" src="/assets/js/search.new.js"></script>
+</head>
+
+<body>
+
+
+	<p class="JumpLink" id="PageTop"><a href="#Body">Skip to Main Content</a></p>
+
+
+	<!-- BEGIN: LayoutWrapper -->
+	<div id="LayoutWrapper">
+		
+		<!-- BEGIN: HeaderWrapper -->		
+		
+			
+		
+
+
+<div id="UtilityNav">
+	<p class="links">
+	<a href="http://www.ieee.org" id="u-home" target="_blank">IEEE.org</a> &#160;|&#160; 
+	<span>IEEE <em>Xplore</em> Digital Library</span> &#160;|&#160; 
+	<a href="http://standards.ieee.org" id="u-standards" target="_blank">IEEE Standards Association</a> &#160;|&#160;
+	<a href="http://spectrum.ieee.org" id="u-spectrum" target="_blank">Spectrum Online</a> &#160;|&#160; 
+	<a href="http://www.ieee.org/web/services/general/sitemap.html" id="u-more" target="_blank">More IEEE Sites</a>
+	</p>
+</div>
+
+<div id="HeaderWrapper">
+<!-- BEGIN: HeaderWrapper -->
+<div id="HeaderMetaNavigation">
+	
+</div>
+		<div id="Header">
+				<div id="logo-xplore">
+					<a href="/"><img src="/assets/img/logo.xplore.gif" width="230" height="45" alt="IEEE Xplore Digital Library" /></a>
+				</div>
+
+				<div id="logo-ieee">
+					<img src="/assets/img/logo.ieee.gif" alt="IEEE" />
+				</div>
+
+				<div id="search-field">
+						
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/js/Xplore.js"></script>
+
+
+<script>
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }
+  function showHideDiv(div,show) {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }  
+  function addFilter(filter,checked) { 
+	  if(checked)
+	  {
+		  document.getElementById("newsearch").value="partialPref"
+	  	  document.getElementById("filter").value=filter;
+		// put a large number so that it would not hit the server
+		  acompleter.options.minChars=3000;
+		  document.getElementById('search_suggestions').style.visibility = 'hidden';
+	  }
+	  else
+	  {
+		  document.getElementById("filter").value="";
+		  acompleter.options.minChars=3;
+		  document.getElementById('search_suggestions').style.visibility = 'visible';
+	  }
+  }
+	function submitForm() {
+		document.forms["search_form"].submit();
+	}  
+</script>
+		
+<form id="search_form" name="search_form"  action='/search/searchresult.jsp' method="get"
+		onSubmit="return filterQuery('queryText');">
+
+<fieldset id="search-fieldset">
+<div class="field"><label for="search-query" class="superfluous">Search Term(s)</label> 
+<span class="input-wrap">
+
+<input type="hidden" name="newsearch" id="newsearch" value="true"/>
+
+	
+<input type="text" name="queryText" id="queryText"  value="" />
+</span>
+
+    <div id="search_suggestions" class="autocomplete">
+    <script>
+    	var acompleter=new Ajax.Autocompleter('queryText', 'search_suggestions', '/search/typeahead',
+    		{ paramName: 'searchRefinementTerm', frequency: '0.8', minChars: 3, method: 'get',
+					parameters: 'searchRefinementMaxResults=20', 
+					afterUpdateElement: "return filterQuery('queryText')"
+    		});
+    </script>
+    </div>
+
+<input type="image" name=""
+	src="/assets/img/btn.search.gif" alt="Search" class="form-action" /></div>
+<div class="tools">
+
+
+
+<a href="/search/advsearch.jsp">Advanced Search</a> &nbsp;|&nbsp;
+
+
+
+
+
+	
+	
+		<a href="#" onClick='loginRedirect()'>Preferences</a>&nbsp;|&nbsp;
+
+
+
+
+ <span id="search-tips-popup">Search Tips</span>
+
+
+&nbsp;
+
+</fieldset>
+</form>
+
+				</div>
+	
+		</div>
+
+</div>
+<!-- END: HeaderWrapper -->
+		
+		
+		<!-- END: HeaderWrapper -->
+
+		<!-- BEGIN: ToolBarWrapper -->		
+		
+
+
+
+
+
+
+<div id="ToolBarWrapper">
+
+	<div id="ToolBar">
+	
+	<div id="Browse" class="DHTMLMenu">
+	<div id="browse-content">
+	<h3><a href="/xpl/browseHome.jsp">Browse</a></h3>
+	<div class="SubMenu">
+		
+<ul class="button" id="browse-revealed-menu">
+	<li><a href="/xpl/periodicals.jsp">Journals & Magazines</a></li>
+	<li><a href="/xpl/conferences.jsp">Conference Proceedings</a></li>
+	<li><a href="/xpl/standards.jsp">Standards</a></li>
+	<li><a href="/xpl/bkBrowse.jsp">Books</a></li>
+	<li><a href="/xpl/modulebrowse.jsp">Educational Courses</a></li>
+	<li><a href="/techsurvey/jsp/ts_browse.jsp">Technology Surveys</a></li>
+</ul>
+
+	</div>
+	</div>
+	</div>
+	
+	
+	
+
+
+
+
+
+	
+
+<ul id="UserTools" class="DHTMLMenu">	
+	<li id="my-account">
+		<span>My Settings</span>
+		<div class="SubMenu">
+			<ul>
+							
+				<li><a href="/xpl/tocalerts_list.jsp">Alerts</a></li>			
+				<li><a href="/articleSale/purchaseHistory.jsp">Purchase History</a></li>
+				
+				<li><a href="/Xplore/login.jsp?url=search/savedsearches">Saved Searches</a></li>
+				
+				
+					
+						
+						
+							<li><a href="/Xplore/login.jsp?tp=&fromGateway=true&">Sign In</a></li>
+						
+									
+					
+				<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+				
+			</ul>
+		</div>
+	</li>
+
+	<li id="cart">
+		<a href="http://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=InvokeMethod&SWEService=IEEEAddToCartService&SWEMethod=GoToView&mem_type=Customer&Join=y&src=0&HideNew=N&SessionId=ZDvgM4GZGqWfpy1nwJ8cdwhJWVvVtvyLfSB1SVPGTDhPJdvBnTX7!-1079424719!1282934011970" target="cartwindow">Cart</a>
+	</li>
+</ul>				
+
+	
+
+
+<div class="support">
+	<a href="/xpl/termsOfUse.jsp"><span>Terms of Use</span></a>&nbsp;|	
+	<a href="/xpl/feedback.jsp"><span>Feedback</span></a>&nbsp;&nbsp;	
+	<a>
+		<img src="/assets/img/icon.support.gif" width="24" height="20" alt="" class="icon" />
+		<a href="/Xplorehelp/Help_start.html" target="blank"><span>Help</span></a>
+	</a>           
+</div>
+
+			 <table style='float: right; position: relative;' border='0' cellspacing='0' cellpadding='0'>
+	
+<td>
+  <div id="SignIn" class="DHTMLMenu">
+
+    <a href="/servlet/Login?logout=/Xplore/guesthome.jsp" border="0"><h3><font color='white'>Sign Out</font></h3></a>
+       
+  </div>
+</td>			
+
+</table>
+	
+	</div>
+
+</div>
+
+
+		<!-- END: ToolBarWrapper -->
+
+	
+		
+		<!-- BEGIN: BodyWrapper -->
+		<div id="BodyWrapper" class="Layout-Column-3">
+
+			<div id="Body">
+				
+				<div class="column-main" id='search' >
+					
+					
+
+
+
+
+
+
+
+
+
+<!---->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+  function gotoPage(pagenum) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'pageNumber' + '='+pagenum;
+    location.href = url_string;
+  }
+
+  function doSearch(searchTerm) {
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value  + '&'
+    + 'queryText' + '='+searchTerm;
+   // alert(url_string);
+    return url_string;
+  }
+
+  function showAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+    var url_string = '/search/srchabstract.jsp?'+ document.getElementById("oqs").value
+    + '&' + 'arnumber' +'='+ articleNumber;
+    url_string = url_string + '&resultAction=ABSTRACT';
+   // alert(url_string);
+    location.href = url_string;
+    
+  }
+
+  function showFreeAbstract(articleNumber, openAbstractParam, prevArticleId, nextArticleId) {
+	    var url_string = '/search/freesrchabstract.jsp?'+ document.getElementById("oqs").value
+	    + '&' + 'arnumber' +'='+ articleNumber;
+	    url_string = url_string + '&resultAction=ABSTRACT';
+	   // alert(url_string);
+	    location.href = url_string;
+	    
+	  }
+
+  function sortAction(sortTypeValue) {	
+    var sortType = sortTypeValue.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'sortType' + '='+ sortType
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=SORT';
+    location.href = url_string;
+  }
+
+  function removeSearchWithin(term) {
+	  var filteredTerm = getFilteredTerms(term);
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value + '&'
+    + 'removeSearchWithin' + '=' + filteredTerm;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = encodeURI(url_string);
+  }
+
+  function removeRefinement(refineID) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRefinement' + '=' + refineID;
+    url_string = url_string + 
+     '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function removeRange(key) {
+    var url_string = '/search/searchresult.jsp?'+document.getElementById("oqs").value
+    + '&' + 'removeRange' + '=' + key;
+    url_string = url_string 
+    +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    location.href = url_string;
+  }
+
+  function rowsPerPageAction(rowsPerPageSelect) {
+	var  rowsPerPage=rowsPerPageSelect.value;
+    var url_string = '/search/searchresult.jsp?' + document.getElementById("oqs").value
+    + '&' + 'rowsPerPage' + '='+rowsPerPage 
+    + '&' + 'pageNumber' + '='+ '1'+ '&resultAction=ROWS_PER_PAGE';
+    location.href = url_string;
+  }
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+}
+
+  function printSelect() {
+	  window.print();
+	  return false;
+}
+ 
+</script>
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="search_results_form" id="search_results_form" action="search">
+  <input type="hidden" name="oqs" id="oqs" value="queryText=(((&#034;Document Title&#034;:Study) AND (&#034;Document Title&#034;:of) AND (&#034;Document Title&#034;:Objectionable) AND (&#034;Document Title&#034;:Sound) AND (&#034;Document Title&#034;:Recognition) AND (&#034;Document Title&#034;:Based) AND (&#034;Document Title&#034;:on) AND (&#034;Document Title&#034;:Histogram) AND (&#034;Document Title&#034;:Features) AND (&#034;Document Title&#034;:and) AND (&#034;Document Title&#034;:SV)))&amp;openedRefinements=*&amp;matchBoolean=true&amp;rowsPerPage=100&amp;searchField=Search All">
+  <input type="hidden" name="pageNumber" id="pageNumber" >
+  <input type="hidden" name="prevArticle" id="prevArticle" />
+  <input type="hidden" name="nextArticle" id="nextArticle" />
+  <input type="hidden" name="savedSearchTitle" id="savedSearchTitle"
+      value="" />
+  
+   
+  
+  
+	
+	
+	
+	
+	
+	
+	
+  	
+  	
+		
+		
+	 
+	
+	
+  	
+  
+ 	 
+
+		
+  <div id="results-hdr">
+							<h2>Search Results</h2>
+							<div class="content" id="content">
+						  
+						  <div class="refinement">
+							<p>You searched for:
+							
+							  
+							  <strong class="search-term">((("Document Title":Study) AND ("Document Title":of) AND ("Document Title":Objectionable) AND ("Document Title":Sound) AND ("Document Title":Recognition) AND ("Document Title":Based) AND ("Document Title":on) AND ("Document Title":Histogram) AND ("Document Title":Features) AND ("Document Title":and) AND ("Document Title":SV)))</strong>
+							
+								
+							
+							</p>
+							</div>
+							
+							
+						</div>
+					
+						<div>
+								
+						</div>
+				</div>	
+			 <div id="hiddenBreadcrumbContent" style="display:none" >
+							((("Document Title":Study) AND ("Document Title":of) AND ("Document Title":Objectionable) AND ("Document Title":Sound) AND ("Document Title":Recognition) AND ("Document Title":Based) AND ("Document Title":on) AND ("Document Title":Histogram) AND ("Document Title":Features) AND ("Document Title":and) AND ("Document Title":SV)))::
+			  </div>	
+				<div id="hiddenEndecaQuery" style="display:none" >
+							N=0&Ntk=&Ntt=&Ntx=&Nty=1&Nrk=Search+All&Nrt=Study+of+Objectionable+Sound+Recognition+Based+on+Histogram+Features+and+SV&Nrr=Search+All&Nrm=matchany&Nrs=collection%28%29%2frecord%5b+%28++%28++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Study%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22of%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Objectionable%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Sound%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Recognition%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Based%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22on%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Histogram%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22Features%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22and%22%2c%22allpartial%22%29%29+%29++and++%28+%28endeca%3amatches%28.%2c%22Document+Title%22%2c%22SV%22%2c%22allpartial%22%29%29+%29++%29++%29+%5d
+				</div>	
+				
+				 
+						  
+						  
+						  
+						  
+				 
+
+
+	
+	
+	
+	<p><strong>No results were found.</strong><br/>
+		Please edit your search criteria and try again. Refer to the Help pages if you need assistance revising your search. 
+	</p>
+	
+		 
+
+<!-- END IF NO RECORDS WERE FOUND -->
+
+
+			<!-- BEGIN: HeaderWrapper -->		
+			
+
+
+
+
+
+
+           
+ 
+
+			<!-- END: HeaderWrapper -->
+
+
+            
+            
+              
+              
+              
+              
+            
+
+
+
+
+
+
+<div class="ClearFix"><!-- do not remove --></div>
+            
+          </form>	
+					
+				</div>
+				
+			
+				<div class="column-side column-side-left">
+					<!-- BEGIN: Search Refinements -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  function searchWithin() {
+	 // 
+ 	var good_query = filterQuery("swr_query");
+ 	if (good_query) {
+ 		var swr_query = getFilteredTerms(document.getElementById("swr_query").value);
+ 	    var url_string =  '/search/searchresult.jsp?' + 
+    	document.getElementById("oqs").value +'&'
+    	+ 'searchWithin'+ '=' + swr_query;
+    	 url_string = url_string 
+    	 +  '&'  + 'pageNumber' + '='+ '1'+ '&resultAction=REFINE';
+    window.location = encodeURI(url_string);
+    } else {
+        return;
+    }
+  }
+  </script>
+  
+  
+
+  
+  
+  
+  
+
+  <!-- BEGIN: Search Refinements -->
+  <div class="box navigation">
+    <div class="header"><h3>Refine/Expand Results</h3></div>
+
+    <fieldset class="search-within-results" >
+      <label for="swr_query">Search within results:</label>
+      <input type="text" id="swr_query" name="swr_query" />
+      <input type="image" alt="Search" onclick="searchWithin()"
+          src="/assets/img/btn.search.sm.gif"/>
+    	<div id="search_within_suggestions" class="autocomplete" style="display:none">
+        <script type='text/javascript'>//<![CDATA[
+new Ajax.Autocompleter(
+'swr_query', 'search_within_suggestions', '/search/typeahead',
+{ paramName: 'searchRefinementTerm', frequency: '1.0', minChars: 3, method: 'get', parameters: encodeURI('queryText=((("Document Title":Study) AND ("Document Title":of) AND ("Document Title":Objectionable) AND ("Document Title":Sound) AND ("Document Title":Recognition) AND ("Document Title":Based) AND ("Document Title":on) AND ("Document Title":Histogram) AND ("Document Title":Features) AND ("Document Title":and) AND ("Document Title":SV)))&openedRefinements=*&matchBoolean=true&rowsPerPage=100&searchField=Search All') + '&searchRefinementId=3344', afterUpdateElement: searchWithin  }
+);
+//]]></script>
+
+      </div>
+    </fieldset>
+
+    
+    
+  </div>	
+					<!-- BEGIN: Search Refinements -->	
+				</div>
+
+				<div class="column-side column-side-right">
+
+					
+
+
+
+
+		
+
+
+	<div class="box box-style-2">
+	
+	<div class="header">
+	<h3>Brought to you by</h3>
+	</div>
+		
+	<div class="section">
+	<h4>University Duisburg Essen</h4>
+												
+	<ul> 
+		<li>Your institute subscribes to:</li>
+		<li><B>IEEE/IET Electronic Library (IEL)</B></li>
+		
+	    
+		<li><a href="/Xplore/accessinfo.jsp">What can I access?</a></li>
+	    
+	    
+	    
+	</ul>
+	</div>
+	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a>
+	
+	</div>
+	
+
+
+
+
+
+
+	
+<br/>
+
+					
+					
+					<!-- BEGIN: Search History -->		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="box">
+<div class="header">
+<h3>SEARCHES FOR THIS SESSION</h3>
+
+</div>
+
+<div class="section">
+<ul>
+<input type="hidden" name="queryText"  /> 
+	
+	
+				<li><a href='/search/searchresult.jsp?queryText%3D%28%28%28%22Document+Title%22%3AStudy%29+AND+%28%22Document+Title%22%3Aof%29+AND+%28%22Document+Title%22%3AObjectionable%29+AND+%28%22Document+Title%22%3ASound%29+AND+%28%22Document+Title%22%3ARecognition%29+AND+%28%22Document+Title%22%3ABased%29+AND+%28%22Document+Title%22%3Aon%29+AND+%28%22Document+Title%22%3AHistogram%29+AND+%28%22Document+Title%22%3AFeatures%29+AND+%28%22Document+Title%22%3Aand%29+AND+%28%22Document+Title%22%3ASV%29%29%29%26openedRefinements%3D*%26searchRefinementMaxResults%3D20%26matchBoolean%3Dtrue%26rowsPerPage%3D100%26searchField%3DSearch+All'>((("Document Title":Study) AND ("Document Title":of) AND ("Document Title":Objectionable) AND ("Document Title":Sound) AND ("Document Title":Recognition) AND ("Document Title":Based) AND ("Document Title":on) AND ("Document Title":Histogram) AND ("Document Title":Features) AND ("Document Title":and) AND ("Document Title":SV))) (0)</a></li>
+	
+				
+			
+
+	
+	
+		<li><a href="/search/jsp/search/searchHistoryMore.jsp?pageAction=search">More Search History</a></li>
+	
+</ul>
+</div>
+</div>
+
+
+<div class="box">
+	<div class="header">
+		<h3>Additional Results</h3>
+	</div>
+	<div class="section">
+		<p><a href="/search/globalspecresults.jsp?queryText='(((&#034;Document Title&#034;:Study) AND (&#034;Document Title&#034;:of) AND (&#034;Document Title&#034;:Objectionable) AND (&#034;Document Title&#034;:Sound) AND (&#034;Document Title&#034;:Recognition) AND (&#034;Document Title&#034;:Based) AND (&#034;Document Title&#034;:on) AND (&#034;Document Title&#034;:Histogram) AND (&#034;Document Title&#034;:Features) AND (&#034;Document Title&#034;:and) AND (&#034;Document Title&#034;:SV)))'">Application Notes (beta)</a></p>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+function doSearch(pageaction, searchTerm)
+{
+	alert(searchTerm);
+	var url_string = '/search/searchresult.jsp?' + 'queryText'+'='+searchTerm+'matchBoolean=true';	
+alert(url_string);
+	location.href = url_string;
+}
+
+function gotoSearchHistory(actionURL)
+{
+	var url_string = actionURL +'pageAction=' + 'search' ;	
+	location.href = url_string;
+}
+		
+</script>	
+					<!-- BEGIN: Search History -->		
+					
+				
+			</div>
+
+			</div>
+
+		</div>
+		<!-- END: BodyWrapper -->
+		
+
+
+		<!-- BEGIN: FooterWrapper -->
+		
+			
+
+
+
+		<!-- BEGIN: FooterWrapper -->
+		<div id="FooterWrapper">
+
+			<div id="logo-inspec">
+				<img src="/assets/img/logo.inspec.gif" width="95" height="45" alt="Indexed by Inspec" />
+			</div>
+			<p class="links"><a href="/Xplorehelp/Help_Welcome_to_IEEE_Xplore.html" target="blank">Help</a> | <a href="/xpl/techform.jsp">Contact Us</a> | <a href="http://www.ieee.org/portal/site/mainsite/menuitem.818c0c39e85ef176fb2275875bac26c8/index.jsp?&pName=corp_level1&path=about/documentation/copyright&file=privacy.xml&xsl=generic.xsl" target="blank">Privacy &amp; Security</a> | <a href="/xpl/sitemap.jsp">Site Map</a> | <a target="blank" href="http://www.ieee.org">IEEE.org</a> | <a target="blank" href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html">Nondiscrimination Policy</a> | <a target="blank" href="/xpl/jsp/common/termsOfUse.jsp">Terms of Use</a></p>
+
+			<p>&#169; Copyright 2010 IEEE &#8211; All Rights Reserved</p>
+
+		</div>
+		<!-- END: FooterWrapper -->
+			
+					
+			
+		<!-- END: FooterWrapper -->
+			
+	</div>
+	<!-- END: LayoutWrapper -->
+
+	<p class="JumpLink"><a href="#PageTop">Back to Top</a></p>
+
+</body>
+</html>

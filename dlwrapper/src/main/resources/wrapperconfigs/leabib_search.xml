@@ -1,0 +1,69 @@
+<wrapperconfiguration>
+
+	<!-- numeric-entities: yes -->
+
+	<fetch method="GET" url="$url" encoding="UTF-8">
+		<param name="query" value="$query" />
+		<param name="maxnum" value="$maxResults" />
+		<param name="start" value="$start" />
+	</fetch>
+
+	<cleanOriginal>
+		<!-- &nbsp; -->
+		<replace pattern="&amp;#160;" replacewith="" />
+		<!-- &copy; -->
+		<replace pattern="&amp;#169;" replacewith="" />
+
+		<replace pattern="&lt;style&gt;[^&lt;]+&lt;\/style&gt;"
+			replacewith="" />
+		<substitute pattern="\t" replacewith="" />
+		<substitute pattern="\n" replacewith="" />
+	</cleanOriginal>
+
+	<parse>
+
+		<iterate xpath="//td[@class='citaton']">
+
+			<extract key="title">
+				<text xpath="./span[@class='b_title']/text()" />
+			</extract>
+
+			<extract key="authors">
+				<iterate xpath="./a[contains(@title,'authored')]">
+					<text xpath="./text()"/>
+				</iterate>
+			</extract>
+
+			<extract key="year">
+				<text xpath="./text()[last()]">
+					<findone pattern="\d\d\d\d(\.|, [A-Z][^0-9 ]+\.)">
+						<substitute pattern="(\.|, [A-Z][^0-9 ]+\.)" replacewith="">
+						</substitute>
+					</findone>
+				</text>
+			</extract>
+
+			<extract key="conference">
+				<text
+					xpath="./span[@class='b_booktitle']/text()">
+				</text>
+			</extract>
+
+			<extract key="journal">
+				<text
+					xpath="./span[@class='b_journal']/text()">
+				</text>
+			</extract>
+
+			<extract key="details">
+				<text xpath="./following-sibling::td[@class='biblinks']/a[@title='Full BibTeX record']/@href" />
+			</extract>
+
+			<extract key="detaillink">
+				<url xpath="./following-sibling::td[@class='biblinks']/a[@title='Full BibTeX record']/@href" />
+			</extract>
+
+		</iterate>
+	</parse>
+
+</wrapperconfiguration>

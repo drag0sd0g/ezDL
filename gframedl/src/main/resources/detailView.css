@@ -1,0 +1,22 @@
+body{
+	margin-left:10px;
+}
+
+#author{
+	font-style:italic;
+}
+
+#journal{
+	font-style:italic;
+}
+
+#conference{
+	font-style:italic;
+}
+
+div{
+	width:90%;
+	margin-left:20px;
+	margin-top:10px;
+	font-style:italic;
+}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{book}
+\usepackage{amsmath}
+\title{ezDL -- User Guide}
+\author{Working Group Information Engineering, University of Duisburg-Essen}
+\date{}
+\begin{document}
+  \maketitle 
+  
+\tableofcontents  
+
+  
+\newcommand{\itemtt}[1]{\item[\texttt{#1}]}
+  
+  
+\chapter{Configuration}
+
+There are some configuration files you can use to tune ezDL to your needs. 
+
+\begin{description}
+\item[Windows] It is located in your home directory as \texttt{ezdl}.
+\item[Linux] It is located in your home directory under the name \texttt{.ezdl}. Because of the dot (``.'') at the beginning of the name, the directory is hidden. In Nautilus, press Ctrl-H to show the hidden files and directories before you can change into the directory.
+\end{description}
+
+
+
+\section{\texttt{user.properties}}
+
+\begin{description}
+\itemtt{search.timeout\_s} The timeout in seconds for searches. The default timeout is 10 seconds, if this property is not set.
+\end{description}
+
+
+
+\section{\texttt{connection.properties}}
+
+\begin{description}
+\itemtt{mta.host} The host name of the MTA, which is the server that handles connections between the front end and the back end. The default is \texttt{mta.ezdl.de}.
+\itemtt{mta.port} The port number of the MTA. The default is \texttt{8080}.
+\end{description}
+
+\end{document}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jnlp PUBLIC "-//Sun Microsystems, Inc//DTD JNLP Descriptor 6.0//EN" "http://java.sun.com/dtd/JNLP-6.0.dtd">
+<jnlp spec="6.0+" codebase="http://ezdl.de/webstart/" href="ezdl-client.jnlp">
+	<information>
+		<title>ezDL</title>
+		<vendor>Universität Duisburg-Essen</vendor>
+		<homepage href="http://ezdl.de" />
+		<icon kind="splash" href="icons/splash.png" />
+		<icon kind="shortcut" href="icons/shortcut_64.png" />
+		<shortcut online="true">
+			<desktop />
+			<menu submenu="ezDL" />
+		</shortcut>
+	</information>
+	<information os="windows">
+		<title>ezDL</title>
+		<vendor>Universität Duisburg-Essen</vendor>
+		<homepage href="http://ezdl.de" />
+		<icon kind="splash" href="icons/splash.png" />
+		<icon kind="shortcut" href="icons/shortcut.ico" />
+		<shortcut online="true">
+			<desktop />
+			<menu submenu="ezDL" />
+		</shortcut>
+	</information>
+	<information os="linux">
+		<title>ezDL</title>
+		<vendor>Universität Duisburg-Essen</vendor>
+		<homepage href="http://ezdl.de" />
+		<icon kind="splash" href="icons/splash.png" />
+		<icon kind="shortcut" href="icons/shortcut_64.png" />
+		<shortcut online="true">
+			<desktop />
+			<menu submenu="ezDL" />
+		</shortcut>
+	</information>
+	<security>
+		<all-permissions />
+	</security>
+	<update check="always" policy="always" />
+	<resources>
+		<java version="1.6+" max-heap-size="128m" />
+		<jar href="ezdl-client.jar" main="true" />
+	</resources>
+	<application-desc main-class="de.unidue.inf.is.ezdl.gframedl.gui.EzDL"/>
+</jnlp>
