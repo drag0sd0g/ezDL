@@ -1,0 +1,69 @@
+RELEASE NOTES
+
+== Changes in release 1.4 ==
+
+=== Things the users see ===
+
++ Personal library with Mendeley synchronisation
++ Groupable result list
++ Support for wildcards in queries
++ Visualization of relations in search results
++ Easy combination of queries
++ Many other small improvements
+
+=== Internal things ===
+
++ Unified frontend and backend query representation
+
+
+
+== Changes in release 1.3 ==
+
+=== Things the users see ===
+
++ Buttons to select/deselect all digital libraries
++ Filter field for the query history to filter for search terms
+
+=== Internal things ===
+
++ Changed ranking of search results
++ ezDL can be built using Maven 3
++ The ezDL client can be run as a web applet in a browser
+
+=== Bugs fixed ===
+
++ Wrappers halt if the fail during initialization
+
+
+
+== Changes in release 1.2 ==
+
+=== Things the users see ===
+
++ New connection to search Mendeley
++ New connection to search CiteSeerX
++ Users now see icons for the available digital libraries
++ Query history tool now has nicer way to display its items
++ Users now see detailed progress of ongoing search and can abort a search 
+  or work with already found results
++ Text fields now have proper context menus with copy and paste and all
++ The password field in the login dialog now uses bullets instead of
+  asterisks
+
+=== Internal things ===
+
++ Moved CORBA-related classes to external project
++ BibTeX export is now tested against a real bibtex/latex installation if
+  present
++ The client can now be started with a new parameter "--config" that takes
+  as an argument the name of a directory that ezDL will use to read/write
+  the config files (e.g. connection.properties and user.properties)
++ The admin interface can now request a status message from agents and
+  display the answer. MTAs report open connections and sessions.
+
+=== Bugs fixed ===
+
++ Fix: Authors in BibTeX export
++ Fix: DBLP now returns detail links
++ Fix: User Log Agent now marks debug sessions correctly
++ Fix: Right-click in result list prevented multiple selection

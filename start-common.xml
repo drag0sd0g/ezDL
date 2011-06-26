@@ -1,0 +1,210 @@
+<project name="ezDL Backend" default="start" basedir=".">
+    <description>
+        Build file for starting the backend
+    </description>
+
+    <property name="orbport" value="2000" />
+    <property name="maxHeap" value="256m" />
+
+
+
+    <target name="startActiveMqBroker">
+        <antcall target="startBroker" />
+    </target>
+
+
+    <path id="project.class.path">
+        <fileset dir="starter/target">
+            <include name="*dependencies*.jar" />
+        </fileset>
+    </path>
+
+
+    <target name="startDirectory">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="directory" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.backbone.directory.Directory" />
+            <param name="agentName" value="Directory" />
+        </antcall>
+    </target>
+
+    <target name="startUA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="ua" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.user.UserAgent" />
+            <param name="agentName" value="UA" />
+        </antcall>
+    </target>
+
+    <target name="startMTA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="mta" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.backbone.mta.gated.http.GatedHttpMTA" />
+            <param name="agentName" value="MTA" />
+        </antcall>
+    </target>
+
+    <target name="startSA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="sa" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.search.SearchAgent" />
+            <param name="agentName" value="SA" />
+        </antcall>
+    </target>
+
+    <target name="startRA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="ra" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.repository.RepositoryAgent" />
+            <param name="agentName" value="RA" />
+        </antcall>
+    </target>
+
+    <target name="startULA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="ula" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.log.UserLogAgent" />
+            <param name="agentName" value="ULA" />
+        </antcall>
+    </target>
+
+    <target name="startQHA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="qha" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.queryhistory.QueryHistoryAgent" />
+            <param name="agentName" value="QHA" />
+        </antcall>
+    </target>
+
+    <target name="startTIA">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="tia" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.terminfo.TermInfoAgent" />
+            <param name="agentName" value="TIA" />
+        </antcall>
+    </target>
+	
+    <target name="startLibrary">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="lib" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlservices.library.LibraryAgent" />
+            <param name="agentName" value="LA" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperBibDB">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="bibdb" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="BibDB" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperDBLP">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="dblp" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="DBLP" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperACM">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="acm" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="ACM" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperPubMed">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="pubmed" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="PubMed" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperLEABIB">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="leabib" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="LEABIB" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperIEEE">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="ieee" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="IEEE" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperWiley">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="wiley" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="Wiley" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperSpringer">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="springer" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="Springer" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperMendeley">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="mendeley" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="Mendeley" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperCiteSeer">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="citeseer" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="CiteSeer" />
+        </antcall>
+    </target>
+
+    <target name="startWrapperDummy">
+        <antcall target="startAgent">
+            <param name="filePrefix" value="dummywrapper" />
+            <param name="agentClass" value="de.unidue.inf.is.ezdl.dlwrapper.WrapperMapper" />
+            <param name="agentName" value="Dummy" />
+        </antcall>
+    </target>
+
+
+    <target name="sleep1">
+        <sleep seconds="8" />
+    </target>
+
+    <target name="sleep2">
+        <sleep seconds="8" />
+    </target>
+
+    <target name="sleep3">
+        <sleep seconds="4" />
+    </target>
+
+    <target name="endMessage">
+        <echo message="All agents have been started in the background." />
+    </target>
+
+    <target name="startCore" depends="startActiveMqBroker,sleep1,startDirectory" />
+    <target name="startAgents" depends="startUA,startSA,startQHA,startTIA,startRA,startULA,startLibrary" />
+    <target name="startWrappers" depends="startWrappersTest,startWrappersCS,startWrappersMisc,startWrappersMed" />
+    <target name="startWrappersTest" depends="startWrapperDummy" />
+    <target name="startWrappersCS" depends="startWrapperBibDB,startWrapperDBLP,startWrapperACM,startWrapperLEABIB,startWrapperIEEE,startWrapperCiteSeer" />
+    <target name="startWrappersMisc" depends="startWrapperWiley,startWrapperSpringer,startWrapperMendeley" />
+    <target name="startWrappersMed" depends="startWrapperPubMed" />
+    <target name="startMTAs" depends="startMTA" />
+    <target name="start" depends="startCore,sleep2,startAgents,startWrappers,sleep3,startMTAs,endMessage" />
+
+</project>

@@ -1,0 +1,359 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.unidue.inf.is.ezdl</groupId>
+	<artifactId>ezdl</artifactId>
+	<packaging>pom</packaging>
+	<name>ezdl</name>
+	<version>1.4.0</version>
+
+	<description>Access to digital libraries and support for searching.</description>
+	<url>http://www.is.inf.uni-due.de/projects/ezdl/</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modules>
+		<module>dlcore</module>
+		<module>dlbackend</module>
+		<module>dlservices</module>
+		<module>dlwrapper</module>
+		<module>dlfrontend</module>
+		<module>gframedl</module>
+		<module>starter</module>
+		<module>examples</module>
+	</modules>
+
+	<inceptionYear>2009</inceptionYear>
+
+	<issueManagement>
+		<system>Agilo</system>
+		<url>http://rum.is.inf.uni-due.de</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Hudson</system>
+		<url>http://gimlet.is.inf.uni-due.de:8080/job/ezdl/</url>
+	</ciManagement>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License, version 3</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+		</license>
+	</licenses>
+
+	<distributionManagement>
+		<site>
+			<id>site</id>
+			<url>file://</url>
+		</site>
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<id>tbeckers</id>
+			<name>Thomas Beckers</name>
+			<email>tbeckers@is.inf.uni-due.de</email>
+			<url>http://www.is.inf.uni-due.de/staff/tbeckers.html</url>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Project Leader</role>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>mjordan</id>
+			<name>Matthias Jordan</name>
+			<email>mjordan@is.inf.uni-due.de</email>
+			<url>http://www.is.inf.uni-due.de</url>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Project Leader</role>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>kriewel</id>
+			<name>Sascha Kriewel</name>
+			<email>sascha.kriewel@uni-due.de</email>
+			<url>http://www.is.inf.uni-due.de</url>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>dungs</id>
+			<name>Sebastian Dungs</name>
+			<email>dungs@is.inf.uni-due.de</email>
+			<url>http://www.is.inf.uni-due.de</url>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>kapitza</id>
+			<name>Jens Kapitza</name>
+			<email>kapitza@is.inf.uni-due.de</email>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>gustak</id>
+			<name>Jaroslaw Gustak</name>
+			<email>gustak@is.inf.uni-due.de</email>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>franitza</id>
+			<name>Markus Franitza</name>
+			<email>franitza@is.inf.uni-due.de</email>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>tacke</id>
+			<name>Andreas Tacke</name>
+			<email>tacke@is.inf.uni-due.de</email>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>tipografov</id>
+			<name>Roman Tipografov</name>
+			<email>tipografov@is.inf.uni-due.de</email>
+			<organization>Universität Duisburg-Essen</organization>
+			<organizationUrl>http://www.is.inf.uni-due.de</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:hg:https://hg-pub.is.inf.uni-due.de/hg/data/ezdl</connection>
+		<url>https://hg-pub.is.inf.uni-due.de/hg/data/ezdl/</url>
+	</scm>
+
+	<organization>
+		<name>Universität Duisburg-Essen</name>
+		<url>http://www.is.inf.uni-due.de</url>
+	</organization>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<sourceEncoding>UTF-8</sourceEncoding>
+					<quiet>true</quiet>
+					<aggregate>true</aggregate>
+
+					<code>javadoc:aggregate</code>
+					<code>javadoc:test-aggregate</code>
+					<doclet>gr.spinellis.umlgraph.doclet.UmlGraphDoc</doclet>
+					<docletArtifact>
+						<groupId>gr.spinellis</groupId>
+						<artifactId>UmlGraph</artifactId>
+						<version>4.6</version>
+					</docletArtifact>
+					<additionalparam>
+						-inferrel -inferdep -quiet -hide java.*
+						-collpackages java.util.* -qualify
+						-postfixpackage -nodefontsize 9
+						-nodefontpackagesize 7
+                  </additionalparam>
+
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<deprecation>on</deprecation>
+					<debug>on</debug>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<inputEncoding>UTF-8</inputEncoding>
+					<outputEncoding>UTF-8</outputEncoding>
+					<argLine>-Dfile.encoding=utf8</argLine>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<version>1.8.0</version>
+				<inherited>false</inherited>
+				<configuration>
+					<header>${basedir}/header.txt</header>
+					<includes>
+						<include>**/**.java</include>
+					</includes>
+					<aggregate>true</aggregate>
+					<mapping>
+						<java>SLASHSTAR_STYLE</java>
+					</mapping>
+					<properties>
+						<year>2011</year>
+					</properties>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>latex-maven-plugin</artifactId>
+				<version>1.0</version>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<type>jar</type>
+			<scope>compile</scope>
+			<!-- exclude unwanted dependencies -->
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<sourceEncoding>UTF-8</sourceEncoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-checkstyle-plugin</artifactId> 
+				<version>2.2</version> <configuration> <configLocation>${basedir}/../src/site/checkstyle.xml</configLocation> 
+				<enableRulesSummary>false</enableRulesSummary> </configuration> </plugin> -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<xmlOutput>true</xmlOutput>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+		</plugins>
+	</reporting>
+	<repositories>
+		<repository>
+			<id>ehcache</id>
+			<name>ehcache</name>
+			<url>http://oss.sonatype.org/content/repositories/sourceforge-releases/</url>
+		</repository>
+		<repository>
+			<id>releases</id>
+			<name>releases</name>
+			<url>http://gimlet.is.inf.uni-due.de:8081/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+
+</project>
+

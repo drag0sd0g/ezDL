@@ -1,0 +1,33 @@
+<project name="ezDL Backend start all in one go" default="start" basedir=".">
+    <description>
+        Build file for starting the backend.
+    </description>
+
+    <import file="./start-common.xml" />
+
+
+    <target name="startBroker">
+        <echo>de.unidue.inf.is.ezdl.dlbackend.agent.connectors.ActiveMqBroker</echo>
+        <java classname="de.unidue.inf.is.ezdl.dlbackend.agent.connectors.ActiveMqBroker" fork="true" spawn="true">
+            <classpath refid="project.class.path" />
+            <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError" />
+            <jvmarg value="-Xmx${maxHeap}" />
+            <jvmarg value="-Dezdl.log.config=logging.properties" />
+        </java>
+    </target>
+
+
+    <target name="startAgent">
+        <java classname="de.unidue.inf.is.ezdl.starter.AgentApplication" fork="true" spawn="true" clonevm="true">
+            <classpath refid="project.class.path" />
+            <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError" />
+            <jvmarg value="-Xmx${maxHeap}" />
+            <jvmarg value="-Dezdl.log.config=logging.properties" />
+            <jvmarg value="-Dezdl.log.file=${filePrefix}.log" />
+            <arg value="${filePrefix}.properties" />
+            <arg value="${agentClass}" />
+            <arg value="${agentName}" />
+        </java>
+    </target>
+
+</project>
